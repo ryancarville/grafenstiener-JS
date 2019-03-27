@@ -54,11 +54,9 @@ function buy(properties) {
 	);
 	console.log(properties);
 	document.getElementById('listingResults').innerHTML = properties.map(
-		listing => [
-			'Id: ' + listing.id,
-			'Name: ' + listing.name,
-			'Address: ' + listing.address
-		]
+		listing => {
+			getListing(listing);
+		}
 	);
 	console.log(document.getElementById('listingResults'));
 }

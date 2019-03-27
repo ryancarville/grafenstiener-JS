@@ -1,6 +1,5 @@
 function office() {
 	$('.main').empty();
-	welcomeSearch();
 	$('.main').append(
 		`<section>
 			<div class='officePage'>
