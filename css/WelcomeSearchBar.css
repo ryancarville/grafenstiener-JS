@@ -1,0 +1,24 @@
+.homeSearchModuel {
+	display: none;
+}
+
+@media only screen and (min-width: 1000px) {
+	.homeSearchModuel {
+		display: block;
+		text-align: center;
+	}
+	.homeSearchInput {
+		width: 50%;
+		height: 50px;
+		margin-top: 450px;
+		margin-left: 20px;
+	}
+
+	.homeSearchBtn {
+		width: 100px;
+		height: 100px;
+		border-radius: 100px;
+		font-size: 20px;
+		margin-left: 20px;
+	}
+}

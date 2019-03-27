@@ -1,0 +1,109 @@
+@media only screen and (min-width: 1000px) {
+	.headerSearch {
+		position: fixed;
+		background-color: rgb(0, 0, 0, 0.7);
+		width: 100%;
+		height: 30px;
+		z-index: 1;
+		margin-top: -30px;
+	}
+
+	.searchIcon {
+		cursor: pointer;
+		height: 20px;
+		margin-top: 5px;
+		margin-right: 20px;
+	}
+
+	.navSearch {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.navSearchForm {
+		opacity: 0;
+		width: 100%;
+		display: flex;
+		justify-content: space-evenly;
+	}
+	.navSearch input {
+		width: 500px;
+		height: 15px;
+		margin: 0px 0px 0px 0px;
+	}
+
+	#keywordBtn {
+		cursor: pointer;
+		height: 30px;
+		width: 200px;
+		background-color: black;
+		border: none;
+		border-radius: 0px;
+		color: white;
+		font-size: 15px;
+		float: right;
+		margin: 0px 0px 0px 0px;
+	}
+	#catagoryMenu {
+		width: 150px;
+		height: 30px;
+		font-size: 15px;
+		background-color: black;
+		color: white;
+		border: none;
+	}
+
+	#typeMenu {
+		width: 150px;
+		height: 30px;
+		font-size: 15px;
+		background-color: black;
+		color: white;
+		border: none;
+	}
+
+	#roomsMenu {
+		width: 150px;
+		height: 30px;
+		font-size: 15px;
+		background-color: black;
+		color: white;
+		border: none;
+	}
+
+	#bathMenu {
+		width: 150px;
+		height: 30px;
+		font-size: 15px;
+		background-color: black;
+		color: white;
+		border: none;
+	}
+}
+
+@keyframes slideLeft {
+	0% {
+		transform: translateX(-100);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+.box {
+	background-color: #218d9b;
+	height: 100px;
+	width: 100px;
+}
+
+.transform {
+	-webkit-transition: all 2s ease;
+	-moz-transition: all 2s ease;
+	-o-transition: all 2s ease;
+	-ms-transition: all 2s ease;
+	transition: all 2s ease;
+}
+
+.navSearchForm-active {
+	opacity: 1;
+}

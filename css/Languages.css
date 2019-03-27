@@ -1,0 +1,12 @@
+@media only screen and (min-width: 1000px) {
+	.langBtn {
+		width: 20px;
+		height: 20px;
+		margin-top: 3px;
+		margin-right: 10px;
+		border: black solid 1px;
+		cursor: pointer;
+		position: sticky;
+		border-radius: 200px;
+	}
+}
