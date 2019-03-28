@@ -7,7 +7,7 @@ function contact() {
 		`<div class='contactPage'>
 				<div class='headers'>
 					<article class='contactHeader'>
-						<h2 class='header'>We are her for you</h2>
+						<h2 class='header'>We are here for you</h2>
 						<h3 class='info'>
 							Gräfenstiener | Swiss Real Estate <br />
 							<a class='emailLink' href='mailto:infor@jdjksl.com'>
