@@ -30,7 +30,7 @@ function rollData() {
 
 function dataCounter() {
 	$('main').append(
-		`<div class='dataCounter' id='scroll-to' onLoad='rollData()'>
+		`<div class='dataCounter' id='scroll-to' onMouseMove=rollData()>
 					<section
 						id='counter-stats'
 						class='wow fadeInRight'
