@@ -20,8 +20,8 @@ const properties = [
 		canton: 'Zurich',
 		size: 1300 + ' sq meters',
 		price: 650000,
-		image1: 'CommunityExterior3.jpg',
-		image2: 'home2.jpg',
+		image1: 'home2.jpg',
+		image2: 'CommunityExterior3.jpg',
 		image3: 'home3.jpg',
 		docs: 'docs/houseDocs.pdf'
 	},
@@ -33,9 +33,9 @@ const properties = [
 		canton: 'Zurich',
 		size: 900 + ' sq meters',
 		price: 2 + ' Million',
-		image1: 'CommunityExterior3.jpg',
+		image1: 'home3.jpg',
 		image2: 'home2.jpg',
-		image3: 'home3.jpg',
+		image3: 'CommunityExterior3.jpg',
 		docs: 'docs/houseDocs.pdf'
 	},
 	{
