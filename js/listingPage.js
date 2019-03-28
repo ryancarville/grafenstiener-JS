@@ -51,6 +51,9 @@ function listingPage(listing) {
 		<br>
 		Size:
 		${listing.size}
+		<br>
+		Documentation:
+		<a href='${listing.docs}'>Click Here for Docs</a>
 		</p>
 		</div>
 		<div class='propertyInfo' id='property${listing.id}'>

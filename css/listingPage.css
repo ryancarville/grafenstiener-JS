@@ -3,6 +3,10 @@
 }
 
 .listingPage p {
-	padding: 5px;
+	margin-top: -50px;
 	text-align: center;
+}
+
+.propertyInfo p {
+	padding: 60px;
 }

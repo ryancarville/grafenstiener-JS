@@ -5,11 +5,12 @@ const properties = [
 		address: 'Feldhofstrasse 66',
 		city: 'Zurich',
 		canton: 'Zurich',
-		size: 2000,
-		price: 1 + 'Million',
+		size: 2000 + ' sq meters',
+		price: 1 + ' Million',
 		image1: 'CommunityExterior3.jpg',
 		image2: 'home2.jpg',
-		image3: 'home3.jpg'
+		image3: 'home3.jpg',
+		docs: 'docs/houseDocs.pdf'
 	},
 	{
 		id: 2,
@@ -17,11 +18,12 @@ const properties = [
 		address: 'Feldhofstrasse 66',
 		city: 'Zurich',
 		canton: 'Zurich',
-		size: 2000,
+		size: 1300 + ' sq meters',
 		price: 650000,
 		image1: 'CommunityExterior3.jpg',
 		image2: 'home2.jpg',
-		image3: 'home3.jpg'
+		image3: 'home3.jpg',
+		docs: 'docs/houseDocs.pdf'
 	},
 	{
 		id: 3,
@@ -29,11 +31,12 @@ const properties = [
 		address: 'Feldhofstrasse 90',
 		city: 'Zurich',
 		canton: 'Zurich',
-		size: 1000,
-		price: 2 + 'Million',
+		size: 900 + ' sq meters',
+		price: 2 + ' Million',
 		image1: 'CommunityExterior3.jpg',
 		image2: 'home2.jpg',
-		image3: 'home3.jpg'
+		image3: 'home3.jpg',
+		docs: 'docs/houseDocs.pdf'
 	},
 	{
 		id: 4,
@@ -41,11 +44,12 @@ const properties = [
 		address: 'Feldhofstrasse 16',
 		city: 'Zurich',
 		canton: 'Zurich',
-		size: 2000,
-		price: 1.5 + 'Million',
+		size: 800 + ' sq meters',
+		price: 1.5 + ' Million',
 		image1: 'CommunityExterior3.jpg',
 		image2: 'home2.jpg',
-		image3: 'home3.jpg'
+		image3: 'home3.jpg',
+		docs: 'docs/houseDocs.pdf'
 	},
 	{
 		id: 5,
@@ -53,11 +57,12 @@ const properties = [
 		address: 'Feldhofstrasse 16',
 		city: 'Zurich',
 		canton: 'Zurich',
-		size: 2000,
-		price: 1.5 + 'Million',
+		size: 1034 + ' sq meters',
+		price: 1.5 + ' Million',
 		image1: 'home4.jpg',
 		image2: 'home2.jpg',
-		image3: 'home3.jpg'
+		image3: 'home3.jpg',
+		docs: 'docs/houseDocs.pdf'
 	}
 ];
 

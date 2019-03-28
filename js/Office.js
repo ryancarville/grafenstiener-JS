@@ -3,6 +3,7 @@ function office() {
 		$(this).scrollTop(0);
 	});
 	$('.main').empty();
+	dataCounter();
 	$('.main').append(
 		`<section>
 			<div class='officePage'>
@@ -30,5 +31,4 @@ function office() {
 			</div>
 		</section>`
 	);
-	dataCounter();
 }
