@@ -9,10 +9,10 @@
 
 .officeMsg {
 	float: left;
-	font-size: 25px;
 	color: rgb(18, 18, 18);
 	width: 30%;
-	height: 600px;
+	margin-top: 15px;
+	height: 700px;
 }
 
 .officeMsg p {

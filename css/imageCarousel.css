@@ -1,0 +1,41 @@
+#showContainer {
+	/* Main wrapper for all images */
+	width: 100%;
+	height: 600px;
+	padding: 0;
+	display: block;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#showContainer img {
+	width: 50%;
+}
+.navButton {
+	/* Make buttons look nice */
+	cursor: pointer;
+	float: left;
+	width: 25px;
+	height: 22px;
+	padding: 10px;
+	margin-left: 30%;
+	border-radius: 100%;
+	overflow: hidden;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	background: #000000;
+	opacity: 0.65;
+	user-select: none;
+}
+.navButton:hover {
+	opacity: 1;
+}
+
+.imageContainer:not(:first-child) {
+	/* Hide all images except the first */
+	display: none;
+}

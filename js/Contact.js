@@ -1,4 +1,7 @@
 function contact() {
+	$(document).ready(function() {
+		$(this).scrollTop(0);
+	});
 	$('.main').empty();
 	$('.main').append(
 		`<div class='contactPage'>

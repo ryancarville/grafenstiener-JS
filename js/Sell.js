@@ -1,6 +1,8 @@
 function sell() {
+	$(document).ready(function() {
+		$(this).scrollTop(0);
+	});
 	$('.main').empty();
-	welcomeSearch();
 	$('.main').append(
 		`<div class='sellerPage'>
 				<div class='sellerFormWrap'>

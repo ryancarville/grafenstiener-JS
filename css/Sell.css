@@ -1,0 +1,50 @@
+.sellerPage {
+	display: flex;
+	padding-top: 115px;
+
+	width: 100%;
+	height: 800px;
+	text-align: center;
+	box-shadow: 0px 1px 20px rgb(91, 91, 91);
+}
+
+/*seller form*/
+
+.sellerFormWrap {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.sellerHeader {
+	font-size: 30px;
+	color: rgb(1, 1, 1);
+}
+
+.sellerHeader p {
+	font-size: 25px;
+	padding: 5px;
+}
+
+.sellerDropDown {
+	width: 100%;
+	display: block;
+	margin-left: 20%;
+}
+
+.sellerInputForm {
+	width: 800px;
+	display: block;
+	margin-left: 20%;
+	margin-top: 20px;
+}
+
+#sellCatagoryMenu {
+	width: 300px;
+	height: 30px;
+	padding: 25px;
+	margin: 10px;
+	font-size: 15px;
+	background-color: black;
+	color: white;
+	border: none;
+}
