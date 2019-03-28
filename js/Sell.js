@@ -57,8 +57,10 @@ function sell() {
                                 <select id='sellCatagoryMenu'>
                                     <optgroup label='sellCatagoryMenu'>
                                         <option value=''>City</option>
-                                        <option value='commercial'>Commercial</option>
-                                        <option value='residential'>Residential</option>
+                                        <option value='zurich'>Zürich</option>
+                                        <option value='bern'>Bern</option>
+                                        <option value='zug'>Zug</option>
+                                        <option value='lucern'>Lucern</option>
                                     </optgroup>
                                 </select>
                                 <select id='sellCatagoryMenu'>
@@ -118,7 +120,7 @@ function sell() {
                                 </select>
                                 <select id='sellCatagoryMenu'>
                                     <optgroup label='sellCatagoryMenu'>
-                                        <option value=''>Market</option>
+                                        <option value=''>Catagory</option>
                                         <option value='investment'>Investment</option>
                                         <option value='residential'>Residential</option>
                                     </optgroup>
