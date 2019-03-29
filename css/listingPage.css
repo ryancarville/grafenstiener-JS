@@ -3,10 +3,25 @@
 }
 
 .listingPage p {
-	margin-top: -50px;
+	margin-top: 0px;
 	text-align: center;
 }
 
 .propertyInfo p {
 	padding: 60px;
+}
+
+#backToSearch {
+	font-size: 15px;
+
+	text-transform: uppercase;
+	text-align-last: center;
+	width: 70px;
+	height: 70px;
+	margin: 10px 10px;
+}
+
+#backToSearch a {
+	padding: 3px;
+	text-align: center;
 }

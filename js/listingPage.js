@@ -25,10 +25,13 @@ function listingPage(listing) {
         <div class="caption">
           Kitchen
         </div>
-      </div>
-      <div class="navButton" id="previous">&#10094;</div>
+			</div>
+			<div class='carouselNavWrap'>
+			<div class="navButton" id="previous">&#10094;</div>
+			<div class="navButton" id="backToSearch"><a>Back To Results</a></div>
       <div class="navButton" id="next">&#10095;</div>
-    </div>
+		</div>
+		</div>
 		
 		</div>
 		<p>ID:  

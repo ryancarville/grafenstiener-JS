@@ -19,6 +19,9 @@ function imageCarousel() {
 			.stop()
 			.fadeIn(1);
 	});
+	$('#backToSearch').on('click', () => {
+		buy(properties);
+	});
 
 	var currentImage = 1;
 	var totalImages = 3;
