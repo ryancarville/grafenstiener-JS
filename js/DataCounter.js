@@ -7,30 +7,35 @@ function rollData() {
 			var $this = $(this),
 				countTo = $this.attr('data-count');
 			//text or image to be animated
-			$({ countNum: $this.text() }).animate(
-				{
-					countNum: countTo
-				},
-
-				{
-					duration: 2000,
-					easing: 'linear',
-					step: function() {
-						$this.text(Math.floor(this.countNum));
+			$('.counting').each(function() {
+				var $this = $(this),
+					countTo = $this.attr('data-count');
+				//text or image to be animated
+				$({ countNum: $this.text() }).animate(
+					{
+						countNum: countTo
 					},
-					complete: function() {
-						$this.text(this.countNum);
-						//alert('finished');
+
+					{
+						duration: 2000,
+						easing: 'linear',
+						step: function() {
+							$this.text(Math.floor(this.countNum));
+						},
+						complete: function() {
+							$this.text(this.countNum);
+							//alert('finished');
+						}
 					}
-				}
-			);
+				);
+			});
 		});
 	});
 }
 
 function dataCounter() {
 	$('main').append(
-		`<div class='dataCounter' id='scroll-to' onMouseMove=rollData()>
+		`<div class='dataCounter' id='scroll-to' onMouseOver="rollData()">
 					<section
 						id='counter-stats'
 						class='wow fadeInRight'

@@ -42,9 +42,9 @@
 	height: 30px;
 	padding: 25px;
 	margin: 10px;
-	background-color: black;
-	color: white;
-	border: none;
+	background-color: rgb(121, 240, 254);
+	color: rgb(0, 0, 0);
+	border: 1px solid grey;
 }
 
 .sellerFormInputs {

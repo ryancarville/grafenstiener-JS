@@ -4,7 +4,6 @@ function welcomeSearch() {
 			<div class='navSearch '>
 				<form class='navSearchForm transform' action={Results}>
 					<section class='navCheckboxes'>
-						
 						<div class='checkboxInput'>
 							<input
 								type='checkbox'
