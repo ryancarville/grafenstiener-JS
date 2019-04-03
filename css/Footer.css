@@ -1,21 +1,20 @@
 .footer {
-	border: black solid 1px;
-	background-color: rgba(216, 216, 216, 0.8);
 	height: 100px;
 	width: 100%;
-	margin-top: 20%;
+	margin-top: 270px;
 	display: block;
-	text-align: center;
+	text-align: right;
 }
 
 #footer {
-	font-size: 20px;
-	margin-top: 40px;
-	color: white;
+	font-size: 16px;
+	margin-top: 5px;
+	margin-right: 80px;
+	color: rgb(126, 126, 126);
+	text-transform: uppercase;
 }
 
-#footer > a {
+#footer > span {
 	cursor: pointer;
-	text-decoration: underline;
-	padding: 10px;
+	padding: 15px;
 }

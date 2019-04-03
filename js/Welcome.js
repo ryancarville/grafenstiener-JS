@@ -2,7 +2,9 @@ function welcome() {
 	$(document).ready(function() {
 		$(this).scrollTop(0);
 	});
+
 	$('.main').empty();
+	slideShow();
 	$('.main').append(
 		`<div class='welcomePage'>
 			<div class='welcomeMsg'>
@@ -15,5 +17,4 @@ function welcome() {
 			</div>
 		</div>`
 	);
-	slideShow();
 }

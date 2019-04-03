@@ -44,7 +44,7 @@ function dataCounter() {
 							<div class='col-lg-3 stats'>
 								<i class='fa'>
 									<img
-										src='images/stepsCounter.jpg'
+										src='images/stepsCounter.png'
 										alt='step counter icon'
 										class='counterIcon'
 									>

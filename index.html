@@ -8,6 +8,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link rel="shortcut icon" href="images/favicon.ico" />
 		<title>Gräfenstiener | Swiss Real Estate</title>
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -29,30 +30,11 @@
 		<link rel="stylesheet" href="css/Slideshow.css" />
 		<link rel="stylesheet" href="css/Sell.css" />
 		<link rel="stylesheet" href="css/imageCarousel.css" />
-
 		<link
-			rel="stylesheet"
-			href="node_modules/propellerkit-range-slider/css/range-slider.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="node_modules/propellerkit-range-slider/node_modules/nouislider/src/nouislider.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="node_modules/propellerkit-range-slider/node_modules/nouislider/src/nouislider.pips.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="node_modules/propellerkit-range-slider/node_modules/nouislider/src/nouislider.tooltips.css"
-		/>
-		<link
-			href="https://fonts.googleapis.com/css?family=Montserrat"
+			href="https://fonts.googleapis.com/css?family=Raleway"
 			rel="stylesheet"
 		/>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="http://propeller.in/components/range-slider/js/wNumb.js"></script>
-		<script src="http://propeller.in/components/range-slider/js/nouislider.js"></script>
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	</head>
 	<body>
 		<!--[if lt IE 7]>
@@ -61,6 +43,7 @@
 				<a href="#">upgrade your browser</a> to improve your experience.
 			</p>
 		<![endif]-->
+		<div class="loadingScreen" id="loadingScreen"><h1>LOADING...</h1></div>
 		<header>
 			<nav class="navContainer">
 				<div class="linksWrapper">
@@ -77,6 +60,9 @@
 						</li>
 						<li class="navLink" id="navServices">
 							<a id="navServices" onclick="$(services())">Services</a>
+						</li>
+						<li class="navLink" id="navReferences">
+							<a id="navReferences" onclick="$(references())">References</a>
 						</li>
 						<li class="navLink" id="navContact">
 							<a id="navContact" onclick="$(contact())">Contact</a>
@@ -97,7 +83,6 @@
 		<script src="js/Welcome.js"></script>
 		<script src="js/WelcomeSearch.js"></script>
 		<script src="js/DataCounter.js"></script>
-		<script src="js/noUiSlider.js"></script>
 		<script src="js/SearchModuel.js"></script>
 		<script src="js/Slideshow.js"></script>
 		<script src="js/Listing.js"></script>

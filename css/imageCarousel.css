@@ -15,6 +15,7 @@
 
 #showContainer img {
 	width: 50%;
+	border: 2px solid black;
 }
 .navButton {
 	/* Make buttons look nice */

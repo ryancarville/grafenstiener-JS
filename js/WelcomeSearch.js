@@ -3,49 +3,15 @@ function welcomeSearch() {
 		`<div class='headerSearch'>
 			<div class='navSearch '>
 				<form class='navSearchForm transform' action={Results}>
-					<section class='navCheckboxes'>
-						<div class='checkboxInput'>
-							<input
-								type='checkbox'
-								class='checkBtn'
-								id='buying'
-								value='buying'
-							/>
-							<label for='buying'></label>
-						</div>
-						<a class='buyingText'>Buying</a>
-						<div class='checkboxInput'>
-							<input
-								type='checkbox'
-								class='checkBtn'
-								id='rent'
-								value='rent'
-							/>
-							<label for='rent'></label>
-						</div>
-						<a class='rentText'>Rent</a>
-						<div class='checkboxInput'>
-							<input
-								type='checkbox'
-								class='checkBtn'
-								id='residential'
-								value='residential'
-							/>
-							<label for='residential'></label>
-						</div>
-						<a class='residentialText'>Residential</a>
-						<div class='checkboxInput'>
-							<input
-								type='checkbox'
-								class='checkBtn'
-								id='investment'
-								value='investment'
-							/>
-							<label for='investment'></label>
-						</div>
-						<a class='investmentText'>Investment</a>
-					</section>
 					<div class='navSearchDropDown'>
+						<select id='navSearchCatagoryMenu'>
+							<optgroup label='searchCatagory'>
+								<option value=''>Type</option>
+								<option value='ivestment'>Investment</option>
+								<option value='buy'>Buy</option>
+								<option value='rent'>Rent</option>
+							</optgroup>
+						</select>	
 						<select id='navSearchCatagoryMenu'>
 							<optgroup label='searchCatagory'>
 								<option value=''>Canton</option>
@@ -76,16 +42,20 @@ function welcomeSearch() {
 								<option value='zug'>Zug</option>
 								<option value='zürich'>Zürich</option>
 							</optgroup>
-						</select>	
-					</div>
-					<button type='submit' id='keywordBtn' onSubmit={Results}>
+						</select>
+						<button type='submit' id='keywordBtn' onSubmit={Results}>
 						Search
-					</button>
+						</button>	
+					</div>
 				</form>
 				<img src='images/search.png' alt='search icon' class='searchIcon' onClick=$('.transform').toggleClass('navSearchForm-active')>
-				<img src="images/german.png" alt="german flag" class="langBtn" />
-				<img src="images/english.png" alt="english flag" class="langBtn" />
+				<span class="langBtn" >DE</span>
+				<span class="langBtn" >EN</span>
 			</div>
 		</div>`
 	);
+
+	if ($('#navOffice').click) {
+		$('#navOffice').toggleClass('bold');
+	}
 }

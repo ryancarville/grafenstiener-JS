@@ -1,21 +1,18 @@
 .welcomePage {
 	width: 100%;
 	padding-top: 300px;
-	display: flex;
-	justify-content: center;
+	display: inline-block;
 }
 .welcomeMsg {
-	background-color: rgba(135, 135, 135, 0.3);
+	background-color: rgba(62, 62, 62, 0.5);
 	color: white;
-	text-align: center;
+	text-align: left;
 	width: 40%;
 	float: left;
+	margin-left: 5%;
 	height: 200px;
-	border: black solid 3px;
+	font-size: 20px;
 	text-shadow: 1px 1px black;
-}
-
-.welcomeMsg p {
-	padding: 15px;
+	padding: 25px;
 	margin-top: -20px;
 }
