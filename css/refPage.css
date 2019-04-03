@@ -1,0 +1,32 @@
+.refPageWrap {
+	padding-top: 100px;
+}
+
+.refPageHeader {
+	text-align: center;
+}
+
+.refContent {
+	display: flex;
+}
+
+.refPageImg img {
+	width: 700px;
+	height: 700px;
+}
+
+.refText {
+	background-color: rgb(0, 0, 0, 0.7);
+	color: white;
+	padding: 50px;
+}
+
+.refText h3 {
+	float: right;
+	font-size: 45px;
+}
+
+.refText p {
+	float: left;
+	font-size: 24px;
+}
