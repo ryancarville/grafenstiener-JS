@@ -29,18 +29,21 @@
 
 .navLink {
 	cursor: pointer;
-	font-size: 18px;
+	font-size: 16px;
 	padding: 20px;
 }
 
 ul li a {
 	color: rgb(0, 0, 0);
+	transition: 1s ease-in-out;
 }
 
 ul li a:hover {
-	color: grey;
+	color: rgb(91, 165, 255);
+	font-size: 17px;
+	transition: 0.5s ease-in-out;
 }
 
-ul li a:active {
-	font-size: 16px;
+.navActive {
+	font-size: 20px;
 }

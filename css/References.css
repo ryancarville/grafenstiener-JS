@@ -10,8 +10,8 @@
 	display: flex;
 	justify-content: center;
 	line-height: 1;
-	font-size: 25px;
 }
+
 .refImg {
 	display: inline-block;
 	width: 400px;
@@ -20,4 +20,8 @@
 	cursor: pointer;
 	width: 400px;
 	height: 400px;
+}
+
+.refImg > a {
+	font-size: 40px;
 }

@@ -10,23 +10,31 @@
 	display: flex;
 }
 
-.refPageImg img {
+.refPageImg {
+	box-sizing: border-box;
 	width: 700px;
 	height: 700px;
+	float: left;
+	padding-right: 20px;
 }
 
 .refText {
+	box-sizing: border-box;
 	background-color: rgb(0, 0, 0, 0.7);
 	color: white;
-	padding: 50px;
+}
+
+.refText h2 {
+	font-size: 40px;
 }
 
 .refText h3 {
-	float: right;
-	font-size: 45px;
+	font-size: 25px;
+	font-style: italic;
+	font-weight: lighter;
+	margin-top: -25px;
 }
 
 .refText p {
-	float: left;
 	font-size: 24px;
 }

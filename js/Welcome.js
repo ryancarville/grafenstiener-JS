@@ -17,4 +17,41 @@ function welcome() {
 			</div>
 		</div>`
 	);
+
+	$('#navOffice').on('click', function() {
+		$(this).addClass('navActive');
+		$('#navRealEstate, #navServices, #navRef, #navContact').removeClass(
+			'navActive'
+		);
+	});
+	$('#navRealEstate').on('click', function() {
+		$(this).addClass('navActive');
+		$('#navOffice, #navServices, #navReferences, #navContact').removeClass(
+			'navActive'
+		);
+	});
+	$('#navServices').on('click', function() {
+		$(this).addClass('navActive');
+		$('#navOffice, #navRealEstate, #navReferences, #navContact').removeClass(
+			'navActive'
+		);
+	});
+	$('#navReferences').on('click', function() {
+		$(this).addClass('navActive');
+		$('#navOffice, #navRealEstate, #navServices, #navContact').removeClass(
+			'navActive'
+		);
+	});
+	$('#navContact').on('click', function() {
+		$(this).addClass('navActive');
+		$('#navOffice, #navRealEstate, #navServices, #navReferences').removeClass(
+			'navActive'
+		);
+	});
+	$('#navLogo').on('click', function() {
+		$(this).addClass('navActive');
+		$(
+			'#navOffice, #navRealEstate, #navServices, #navReferences, #navContact'
+		).removeClass('navActive');
+	});
 }
