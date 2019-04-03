@@ -71,6 +71,7 @@ function buy(properties) {
 		$(this).scrollTop(0);
 	});
 	$('.main').empty();
+
 	$('.main').append(
 		`<div class='buyPage'>
             <header>
@@ -82,7 +83,6 @@ function buy(properties) {
             </div>
         </div>`
 	);
-	console.log(properties);
 	let myHTMLString = properties.map(listing => getListing(listing)).join('');
 	document.getElementById('listingResults').innerHTML = myHTMLString;
 	for (let i = 0; i < properties.length; i++) {
@@ -91,6 +91,5 @@ function buy(properties) {
 			listingPage(properties[i]);
 		});
 	}
-	console.log(document.getElementById('listingResults'));
 	searchModuel();
 }

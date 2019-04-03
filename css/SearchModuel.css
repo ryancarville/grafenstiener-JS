@@ -3,10 +3,9 @@
 	margin-left: auto;
 	margin-right: auto;
 	box-sizing: border-box;
-	background-color: rgba(0, 0, 0, 0.5);
-	border: black solid 1px;
+	background-color: rgba(101, 101, 101, 0.5);
 	width: 50%;
-	height: 200px;
+	height: 60px;
 	padding: 10px;
 }
 
@@ -17,72 +16,33 @@
 	width: 100px;
 	height: 50px;
 	float: right;
-	margin-right: 20px;
-	margin-top: -100px;
-	font-size: 18px;
-}
-
-.searchCatag {
-	width: 100%;
-	height: 250px;
-	color: white;
-	border: none;
-	display: inline-block;
-	text-shadow: 1px 1px black;
-}
-
-.checkbox {
-	width: 30px;
-	height: 30px;
-	background: rgb(255, 255, 255, 1);
-	border-radius: 100%;
-	position: relative;
-	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
-}
-
-.checkbox label {
-	width: 20px;
-	height: 20px;
-	border-radius: 100px;
-	transition: all 0.5s ease;
-	cursor: pointer;
-	position: absolute;
-	top: 5px;
-	left: 5px;
-	z-index: 1;
-	background: #333;
-	box-shadow: inset 0px 1px 3px rgba(106, 106, 106, 0.5);
-}
-
-.checkBtn input[type='checkbox']:checked + label {
-	background: #00fbff;
-}
-
-.checkBtn {
-	opacity: 0;
-}
-
-.checkboxes span {
-	float: left;
-	margin-top: 10px;
-	margin-left: 5px;
-
+	margin-top: -5px;
 	font-size: 18px;
 }
 
 .searchDropDown {
-	display: wrap;
-	width: 50%;
-	margin-top: 10px;
+	width: 100%;
+	float: left;
 }
 
-#searchCatagoryMenu {
+#searchCantonMenu {
 	width: 200px;
 	height: 30px;
-	padding: 25px;
-	margin: 10px;
 	font-size: 15px;
 	color: rgb(97, 97, 97);
-	border: 1px solid black;
 	background-color: rgb(255, 255, 255);
+	border: none;
+}
+
+#searchTypeMenu {
+	width: 200px;
+	height: 30px;
+	font-size: 15px;
+	color: rgb(97, 97, 97);
+	background-color: rgb(255, 255, 255);
+	border: none;
+}
+
+#priceSlider {
+	width: 275px;
 }
