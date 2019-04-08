@@ -42,7 +42,7 @@ function searchModuel() {
 								<option value='residential'>Residential</option>
 							</optgroup>
 						</select>
-						
+						<div id="pmd-slider-range-tooltip"  class="pmd-range-slider pmd-range-tooltip"></div>
 						
 						<button class='mainSearchBtn' type='submit' onClick="$(results())">
 						Search
