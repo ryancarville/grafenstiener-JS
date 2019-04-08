@@ -7,7 +7,7 @@ function footer() {
 			<span onclick=buy(properties)>Buy</span>
 			<span onclick=rent(properties)>Rent</span>
 			<span onclick=sell()>Sell</span>
-			<span onclick=sell()>References</span>
+			<span onclick=references()>References</span>
 			<span onclick=contact()>Contact</span>
 		</div>`
 	);

@@ -5,4 +5,10 @@ window.addEventListener('load', function() {
 	welcome();
 	footer();
 	imageCarousel();
+	$('.mobileMenu').on('click', () => {
+		$('.navMobileLinks').toggleClass('mobileMenuShow');
+	});
+	$('.navMobileLinks').on('click', () => {
+		$('.navMobileLinks').toggleClass('mobileMenuShow');
+	});
 });

@@ -1,27 +1,28 @@
 .listingPage {
-	padding: 150px;
+	box-sizing: border-box;
+	width: 100%;
 }
 
 .listingPage p {
-	margin-top: 0px;
 	text-align: center;
 }
 
 .propertyInfo p {
-	padding: 60px;
+	box-sizing: border-box;
+	padding: 10px;
 }
 
-#backToSearch {
-	font-size: 15px;
+@media only screen and (min-widht: 1000px) {
+	.listingPage {
+		padding: 150px;
+	}
 
-	text-transform: uppercase;
-	text-align-last: center;
-	width: 70px;
-	height: 70px;
-	margin: 10px 10px;
-}
+	.listingPage p {
+		margin-top: 0px;
+		text-align: center;
+	}
 
-#backToSearch a {
-	padding: 3px;
-	text-align: center;
+	.propertyInfo p {
+		padding: 60px;
+	}
 }

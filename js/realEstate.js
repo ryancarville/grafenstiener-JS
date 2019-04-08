@@ -29,8 +29,10 @@ function realEstate() {
 							nulla pariatur. Excepteur sint occaecat cupidatat non proident,
 							sunt in culpa qui officia deserunt mollit anim id est laborum."
 							</p>
+						<div class='buttonWrap'>
 							<button type='button' id='investButton' onClick=buy(properties)>Investment</button>
 							<button type='button' id='resButton' onClick=buy(properties)>Residential</button>
+						</div>
 					</div>
 					<div class='rentMsg'>
 					<button type='button' id='rentButton' onClick=rent(properties)>Rent Real Estate</button>
@@ -43,8 +45,10 @@ function realEstate() {
 							nulla pariatur. Excepteur sint occaecat cupidatat non proident,
 							sunt in culpa qui officia deserunt mollit anim id est laborum."
 							</p>
+						<div class='buttonWrap'>
 							<button type='button' id='officeButton' onClick=buy(properties)>Office</button>
 							<button type='button' id='resButton' onClick=buy(properties)>Residential</button>
+						</div>
 					</div>
 					<div class='sellMsg'>
 					<button type='button' id='sellButton' onClick=sell()>Sell Real Estate</button>

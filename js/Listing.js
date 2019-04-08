@@ -2,7 +2,7 @@ function getListing(listing) {
 	const listItem = `<div class='listing' id='${listing.id}'>
 	<img src='images/listings/
 	${listing.image1}'
-	class='listingImg'> 
+	class='listingImg' id='image${listing.id}'> 
 	<p>ID:  
 	${listing.id} 
 	<br>

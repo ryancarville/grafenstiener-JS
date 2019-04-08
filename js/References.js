@@ -1,5 +1,7 @@
 function references() {
-	const julia = 'julia';
+	$(document).ready(function() {
+		$(this).scrollTop(0);
+	});
 	$('.main').empty();
 	$('.main').append(
 		`<div class='refWrapper'>

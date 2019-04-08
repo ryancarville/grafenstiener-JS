@@ -15,7 +15,8 @@
 		/>
 		<title>Gräfenstiener | Swiss Real Estate</title>
 		<meta name="description" content="" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="stylesheet" href="css/Languages.css" />
 		<link rel="stylesheet" href="css/Nav.css" />
@@ -52,10 +53,43 @@
 		<div class="loadingScreen" id="loadingScreen"><h1>LOADING...</h1></div>
 		<header>
 			<nav class="navContainer">
+				<div class="mobileMenuWrap">
+					<img src="images/menu.png" alt="mobileMenu" class="mobileMenu" />
+					<ul class="navMobileLinks">
+						<li class="navMobileLink" id="navMobileOffice">
+							<a id="navMobileOffice" onclick="$(office())">Office</a>
+						</li>
+
+						<li class="navMobileLink" id="navMobileRealEstate">
+							<a id="navMobileRealEstate" onclick="$(realEstate())"
+								>real estate</a
+							>
+						</li>
+						<li class="navMobileLink" id="navMobileServices">
+							<a id="navMobileServices" onclick="$(services())">Services</a>
+						</li>
+						<li class="navMobileLink" id="navMobileReferences">
+							<a id="navMobileReferences" onclick="$(references())"
+								>References</a
+							>
+						</li>
+						<li class="navMobileLink" id="navMobileContact">
+							<a id="navMobileContact" onclick="$(contact())">Contact</a>
+						</li>
+						<li class="navMobileLink">
+							<a class="mobileLangBtn">DE</a>
+							<a class="mobileLangBtn">EN</a>
+						</li>
+					</ul>
+				</div>
+				<a id="navHome" onclick="$(welcome())"
+					><img src="images/logo.png" alt="logo" id="navMobileLogo"
+				/></a>
 				<div class="linksWrapper">
 					<a id="navHome" onclick="$(welcome())"
 						><img src="images/logo.png" alt="logo" id="navLogo"
 					/></a>
+
 					<ul class="navLinks">
 						<li class="navLink" id="navOffice">
 							<a id="navOffice" onclick="$(office())">Office</a>

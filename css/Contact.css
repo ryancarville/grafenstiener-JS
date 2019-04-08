@@ -1,22 +1,20 @@
 .contactPage {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+	display: block;
 	text-align: center;
 	width: 100%;
+	box-sizing: border-box;
 }
 
 .headers {
-	margin-top: 100px;
+	margin-top: 10px;
 }
 
 .contactFormInput {
-	font-size: 20px;
+	font-size: 18px;
 	margin-top: 10px;
 	box-sizing: border-box;
 	text-align: center;
-	width: 400px;
+	width: 100%;
 	height: 50px;
 	padding: 20px;
 	box-shadow: 1px 1px 0px 0px;
@@ -25,41 +23,41 @@
 #name {
 	box-sizing: border-box;
 	text-align: center;
-	width: 400px;
+	width: 90%;
 	height: 50px;
 }
 
 #email {
 	box-sizing: border-box;
 	text-align: center;
-	width: 400px;
+	width: 90%;
 	height: 50px;
 }
 #address {
 	box-sizing: border-box;
 	text-align: center;
-	width: 400px;
+	width: 90%;
 	height: 50px;
 }
 
 #phoneNum {
 	box-sizing: border-box;
 	text-align: center;
-	width: 400px;
+	width: 90%;
 	height: 50px;
 }
 
 #msg {
 	box-sizing: border-box;
 	text-align: center;
-	width: 800px;
-	height: 200px;
+	width: 90%;
+	height: 150px;
 	margin-top: 20px;
 }
 
 #submit {
 	cursor: pointer;
-	width: 400px;
+	width: 90%;
 	height: 50px;
 	border-radius: 100px;
 	margin-top: 20px;
@@ -101,4 +99,111 @@
 
 .newsletterText {
 	font-size: 20px;
+}
+
+@media only screen and (min-width: 1000px) {
+	.contactPage {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		text-align: center;
+		width: 100%;
+	}
+
+	.headers {
+		margin-top: 100px;
+	}
+
+	.contactFormInput {
+		font-size: 20px;
+		margin-top: 10px;
+		box-sizing: border-box;
+		text-align: center;
+		width: 400px;
+		height: 50px;
+		padding: 20px;
+		box-shadow: 1px 1px 0px 0px;
+	}
+
+	#name {
+		box-sizing: border-box;
+		text-align: center;
+		width: 400px;
+		height: 50px;
+	}
+
+	#email {
+		box-sizing: border-box;
+		text-align: center;
+		width: 400px;
+		height: 50px;
+	}
+	#address {
+		box-sizing: border-box;
+		text-align: center;
+		width: 400px;
+		height: 50px;
+	}
+
+	#phoneNum {
+		box-sizing: border-box;
+		text-align: center;
+		width: 400px;
+		height: 50px;
+	}
+
+	#msg {
+		box-sizing: border-box;
+		text-align: center;
+		width: 800px;
+		height: 200px;
+		margin-top: 20px;
+	}
+
+	#submit {
+		cursor: pointer;
+		width: 400px;
+		height: 50px;
+		border-radius: 100px;
+		margin-top: 20px;
+		font-size: 20px;
+	}
+
+	.checkboxNewsletterInput {
+		width: 30px;
+		height: 30px;
+		background: rgb(255, 255, 255, 1);
+		border-radius: 100%;
+		position: relative;
+		box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 15px;
+	}
+
+	.checkboxNewsletterInput label {
+		width: 20px;
+		height: 20px;
+		border-radius: 100px;
+		transition: all 0.5s ease;
+		cursor: pointer;
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		z-index: 1;
+		background: #333;
+		box-shadow: inset 0px 1px 3px rgba(106, 106, 106, 0.5);
+	}
+
+	.checkboxNewsletterInput input {
+		opacity: 0;
+	}
+	.checkboxNewsletterInput input[type='checkbox']:checked + label {
+		background: #00fbff;
+	}
+
+	.newsletterText {
+		font-size: 20px;
+	}
 }

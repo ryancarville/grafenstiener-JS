@@ -90,6 +90,10 @@ function buy(properties) {
 		$(id).on('click', () => {
 			listingPage(properties[i]);
 		});
+		let imgID = `#image${properties[i].id}`;
+		$(imgID).on('click', () => {
+			listingPage(properties[i]);
+		});
 	}
 	searchModuel();
 }

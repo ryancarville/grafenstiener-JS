@@ -4,45 +4,98 @@
 	margin-right: auto;
 	box-sizing: border-box;
 	background-color: rgba(101, 101, 101, 0.5);
-	width: 50%;
-	height: 60px;
+	width: 100%;
+	height: 150px;
 	padding: 10px;
+	box-sizing: border-box;
 }
 
 .mainSearchBtn {
 	cursor: pointer;
 	color: white;
 	background-color: rgba(123, 123, 123, 0.5);
-	width: 100px;
+	width: 80%;
 	height: 50px;
-	float: right;
-	margin-top: -5px;
 	font-size: 18px;
 }
 
 .searchDropDown {
 	width: 100%;
-	float: left;
 }
 
 #searchCantonMenu {
-	width: 200px;
+	width: 90%;
 	height: 30px;
 	font-size: 15px;
 	color: rgb(97, 97, 97);
 	background-color: rgb(255, 255, 255);
 	border: none;
+	margin-bottom: 10px;
 }
 
 #searchTypeMenu {
-	width: 200px;
+	width: 90%;
 	height: 30px;
 	font-size: 15px;
 	color: rgb(97, 97, 97);
 	background-color: rgb(255, 255, 255);
 	border: none;
+	margin-bottom: 10px;
 }
 
 #priceSlider {
 	width: 275px;
+}
+
+@media only screen and (min-width: 1000px) {
+	.searchModuel {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		box-sizing: border-box;
+		background-color: rgba(101, 101, 101, 0.5);
+		width: 50%;
+		height: 60px;
+		padding: 10px;
+	}
+
+	.mainSearchBtn {
+		cursor: pointer;
+		color: white;
+		background-color: rgba(123, 123, 123, 0.5);
+		width: 100px;
+		height: 50px;
+		float: right;
+		margin-top: -10px;
+		font-size: 18px;
+	}
+
+	.searchDropDown {
+		display: flex;
+		justify-content: space-around;
+		width: 100%;
+		margin-top: 5px;
+	}
+
+	#searchCantonMenu {
+		width: 200px;
+		height: 30px;
+		font-size: 15px;
+		color: rgb(97, 97, 97);
+		background-color: rgb(255, 255, 255);
+		border: none;
+	}
+
+	#searchTypeMenu {
+		width: 200px;
+		height: 30px;
+		font-size: 15px;
+		color: rgb(97, 97, 97);
+		background-color: rgb(255, 255, 255);
+		border: none;
+	}
+
+	#priceSlider {
+		width: 275px;
+	}
 }

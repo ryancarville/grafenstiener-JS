@@ -1,8 +1,19 @@
-.langBtn {
+.mobileLangBtn {
 	width: 20px;
 	height: 20px;
 	margin-right: 10px;
 	cursor: pointer;
 	position: sticky;
-	border-radius: 200px;
+}
+.langBtn {
+	display: none;
+}
+
+@media only screen and (min-width: 1000px) {
+	.langBtn {
+		display: inline;
+		margin-right: 20px;
+		cursor: pointer;
+		position: sticky;
+	}
 }

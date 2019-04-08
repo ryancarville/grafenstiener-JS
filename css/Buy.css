@@ -1,6 +1,7 @@
 .buyPage {
-	padding-top: 120px;
+	box-sizing: border-box;
+	padding-top: 5%;
 	width: 100%;
 	text-align: center;
-	font-size: 25px;
+	font-size: 20px;
 }

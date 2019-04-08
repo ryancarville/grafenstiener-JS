@@ -1,15 +1,15 @@
 .sellerPage {
-	display: flex;
-	align-items: center;
-	padding-top: 70px;
+	display: block;
+	padding-top: 10px;
 	width: 100%;
-	height: 800px;
+	height: auto;
 	text-align: center;
+	box-sizing: border-box;
 }
 
 .sellerHeader {
-	margin-left: 25px;
-	font-size: 30px;
+	text-align: center;
+	font-size: 25px;
 }
 
 .sellerHeader p {
@@ -25,17 +25,18 @@
 }
 
 .sellerFormInputs {
-	width: 350px;
+	width: 90%;
 	height: 35px;
 	margin: 10px;
 	text-align: center;
 	font-size: 20px;
 	border: 1px solid;
 	box-shadow: 1px 1px 0px 0px;
+	box-sizing: border-box;
 }
 
 #sellerFormMsg {
-	width: 720px;
+	width: 90%;
 	height: 150px;
 }
 
@@ -83,4 +84,93 @@
 .sellFormCheckboxes a {
 	padding: 10px;
 	margin-top: 5px;
+}
+
+@media only screen and (min-width: 1000px) {
+	.sellerPage {
+		display: flex;
+		align-items: center;
+		padding-top: 70px;
+		width: 100%;
+		height: 800px;
+		text-align: center;
+	}
+
+	.sellerHeader {
+		margin-left: 25px;
+		font-size: 30px;
+	}
+
+	.sellerHeader p {
+		font-size: 25px;
+		padding: 5px;
+	}
+
+	.sellInputForm {
+		border: 2px solid black;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.sellerFormInputs {
+		width: 350px;
+		height: 35px;
+		margin: 10px;
+		text-align: center;
+		font-size: 20px;
+		border: 1px solid;
+		box-shadow: 1px 1px 0px 0px;
+	}
+
+	#sellerFormMsg {
+		width: 720px;
+		height: 150px;
+	}
+
+	#sellerFormSubmit {
+		cursor: pointer;
+		height: 50px;
+		border-radius: 50px;
+	}
+
+	.sellFormCheckboxes {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.sellFormCheckbox {
+		width: 30px;
+		height: 30px;
+		background: rgb(255, 255, 255, 1);
+		border-radius: 100%;
+		position: relative;
+		box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
+	}
+
+	.sellFormCheckbox label {
+		width: 20px;
+		height: 20px;
+		border-radius: 100px;
+		transition: all 0.5s ease;
+		cursor: pointer;
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		z-index: 1;
+		background: #333;
+		box-shadow: inset 0px 1px 3px rgba(106, 106, 106, 0.5);
+	}
+
+	.sellFormCheckbox input {
+		opacity: 0;
+	}
+	.sellFormCheckbox input[type='checkbox']:checked + label {
+		background: #00fbff;
+	}
+
+	.sellFormCheckboxes a {
+		padding: 10px;
+		margin-top: 5px;
+	}
 }

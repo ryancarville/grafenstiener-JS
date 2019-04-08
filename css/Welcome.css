@@ -1,18 +1,43 @@
 .welcomePage {
 	width: 100%;
-	padding-top: 300px;
+	padding-top: 100px;
 	display: inline-block;
 }
 .welcomeMsg {
 	background-color: rgba(62, 62, 62, 0.5);
 	color: white;
 	text-align: left;
-	width: 40%;
+	width: 100%;
 	float: left;
-	margin-left: 5%;
 	height: 200px;
-	font-size: 20px;
+	font-size: 14px;
 	text-shadow: 1px 1px black;
+	margin-top: 20px;
+}
+
+.welcomeMsg h2 {
+	text-align: center;
+}
+.welcomeMsg p {
 	padding: 25px;
-	margin-top: -20px;
+}
+
+@media only screen and (min-width: 1000px) {
+	.welcomePage {
+		width: 100%;
+		padding-top: 300px;
+	}
+	.welcomeMsg {
+		background-color: rgba(62, 62, 62, 0.5);
+		color: white;
+		text-align: left;
+		width: 40%;
+		float: left;
+		margin-left: 5%;
+		height: 200px;
+		font-size: 20px;
+		text-shadow: 1px 1px black;
+		padding: 25px;
+		margin-top: -20px;
+	}
 }
