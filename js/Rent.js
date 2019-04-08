@@ -7,7 +7,8 @@ function rent(properties) {
 		`<div class='buyPage'>
             <header>
                 <h2>${properties.length} Properties for you</h2>
-            </header>
+			</header>
+			<div class='sortListings'></div>
             <div id='listingResults'>
             </div>
         </div>`
@@ -21,5 +22,5 @@ function rent(properties) {
 			listingPage(properties[i]);
 		});
 	}
-	console.log(document.getElementById('listingResults'));
+	searchModuel();
 }
