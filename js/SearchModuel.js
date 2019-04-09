@@ -2,7 +2,7 @@ function searchModuel() {
 	$('.sortListings').append(
 		`<div class='seachModWrapper'>
 			<div class='searchModuel'>
-				<form action='' class='searchCatag'>
+				<form action='' class='searchCatag' id='searchFilter'>
 					<div class='searchDropDown'>
 						<select id='searchCantonMenu'>
 							<optgroup label='searchCanton'>
@@ -32,7 +32,7 @@ function searchModuel() {
 								<option value='valais'>Valais</option>
 								<option value='vaud'>Vaud</option>
 								<option value='zug'>Zug</option>
-								<option value='zürich'>Zürich</option>
+								<option value='zurich'>Zürich</option>
 							</optgroup>
 						</select>
 						<select id='searchTypeMenu'>
@@ -44,8 +44,11 @@ function searchModuel() {
 						</select>
 						<div id="pmd-slider-range-tooltip"  class="pmd-range-slider pmd-range-tooltip"></div>
 						
-						<button class='mainSearchBtn' type='submit' onClick="$(results())">
-						Search
+						<button class='mainSearchBtn' type='button' onClick="$(filterSearch())">
+						Sort
+						</button>
+						<button class='mainSearchBtn' type='button' onClick="$(buy(properties))">
+						Reset
 						</button>
 					</div>
 					
@@ -53,4 +56,34 @@ function searchModuel() {
 			</div>
 		</div>`
 	);
+}
+
+function filterSearch() {
+	const canton = document.getElementById('searchCantonMenu');
+	const type = document.getElementById('searchTypeMenu');
+	const cantonFilter = canton.options[canton.selectedIndex].value;
+	const typeFilter = type.options[type.selectedIndex].value;
+
+	if (cantonFilter && typeFilter != '') {
+		const allFilteres = properties
+			.filter(
+				listing =>
+					listing.canton === cantonFilter && listing.type === typeFilter
+			)
+			.map(listing => getListing(listing))
+			.join('');
+		document.getElementById('listingResults').innerHTML = allFilteres;
+	} else if (cantonFilter != '') {
+		const cantonFilterOnly = properties
+			.filter(listing => listing.canton === cantonFilter)
+			.map(listing => getListing(listing))
+			.join('');
+		document.getElementById('listingResults').innerHTML = cantonFilterOnly;
+	} else if (typeFilter != '') {
+		const typeFilterOnly = properties
+			.filter(listing => listing.type === typeFilter)
+			.map(listing => getListing(listing))
+			.join('');
+		document.getElementById('listingResults').innerHTML = typeFilterOnly;
+	}
 }

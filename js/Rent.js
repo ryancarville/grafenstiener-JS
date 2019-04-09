@@ -14,11 +14,15 @@ function rent(properties) {
         </div>`
 	);
 	console.log(properties);
-	let myHTMLString = properties.map(listing => getListing(listing)).join('');
-	document.getElementById('listingResults').innerHTML = myHTMLString;
+	let allRentals = properties.map(listing => getListing(listing)).join('');
+	document.getElementById('listingResults').innerHTML = allRentals;
 	for (let i = 0; i < properties.length; i++) {
 		let id = `#listingBTN${properties[i].id}`;
 		$(id).on('click', () => {
+			listingPage(properties[i]);
+		});
+		let imgID = `#image${properties[i].id}`;
+		$(imgID).on('click', () => {
 			listingPage(properties[i]);
 		});
 	}
