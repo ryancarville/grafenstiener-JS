@@ -8,8 +8,6 @@
 	color: white;
 	text-align: left;
 	width: 100%;
-	float: left;
-	height: 200px;
 	font-size: 14px;
 	text-shadow: 1px 1px black;
 	margin-top: 20px;
@@ -26,15 +24,13 @@
 	.welcomePage {
 		width: 100%;
 		padding-top: 300px;
+		animation: slideRight 3s ease-in;
 	}
 	.welcomeMsg {
 		background-color: rgba(62, 62, 62, 0.5);
 		color: white;
 		text-align: left;
 		width: 40%;
-		float: left;
-		margin-left: 5%;
-		height: 200px;
 		font-size: 20px;
 		text-shadow: 1px 1px black;
 		padding: 25px;

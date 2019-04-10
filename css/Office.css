@@ -2,6 +2,7 @@
 	width: 100%;
 	height: auto;
 	display: inline-block;
+	animation: fadeIn 2s ease-in-out;
 }
 
 .officeMsg {
@@ -34,8 +35,6 @@ h4 {
 	}
 
 	.officeMsg {
-		float: left;
-		color: rgb(18, 18, 18);
 		width: 30%;
 		padding-top: 200px;
 	}
