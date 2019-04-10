@@ -97,8 +97,8 @@
 
 	.navLink {
 		cursor: pointer;
-		font-size: 16px;
-		padding: 20px;
+		font-size: 15px;
+		margin: 20px;
 	}
 
 	ul li a {
@@ -108,11 +108,11 @@
 
 	ul li a:hover {
 		color: rgb(91, 165, 255);
-		font-size: 20px;
+		font-size: 16px;
 		transition: 0.5s ease-in-out;
 	}
 
 	.navActive {
-		font-size: 20px;
+		font-size: 18px;
 	}
 }
