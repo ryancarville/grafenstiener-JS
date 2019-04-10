@@ -18,12 +18,11 @@ function contact() {
 				</div>
 				<div class='contactFormWrap'>
 					<form
-						name='myform'
+						name='contactForm'
 						id='contactForm'
-						action='./sendcontact.php'
 						enctype='multipart/form-data'
-						method='post'>
-						<article>
+						method='post'
+						action='sendEmail.php'>
 							<input
 								type='text'
 								placeholder='Full Name'
@@ -49,7 +48,7 @@ function contact() {
 								id='address'
 								name='addess'
 								class='contactFormInput'
-								required
+								
 							/>
 							<br />
 							<input
@@ -58,11 +57,9 @@ function contact() {
 								id='phoneNum'
 								name='phone'
 								class='contactFormInput'
-								required
+								
 							/>
 							<br />
-						</article>
-						<article>
 							<textarea
 								placeholder='Your Message'
 								name='message'
@@ -76,6 +73,7 @@ function contact() {
 							<input
 								type='checkbox'
 								class='checkBtn'
+								name='newsletter'
 								id='newsletter'
 								value='newsletter'
 							/>
@@ -90,7 +88,6 @@ function contact() {
 								type='submit'>
 								Send Message
 							</button>
-						</article>
 					</form>
 				</div>
 		</div>`
