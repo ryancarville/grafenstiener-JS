@@ -19,10 +19,7 @@
 
 @media only screen and (min-width: 1000px) {
 	.footer {
-		height: 100px;
-		width: 100%;
-		margin-top: 320px;
-		display: block;
+		margin-top: 250px;
 		text-align: right;
 	}
 
@@ -30,12 +27,5 @@
 		font-size: 16px;
 		margin-top: 5px;
 		margin-right: 80px;
-		color: rgb(126, 126, 126);
-		text-transform: uppercase;
-	}
-
-	#footer > span {
-		cursor: pointer;
-		padding: 15px;
 	}
 }
