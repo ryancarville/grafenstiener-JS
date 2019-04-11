@@ -2,11 +2,14 @@ function results(properties) {
 	$(document).ready(function() {
 		$(this).scrollTop(0);
 	});
+	let fullListingResults = properties
+		.map(listing => getListing(listing))
+		.join('');
 	$('.main').empty();
 	$('.main').append(
 		`<div class='resultsPage'>
             <header>
-                <h2>${properties.length} Properties for you</h2>
+                <h2>${properties.length} Properties</h2>
 			</header>
 			<div class='sortListings'></div>
 
@@ -14,8 +17,8 @@ function results(properties) {
             </div>
         </div>`
 	);
-	let myHTMLString = properties.map(listing => getListing(listing)).join('');
-	document.getElementById('listingResults').innerHTML = myHTMLString;
+	searchModuel();
+	document.getElementById('listingResults').innerHTML = fullListingResults;
 	for (let i = 0; i < properties.length; i++) {
 		let id = `#listingBTN${properties[i].id}`;
 		$(id).on('click', () => {
@@ -26,5 +29,4 @@ function results(properties) {
 			listingPage(properties[i]);
 		});
 	}
-	searchModuel();
 }

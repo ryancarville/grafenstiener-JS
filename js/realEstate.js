@@ -18,7 +18,7 @@ function realEstate() {
 			</div>
 				<div class='realEstatePage'>
 					<div class='buyMsg'>
-						<button type='button' class='button' id='buyButton' onClick=results(properties)>Buy Real Estate</button>
+						<button type='button' id='buyButton' onClick=results(properties)>Buy Real Estate</button>
 						<p>
 							"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

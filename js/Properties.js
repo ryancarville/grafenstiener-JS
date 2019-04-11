@@ -61,7 +61,7 @@ const properties = [
 	},
 	{
 		id: 5,
-		name: 'Property 4',
+		name: 'Property 5',
 		address: 'Feldhofstrasse 16',
 		type: 'residential',
 		market: 'buy',
@@ -75,8 +75,8 @@ const properties = [
 		docs: 'docs/houseDocs.pdf'
 	},
 	{
-		id: 5,
-		name: 'Property 4',
+		id: 6,
+		name: 'Property 6',
 		address: 'Lake Bend Rd 49',
 		type: 'residential',
 		market: 'rent',

@@ -126,4 +126,14 @@ function filterSearch() {
 			document.getElementById('listingResults').innerHTML = noListingsMsg;
 		}
 	}
+	for (let i = 0; i < properties.length; i++) {
+		let id = `#listingBTN${properties[i].id}`;
+		$(id).on('click', () => {
+			listingPage(properties[i]);
+		});
+		let imgID = `#image${properties[i].id}`;
+		$(imgID).on('click', () => {
+			listingPage(properties[i]);
+		});
+	}
 }

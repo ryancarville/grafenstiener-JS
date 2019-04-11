@@ -1,47 +1,30 @@
-function imageCarousel() {
-	$('#previous').on('click', function() {
-		// Change to the previous image
-		$('#im_' + currentImage)
-			.stop()
-			.fadeOut(1);
-		decreaseImage();
-		$('#im_' + currentImage)
-			.stop()
-			.fadeIn(1);
-	});
-	$('#next').on('click', function() {
-		// Change to the next image
-		$('#im_' + currentImage)
-			.stop()
-			.fadeOut(1);
-		increaseImage();
-		$('#im_' + currentImage)
-			.stop()
-			.fadeIn(1);
-	});
-	$('#backToSearch').on('click', () => {
-		results(properties);
-	});
+var slideIndex = 1;
+showSlides(slideIndex);
 
-	var currentImage = 1;
-	var totalImages = 3;
+function plusSlides(n) {
+	showSlides((slideIndex += n));
+}
 
-	function increaseImage() {
-		/* Increase currentImage by 1.
-		 * Resets to 1 if larger than totalImages
-		 */
-		++currentImage;
-		if (currentImage > totalImages) {
-			currentImage = 1;
-		}
+function currentSlide(n) {
+	showSlides((slideIndex = n));
+}
+
+function showSlides(n) {
+	var i;
+	var slides = document.getElementsByClassName('mySlides');
+	var dots = document.getElementsByClassName('dot');
+	if (n > slides.length) {
+		slideIndex = 1;
 	}
-	function decreaseImage() {
-		/* Decrease currentImage by 1.
-		 * Resets to totalImages if smaller than 1
-		 */
-		--currentImage;
-		if (currentImage < 1) {
-			currentImage = totalImages;
-		}
+	if (n < 1) {
+		slideIndex = slides.length;
 	}
+	for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = 'none';
+	}
+	for (i = 0; i < dots.length; i++) {
+		dots[i].className = dots[i].className.replace(' active', '');
+	}
+	slides[slideIndex - 1].style.display = 'block';
+	dots[slideIndex - 1].className += ' active';
 }

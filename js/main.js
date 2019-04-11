@@ -4,7 +4,7 @@ window.addEventListener('load', function() {
 	welcomeSearch();
 	welcome();
 	footer();
-	imageCarousel();
+
 	document.body.removeChild(loadingScreen);
 	$('.mobileMenu').on('click', () => {
 		$('.navMobileLinks').toggleClass('mobileMenuShow');
