@@ -3,7 +3,8 @@ const properties = [
 		id: 1,
 		name: 'Property One',
 		address: 'Feldhofstrasse 66',
-		type: 'residential',
+		type: 'investment',
+		market: 'buy',
 		city: 'Zurich',
 		canton: 'zug',
 		size: 2000 + ' sq meters',
@@ -16,8 +17,9 @@ const properties = [
 	{
 		id: 2,
 		name: 'Property 2',
-		type: 'residential',
 		address: 'Feldhofstrasse 66',
+		type: 'residential',
+		market: 'buy',
 		city: 'Zurich',
 		canton: 'zurich',
 		size: 1300 + ' sq meters',
@@ -32,6 +34,7 @@ const properties = [
 		name: 'Property Three',
 		address: 'Feldhofstrasse 90',
 		type: 'investment',
+		market: 'rent',
 		city: 'Zurich',
 		canton: 'bern',
 		size: 900 + ' sq meters',
@@ -46,6 +49,7 @@ const properties = [
 		name: 'Property 4',
 		address: 'Feldhofstrasse 16',
 		type: 'investment',
+		market: 'buy',
 		city: 'zurich',
 		canton: 'zurich',
 		size: 800 + ' sq meters',
@@ -60,6 +64,7 @@ const properties = [
 		name: 'Property 4',
 		address: 'Feldhofstrasse 16',
 		type: 'residential',
+		market: 'buy',
 		city: 'Zurich',
 		canton: 'zurich',
 		size: 1034 + ' sq meters',
@@ -68,37 +73,20 @@ const properties = [
 		image2: 'home2.jpg',
 		image3: 'home3.jpg',
 		docs: 'docs/houseDocs.pdf'
+	},
+	{
+		id: 5,
+		name: 'Property 4',
+		address: 'Lake Bend Rd 49',
+		type: 'residential',
+		market: 'rent',
+		city: 'bern',
+		canton: 'zurich',
+		size: 1034 + ' sq meters',
+		price: 2 + ' Million',
+		image1: 'home4.jpg',
+		image2: 'home2.jpg',
+		image3: 'home3.jpg',
+		docs: 'docs/houseDocs.pdf'
 	}
 ];
-
-function buy(properties) {
-	$(document).ready(function() {
-		$(this).scrollTop(0);
-	});
-	$('.main').empty();
-
-	$('.main').append(
-		`<div class='buyPage'>
-            <header>
-                <h2>${properties.length} Properties for you</h2>
-			</header>
-			<div class='sortListings'></div>
-
-            <div id='listingResults'>
-            </div>
-        </div>`
-	);
-	let myHTMLString = properties.map(listing => getListing(listing)).join('');
-	document.getElementById('listingResults').innerHTML = myHTMLString;
-	for (let i = 0; i < properties.length; i++) {
-		let id = `#listingBTN${properties[i].id}`;
-		$(id).on('click', () => {
-			listingPage(properties[i]);
-		});
-		let imgID = `#image${properties[i].id}`;
-		$(imgID).on('click', () => {
-			listingPage(properties[i]);
-		});
-	}
-	searchModuel();
-}

@@ -2,18 +2,26 @@ function welcomeSearch() {
 	$('.navContainer').prepend(
 		`<div class='headerSearch'>
 			<div class='navSearch '>
-				<form class='navSearchForm transform' action={Results}>
+				<div class='navSearchForm transform'>
 					<div class='navSearchDropDown'>
-						<select id='navSearchCatagoryMenu'>
-							<optgroup label='searchCatagory'>
-								<option value=''>Type</option>
-								<option value='ivestment'>Investment</option>
+						<select id='navSearchMarketMenu'>
+							<optgroup label='searchMarket'>
+								<option value=''>Market</option>
+								<option value='investment'>Investment</option>
 								<option value='buy'>Buy</option>
 								<option value='rent'>Rent</option>
 							</optgroup>
 						</select>	
-						<select id='navSearchCatagoryMenu'>
-							<optgroup label='searchCatagory'>
+						<select id='navSearchTypeMenu'>
+							<optgroup label='searchType'>
+								<option value=''>Type</option>
+								<option value='residential'>Residential</option>
+								<option value='office'>Office</option>
+								<option value='investment'>Investment</option>
+							</optgroup>
+						</select>	
+						<select id='navSearchCantonMenu'>
+							<optgroup label='searchCanton'>
 								<option value=''>Canton</option>
 								<option value='aargau'>Aargau</option>
 								<option value='appenzell ausserrhoden'>Appenzell Ausserrhoden</option>
@@ -40,22 +48,81 @@ function welcomeSearch() {
 								<option value='valais'>Valais</option>
 								<option value='vaud'>Vaud</option>
 								<option value='zug'>Zug</option>
-								<option value='zürich'>Zürich</option>
+								<option value='zurich'>Zürich</option>
 							</optgroup>
 						</select>
-						<button type='submit' id='keywordBtn' onSubmit={Results}>
+						<button type='button' class='keywordBtn' id='keywordBtn' onClick=welcomeNavSearch()>
 						Search
 						</button>	
 					</div>
-				</form>
+				</div>
 				<img src='images/search.png' alt='search icon' class='searchIcon' onClick=$('.transform').toggleClass('navSearchForm-active')>
 				<span class="langBtn" >DE</span>
 				<span class="langBtn" >EN</span>
 			</div>
 		</div>`
 	);
+	$('.keywordBtn').on('click', () => {
+		$('.transform').removeClass('navSearchForm-active');
+	});
+}
 
-	if ($('#navOffice').click) {
-		$('#navOffice').toggleClass('bold');
+function welcomeNavSearch() {
+	const market = document.getElementById('navSearchMarketMenu');
+	const canton = document.getElementById('navSearchCantonMenu');
+	const type = document.getElementById('navSearchTypeMenu');
+	const marketFilter = market.options[market.selectedIndex].value;
+	const cantonFilter = canton.options[canton.selectedIndex].value;
+	const typeFilter = type.options[type.selectedIndex].value;
+	results(properties);
+	if (marketFilter && cantonFilter && typeFilter != '') {
+		const allFilteres = properties
+			.filter(
+				listing =>
+					listing.market === marketFilter &&
+					listing.canton === cantonFilter &&
+					listing.type === typeFilter
+			)
+			.map(listing => getListing(listing))
+			.join('');
+		document.getElementById('listingResults').innerHTML = allFilteres;
+		if (allFilteres === '') {
+			const noListingsMsg =
+				'<p>We are sorry but there are currently no listings that match your search criteria.</p>';
+			document.getElementById('listingResults').innerHTML = noListingsMsg;
+		}
+	} else if (marketFilter != '') {
+		const marketFilterOnly = properties
+			.filter(listing => listing.market === marketFilter)
+			.map(listing => getListing(listing))
+			.join('');
+		document.getElementById('listingResults').innerHTML = marketFilterOnly;
+		if (marketFilterOnly === '') {
+			const noListingsMsg =
+				'<p>We are sorry but there are currently no listings that match your search criteria.</p>';
+			document.getElementById('listingResults').innerHTML = noListingsMsg;
+		}
+	} else if (cantonFilter != '') {
+		const cantonFilterOnly = properties
+			.filter(listing => listing.canton === cantonFilter)
+			.map(listing => getListing(listing))
+			.join('');
+		document.getElementById('listingResults').innerHTML = cantonFilterOnly;
+		if (cantonFilterOnly === '') {
+			const noListingsMsg =
+				'<p>We are sorry but there are currently no listings that match your search criteria.</p>';
+			document.getElementById('listingResults').innerHTML = noListingsMsg;
+		}
+	} else if (typeFilter != '') {
+		const typeFilterOnly = properties
+			.filter(listing => listing.type === typeFilter)
+			.map(listing => getListing(listing))
+			.join('');
+		document.getElementById('listingResults').innerHTML = typeFilterOnly;
+		if (typeFilterOnly === '') {
+			const noListingsMsg =
+				'<p>We are sorry but there are currently no listings that match your search criteria.</p>';
+			document.getElementById('listingResults').innerHTML = noListingsMsg;
+		}
 	}
 }

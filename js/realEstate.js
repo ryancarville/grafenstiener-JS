@@ -4,8 +4,7 @@ function realEstate() {
 	});
 	$('.main').empty();
 	$('.main').append(
-		`
-		<div class='realEstateMsg'>
+		`<div class='realEstateMsg'>
 				<h2>What we can do for you!</h2>
 				<p>
 					"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -19,7 +18,7 @@ function realEstate() {
 			</div>
 				<div class='realEstatePage'>
 					<div class='buyMsg'>
-						<button type='button' id='buyButton' onClick=buy(properties)>Buy Real Estate</button>
+						<button type='button' class='button' id='buyButton' onClick=results(properties)>Buy Real Estate</button>
 						<p>
 							"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -30,12 +29,12 @@ function realEstate() {
 							sunt in culpa qui officia deserunt mollit anim id est laborum."
 							</p>
 						<div class='buttonWrap'>
-							<button type='button' id='investButton' onClick=buy(properties)>Investment</button>
-							<button type='button' id='resButton' onClick=buy(properties)>Residential</button>
+							<button type='button' id='investButton' onClick=results(properties)>Investment</button>
+							<button type='button' id='resButton' onClick=results(properties)>Residential</button>
 						</div>
 					</div>
 					<div class='rentMsg'>
-					<button type='button' id='rentButton' onClick=rent(properties)>Rent Real Estate</button>
+					<button type='button' id='rentButton' onClick=results(properties)>Rent Real Estate</button>
 						<p>
 							"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -46,8 +45,8 @@ function realEstate() {
 							sunt in culpa qui officia deserunt mollit anim id est laborum."
 							</p>
 						<div class='buttonWrap'>
-							<button type='button' id='officeButton' onClick=buy(properties)>Office</button>
-							<button type='button' id='resButton' onClick=buy(properties)>Residential</button>
+							<button type='button' id='officeButton' onClick=results(properties)>Office</button>
+							<button type='button' id='resButton' onClick=results(properties)>Residential</button>
 						</div>
 					</div>
 					<div class='sellMsg'>

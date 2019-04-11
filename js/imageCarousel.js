@@ -20,7 +20,7 @@ function imageCarousel() {
 			.fadeIn(1);
 	});
 	$('#backToSearch').on('click', () => {
-		buy(properties);
+		results(properties);
 	});
 
 	var currentImage = 1;

@@ -1,21 +1,21 @@
-function rent(properties) {
+function results(properties) {
 	$(document).ready(function() {
 		$(this).scrollTop(0);
 	});
 	$('.main').empty();
 	$('.main').append(
-		`<div class='buyPage'>
+		`<div class='resultsPage'>
             <header>
                 <h2>${properties.length} Properties for you</h2>
 			</header>
 			<div class='sortListings'></div>
+
             <div id='listingResults'>
             </div>
         </div>`
 	);
-	console.log(properties);
-	let allRentals = properties.map(listing => getListing(listing)).join('');
-	document.getElementById('listingResults').innerHTML = allRentals;
+	let myHTMLString = properties.map(listing => getListing(listing)).join('');
+	document.getElementById('listingResults').innerHTML = myHTMLString;
 	for (let i = 0; i < properties.length; i++) {
 		let id = `#listingBTN${properties[i].id}`;
 		$(id).on('click', () => {

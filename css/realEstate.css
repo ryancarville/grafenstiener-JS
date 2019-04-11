@@ -14,11 +14,13 @@
 .realEstateMsg h2 {
 	margin-top: 50px;
 	text-align: center;
+	animation: fadeIn 2s ease-in-out;
 }
 .realEstateMsg p {
 	margin-top: 10px;
 	padding: 10px;
 	box-sizing: border-box;
+	animation: fadeIn 2s ease-in-out;
 }
 
 .buyMsg {
@@ -28,8 +30,8 @@
 	padding: 10px;
 	box-sizing: border-box;
 	background-color: rgb(0, 0, 0, 0.1);
-	border-bottom: 20px solid white;
 	border-radius: 20px 20px 20px 20px;
+	margin-bottom: 20px;
 }
 
 #buyButton {
@@ -49,7 +51,7 @@
 
 .buttonWrap {
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
 }
 #investButton {
@@ -62,6 +64,7 @@
 	padding: 10px;
 	box-shadow: 2px 2px 2px 0px;
 	box-sizing: border-box;
+	margin-bottom: 10px;
 }
 
 #resButton {
@@ -72,9 +75,9 @@
 	font-size: 25px;
 	margin-top: 20px;
 	padding: 10px;
-	margin-bottom: 10px;
 	box-shadow: 2px 2px 2px 0px;
 	box-sizing: border-box;
+	margin-bottom: 10px;
 }
 
 .rentMsg {
@@ -84,8 +87,8 @@
 	height: auto;
 	padding: 10px;
 	box-sizing: border-box;
-	border-bottom: 20px solid white;
 	border-radius: 20px 20px 20px 20px;
+	margin-bottom: 20px;
 }
 
 #rentButton {
@@ -113,6 +116,7 @@
 	padding: 10px;
 	box-shadow: 2px 2px 2px 0px;
 	box-sizing: border-box;
+	margin-bottom: 10px;
 }
 
 .sellMsg {

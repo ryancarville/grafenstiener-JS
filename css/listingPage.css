@@ -1,6 +1,7 @@
 .listingPage {
 	box-sizing: border-box;
 	width: 100%;
+	animation: scaleListings 1s ease-in-out;
 }
 
 .listingPage p {

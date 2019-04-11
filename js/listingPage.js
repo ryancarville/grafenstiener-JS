@@ -9,19 +9,19 @@ function listingPage(listing) {
 		<div class='imageCarousel'>
 		<div id="showContainer">
       <div class="imageContainer" id="im_1">
-	  		<img src='images/listings/${listing.image1}' />
+	  		<img src='images/listings/${listing.image1}' id='im_'/>
         <div class="caption">
           Exteriror
         </div>
       </div>
       <div class="imageContainer" id="im_2">
-	  		<img src='images/listings/${listing.image2}' />
+	  		<img src='images/listings/${listing.image2}' id='im_'/>
         <div class="caption">
           Livingroom
         </div>
       </div>
       <div class="imageContainer" id="im_3">
-	  		<img src='images/listings/${listing.image3}' />
+	  		<img src='images/listings/${listing.image3}' id='im_' />
         <div class="caption">
           Kitchen
         </div>

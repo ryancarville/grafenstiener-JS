@@ -4,6 +4,22 @@ function searchModuel() {
 			<div class='searchModuel'>
 				<form action='' class='searchCatag' id='searchFilter'>
 					<div class='searchDropDown'>
+						<select id='searchMarketMenu'>
+							<optgroup label='searchMarket'>
+								<option value=''>Market</option>
+								<option value='investment'>Investment</option>
+								<option value='buy'>Buy</option>
+								<option value='rent'>Rent</option>
+							</optgroup>
+						</select>	
+						<select id='searchTypeMenu'>
+							<optgroup label='searchType'>
+								<option value=''>Type</option>
+								<option value='investment'>Investment</option>
+								<option value='residential'>Residential</option>
+								<option value='office'>Office</option>
+							</optgroup>
+						</select>
 						<select id='searchCantonMenu'>
 							<optgroup label='searchCanton'>
 								<option value=''>Canton</option>
@@ -35,19 +51,13 @@ function searchModuel() {
 								<option value='zurich'>Zürich</option>
 							</optgroup>
 						</select>
-						<select id='searchTypeMenu'>
-							<optgroup label='searchType'>
-								<option value=''>Type</option>
-								<option value='investment'>Investment</option>
-								<option value='residential'>Residential</option>
-							</optgroup>
-						</select>
+						
 						<div id="pmd-slider-range-tooltip"  class="pmd-range-slider pmd-range-tooltip"></div>
 						
-						<button class='mainSearchBtn' type='button' onClick="$(filterSearch())">
+						<button class='mainSearchBtn' type='button' onClick=filterSearch()>
 						Sort
 						</button>
-						<button class='mainSearchBtn' type='button' onClick="$(buy(properties))">
+						<button class='mainSearchBtn' type='button' onClick=results(properties)>
 						Reset
 						</button>
 					</div>
@@ -59,31 +69,61 @@ function searchModuel() {
 }
 
 function filterSearch() {
+	const market = document.getElementById('searchMarketMenu');
 	const canton = document.getElementById('searchCantonMenu');
 	const type = document.getElementById('searchTypeMenu');
+	const marketFilter = market.options[market.selectedIndex].value;
 	const cantonFilter = canton.options[canton.selectedIndex].value;
 	const typeFilter = type.options[type.selectedIndex].value;
 
-	if (cantonFilter && typeFilter != '') {
+	if (marketFilter && cantonFilter && typeFilter != '') {
 		const allFilteres = properties
 			.filter(
 				listing =>
-					listing.canton === cantonFilter && listing.type === typeFilter
+					listing.market === marketFilter &&
+					listing.canton === cantonFilter &&
+					listing.type === typeFilter
 			)
 			.map(listing => getListing(listing))
 			.join('');
 		document.getElementById('listingResults').innerHTML = allFilteres;
+		if (allFilteres === '') {
+			const noListingsMsg =
+				'<p>We are sorry but there are currently no listings that match your search criteria.</p>';
+			document.getElementById('listingResults').innerHTML = noListingsMsg;
+		}
+	} else if (marketFilter != '') {
+		const marketFilterOnly = properties
+			.filter(listing => listing.market === marketFilter)
+			.map(listing => getListing(listing))
+			.join('');
+		document.getElementById('listingResults').innerHTML = marketFilterOnly;
+		if (marketFilterOnly === '') {
+			const noListingsMsg =
+				'<p>We are sorry but there are currently no listings that match your search criteria.</p>';
+			document.getElementById('listingResults').innerHTML = noListingsMsg;
+		}
 	} else if (cantonFilter != '') {
 		const cantonFilterOnly = properties
 			.filter(listing => listing.canton === cantonFilter)
 			.map(listing => getListing(listing))
 			.join('');
 		document.getElementById('listingResults').innerHTML = cantonFilterOnly;
+		if (cantonFilterOnly === '') {
+			const noListingsMsg =
+				'<p>We are sorry but there are currently no listings that match your search criteria.</p>';
+			document.getElementById('listingResults').innerHTML = noListingsMsg;
+		}
 	} else if (typeFilter != '') {
 		const typeFilterOnly = properties
 			.filter(listing => listing.type === typeFilter)
 			.map(listing => getListing(listing))
 			.join('');
 		document.getElementById('listingResults').innerHTML = typeFilterOnly;
+		if (typeFilterOnly === '') {
+			const noListingsMsg =
+				'<p>We are sorry but there are currently no listings that match your search criteria.</p>';
+			document.getElementById('listingResults').innerHTML = noListingsMsg;
+		}
 	}
 }

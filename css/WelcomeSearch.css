@@ -35,25 +35,40 @@
 	color: rgb(255, 255, 255);
 	font-size: 15px;
 	float: right;
-	margin-right: 10px;
+	margin-right: 20px;
 }
 
-#navSearchCatagoryMenu {
+#navSearchMarketMenu {
+	cursor: pointer;
 	width: 90px;
 	height: 30px;
 	font-size: 15px;
 	background: transparent;
 	color: rgb(0, 0, 0);
 	border: none;
+	margin-right: 20px;
 }
 
-@keyframes slideLeft {
-	0% {
-		transform: translateX(-100);
-	}
-	100% {
-		transform: translateX(0);
-	}
+#navSearchCantonMenu {
+	cursor: pointer;
+	width: 90px;
+	height: 30px;
+	font-size: 15px;
+	background: transparent;
+	color: rgb(0, 0, 0);
+	border: none;
+	margin-right: 20px;
+}
+
+#navSearchTypeMenu {
+	cursor: pointer;
+	width: 90px;
+	height: 30px;
+	font-size: 15px;
+	background: transparent;
+	color: rgb(0, 0, 0);
+	border: none;
+	margin-right: 20px;
 }
 
 .transform {

@@ -2,6 +2,7 @@
 	width: 100%;
 	padding-top: 100px;
 	display: inline-block;
+	animation: slideRight 4s ease-in-out;
 }
 .welcomeMsg {
 	background-color: rgba(62, 62, 62, 0.5);
@@ -24,7 +25,6 @@
 	.welcomePage {
 		width: 100%;
 		padding-top: 300px;
-		animation: slideRight 3s ease-in;
 	}
 	.welcomeMsg {
 		background-color: rgba(62, 62, 62, 0.5);

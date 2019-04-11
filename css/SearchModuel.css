@@ -5,7 +5,7 @@
 	box-sizing: border-box;
 	background-color: rgba(101, 101, 101, 0.5);
 	width: 100%;
-	height: 150px;
+	height: auto;
 	padding: 10px;
 	box-sizing: border-box;
 }
@@ -17,6 +17,7 @@
 	width: 80%;
 	height: 50px;
 	font-size: 18px;
+	margin-top: 10px;
 }
 
 .searchDropDown {
@@ -24,7 +25,7 @@
 }
 
 #searchCantonMenu {
-	width: 90%;
+	width: 200px;
 	height: 30px;
 	font-size: 15px;
 	color: rgb(97, 97, 97);
@@ -34,7 +35,17 @@
 }
 
 #searchTypeMenu {
-	width: 90%;
+	width: 200px;
+	height: 30px;
+	font-size: 15px;
+	color: rgb(97, 97, 97);
+	background-color: rgb(255, 255, 255);
+	border: none;
+	margin-bottom: 10px;
+}
+
+#searchMarketMenu {
+	width: 200px;
 	height: 30px;
 	font-size: 15px;
 	color: rgb(97, 97, 97);
