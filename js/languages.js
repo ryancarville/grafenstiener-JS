@@ -38,10 +38,11 @@ const languages = {
 		servicesIntro:
 			'Having real estate sales and rentals with you is a guarantee that nothing is forgotten in the transaction and every step is carefully taken. With a professional market valuation, profound market knowledge and the right marketing approach, we maximize the results.',
 		servicesListUl: 'We accompany you:',
+
 		servicesListLi: [
 			'Sale of residential property',
 			'Sale of multifamily commercial buildings and commercial properties',
-			'TTransactions of Share & Asset Deal',
+			'Transactions of Share & Asset Deal',
 			'Market valuations',
 			'Consulting residential and investment real estate'
 		],

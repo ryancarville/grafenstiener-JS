@@ -15,21 +15,7 @@ function services() {
 				<div class='servicesList'>
 					<ul id='servicesListUl'><b>Wir begleiten Sie:</b>
 					<br/><br/>
-						<li> 
-						Verkauf von Wohneigentum
-						</li>
-						<li>
-						Verkauf von Mehrfamilien- Geschäftshäusern und Gewerbeliegenschaften
-						</li>
-						<li>
-						Transaktionen von Share- & Asset Deal 
-						</li>
-						<li>
-						Marktwertermittlungen 
-						</li>
-						<li>
-						Beratung Wohn- und Anlageimmobilien
-						</li>
+						
 						
 					</ul>
 				</div>
@@ -40,13 +26,22 @@ function services() {
 		$('#servicesMsgHeader').text(languages.en.servicesHeader);
 		$('#servicesMsg').text(languages.en.servicesIntro);
 		$('#servicesListUl').text(languages.en.servicesListUl);
+		const servicesArray = languages.en.servicesListLi;
 		$('#servicesListUl').append(
-			languages.en.servicesListLi.map(item => {
-				item;
+			servicesArray.map((item, i) => {
+				return `<li key={i}>${item}</li>`;
 			})
 		);
 	} else if (window.location.hash === '#de') {
-		$('#welcomeMsg').text(languages.de.welcome);
+		$('#servicesMsgHeader').text(languages.de.servicesHeader);
+		$('#servicesMsg').text(languages.de.servicesIntro);
+		$('#servicesListUl').text(languages.de.servicesListUl);
+		const servicesArray = languages.de.servicesListLi;
+		$('#servicesListUl').append(
+			servicesArray.map((item, i) => {
+				return `<li key={i}>${item}</li>`;
+			})
+		);
 	} else {
 		$('#welcomeMsg').text(languages.de.welcome);
 	}

@@ -7,7 +7,7 @@ function contact() {
 		`<div class='contactPage'>
 				<div class='headers'>
 					<article class='contactHeader'>
-						<h2 class='header'>Wir sind gerne für Sie da und freuen uns auf Ihre Kontaktaufnahme.</h2>
+						<h2 class='header' id='contactHeader'>Wir sind gerne für Sie da und freuen uns auf Ihre Kontaktaufnahme.</h2>
 						<h3 class='info'>
 							Gräfenstiener | Swiss Real Estate <br />
 							<a class='emailLink' href='mailto:infor@jdjksl.com'>
@@ -79,7 +79,7 @@ function contact() {
 							/>
 							<label for='newsletter'></label>
 						</div>
-						<a class='newsletterText'>Möchten Sie unseren monatlichen Newsletter erhalten?</a>
+						<a class='newsletterText' id='newsletterMsg'>Möchten Sie unseren monatlichen Newsletter erhalten?</a>
 						<br />
 							<button
 								class='contactBtn'
@@ -92,4 +92,14 @@ function contact() {
 				</div>
 		</div>`
 	);
+	if (window.location.hash === '#en') {
+		$('#contactHeader').text(languages.en.contact);
+		$('#name').attr('placeholder', 'Full Name');
+		$('#email').attr('placeholder', 'Valid Email Address');
+		$('#address').attr('placeholder', 'Address');
+		$('#phoneNum').attr('placeholder', 'Telephone Number');
+		$('#msg').attr('placeholder', 'Your message here');
+		$('#newsletterMsg').text('Do you want to receive our monthly newsletter?');
+		$('#submit').text('Submit');
+	}
 }
