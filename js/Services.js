@@ -7,18 +7,47 @@ function services() {
 		`<section>
 			<div class='servicesPage'>
 				<div class='servicesMsg'>
-					<h2>Services we offer</h2>
-					<p>
-						"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-						ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-						aliquip ex ea commodo consequat. Duis aute irure dolor in
-						reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-						pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-						culpa qui officia deserunt mollit anim id est laborum."
+					<h2 id='servicesMsgHeader'>Dienstleistungen, die wir anbieten</h2>
+					<p id='servicesMsg'>
+					Bei Immobilienverkäufen und -vermietungen eine erfahrene Begleitung an der Seite zu haben, gibt Sicherheit, dass in der Transaktion nichts vergessen geht und jeder Schritt sorgfältig gesetzt wird. Mit einer professionellen Marktwertermittlung, profunden Marktkenntnissen und dem richtigen Vermarktungsvorgehen maximieren wir die Resultate.
 					</p>
+				</div>
+				<div class='servicesList'>
+					<ul id='servicesListUl'><b>Wir begleiten Sie:</b>
+					<br/><br/>
+						<li> 
+						Verkauf von Wohneigentum
+						</li>
+						<li>
+						Verkauf von Mehrfamilien- Geschäftshäusern und Gewerbeliegenschaften
+						</li>
+						<li>
+						Transaktionen von Share- & Asset Deal 
+						</li>
+						<li>
+						Marktwertermittlungen 
+						</li>
+						<li>
+						Beratung Wohn- und Anlageimmobilien
+						</li>
+						
+					</ul>
 				</div>
 			</div>
 		</section>`
 	);
+	if (window.location.hash === '#en') {
+		$('#servicesMsgHeader').text(languages.en.servicesHeader);
+		$('#servicesMsg').text(languages.en.servicesIntro);
+		$('#servicesListUl').text(languages.en.servicesListUl);
+		$('#servicesListUl').append(
+			languages.en.servicesListLi.map(item => {
+				item;
+			})
+		);
+	} else if (window.location.hash === '#de') {
+		$('#welcomeMsg').text(languages.de.welcome);
+	} else {
+		$('#welcomeMsg').text(languages.de.welcome);
+	}
 }

@@ -1,5 +1,7 @@
 .servicesPage {
-	display: block;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
 	width: 100%;
 	box-sizing: border-box;
 	animation: fadeIn 2s ease-in-out;
@@ -21,18 +23,37 @@
 	box-sizing: border-box;
 }
 
+.servicesList ul {
+	list-style: none;
+	background-color: rgb(116, 116, 116, 0.5);
+	width: 100%;
+	border-radius: 20px 20px 20px 20px;
+}
+
 @media only screen and (min-width: 1000px) {
 	.servicesPage {
 		display: flex;
 		justify-content: center;
-		align-items: center;
+		align-items: flex-end;
 		padding-top: 100px;
 	}
 
 	.servicesMsg {
 		text-align: center;
 		height: 400px;
-		width: 70%;
+		width: 50%;
 		margin-top: 5%;
+		padding: 100px;
+		box-sizing: border-box;
+	}
+
+	.servicesList ul {
+		padding: 40px;
+		box-sizing: border-box;
+		list-style: disc;
+		background-color: rgb(116, 116, 116, 0.2);
+		width: 50%;
+		border-radius: 20px 20px 20px 20px;
+		margin-left: 100px;
 	}
 }

@@ -55,10 +55,10 @@ function welcomeSearch() {
 						Search
 						</button>	
 					</div>
+					
 				</div>
 				<img src='images/search.png' alt='search icon' class='searchIcon' onClick=$('.transform').toggleClass('navSearchForm-active')>
-				<span class="langBtn" >DE</span>
-				<span class="langBtn" >EN</span>
+				
 			</div>
 		</div>`
 	);

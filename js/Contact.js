@@ -7,7 +7,7 @@ function contact() {
 		`<div class='contactPage'>
 				<div class='headers'>
 					<article class='contactHeader'>
-						<h2 class='header'>We are here for you</h2>
+						<h2 class='header'>Wir sind gerne für Sie da und freuen uns auf Ihre Kontaktaufnahme.</h2>
 						<h3 class='info'>
 							Gräfenstiener | Swiss Real Estate <br />
 							<a class='emailLink' href='mailto:infor@jdjksl.com'>
@@ -25,7 +25,7 @@ function contact() {
 						action='sendEmail.php'>
 							<input
 								type='text'
-								placeholder='Full Name'
+								placeholder='Vollständiger Name'
 								id='name'
 								name='name'
 								class='contactFormInput'
@@ -34,7 +34,7 @@ function contact() {
 							<br />
 							<input
 								type='text'
-								placeholder='Valid email address'
+								placeholder='Gültige Email Addresse'
 								name='email'
 								id='email'
 								size='30'
@@ -44,7 +44,7 @@ function contact() {
 							<br />
 							<input
 								type='text'
-								placeholder='Address'
+								placeholder='Addresse'
 								id='address'
 								name='addess'
 								class='contactFormInput'
@@ -53,7 +53,7 @@ function contact() {
 							<br />
 							<input
 								type='text'
-								placeholder='Phone Number'
+								placeholder='Telefonnummer'
 								id='phoneNum'
 								name='phone'
 								class='contactFormInput'
@@ -61,7 +61,7 @@ function contact() {
 							/>
 							<br />
 							<textarea
-								placeholder='Your Message'
+								placeholder='Deine Nachricht'
 								name='message'
 								cols='40'
 								rows='4'
@@ -79,14 +79,14 @@ function contact() {
 							/>
 							<label for='newsletter'></label>
 						</div>
-						<a class='newsletterText'>Would you like to recieve our monthly newsletter?</a>
+						<a class='newsletterText'>Möchten Sie unseren monatlichen Newsletter erhalten?</a>
 						<br />
 							<button
 								class='contactBtn'
 								id='submit'
 								name='submit'
 								type='submit'>
-								Send Message
+								Nachricht senden
 							</button>
 					</form>
 				</div>

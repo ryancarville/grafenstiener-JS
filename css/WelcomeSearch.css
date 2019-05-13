@@ -26,6 +26,11 @@
 	float: right;
 }
 
+.navSearchDropDown {
+	display: flex;
+	justify-content: center;
+}
+
 #keywordBtn {
 	cursor: pointer;
 	height: 30px;
@@ -35,40 +40,40 @@
 	color: rgb(255, 255, 255);
 	font-size: 15px;
 	float: right;
-	margin-right: 20px;
+	margin-right: 5px;
 }
 
 #navSearchMarketMenu {
 	cursor: pointer;
-	width: 90px;
+	width: 80px;
 	height: 30px;
-	font-size: 15px;
+	font-size: 14px;
 	background: transparent;
 	color: rgb(0, 0, 0);
 	border: none;
-	margin-right: 20px;
+	margin-right: 5px;
 }
 
 #navSearchCantonMenu {
 	cursor: pointer;
-	width: 90px;
+	width: 80px;
 	height: 30px;
-	font-size: 15px;
+	font-size: 14px;
 	background: transparent;
 	color: rgb(0, 0, 0);
 	border: none;
-	margin-right: 20px;
+	margin-right: 5px;
 }
 
 #navSearchTypeMenu {
 	cursor: pointer;
-	width: 90px;
+	width: 80px;
 	height: 30px;
-	font-size: 15px;
+	font-size: 14px;
 	background: transparent;
 	color: rgb(0, 0, 0);
 	border: none;
-	margin-right: 20px;
+	margin-right: 0px;
 }
 
 .transform {
@@ -94,7 +99,7 @@
 	.searchIcon {
 		cursor: pointer;
 		height: 20px;
-		margin-right: 20px;
+		margin-right: 100px;
 	}
 
 	.navSearch {

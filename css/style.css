@@ -18,3 +18,9 @@ body {
 .main {
 	position: relative;
 }
+
+.langBtn {
+	float: right;
+	margin-top: -20px;
+	text-decoration: none;
+}

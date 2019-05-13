@@ -2,17 +2,17 @@ function slideShow() {
 	$('.main').prepend(
 		`<div class="slideshowWrap">
         <img
-            src="images/image1.jpg"
+            src="images/bg/architecture.jpg"
             alt="slideshow image"
             class="slideshowImg"
         />
         <img
-            src="images/image2.jpg"
-            alt="slideshow image"
-            class="slideshowImg"
-        />
+        src="images/bg/home2.jpg"
+        alt="slideshow image"
+        class="slideshowImg"
+    />
         <img
-            src="images/image3.jpg"
+            src="images/bg/home.jpg"
             alt="slideshow image"
             class="slideshowImg"
         />

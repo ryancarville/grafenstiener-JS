@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js">
+<html class="no-js" lang="de">
 	<!--<![endif]-->
 	<head>
 		<meta charset="utf-8" />
@@ -50,6 +50,14 @@
 		<div class="loadingScreen" id="loadingScreen"><h1>LOADING...</h1></div>
 		<header>
 			<nav class="navContainer">
+				<div class="langBtnWrap">
+					<a href="#de" class="langBtn" onClick="$(german())">
+						DE
+					</a>
+					<a href="#en" class="langBtn" onClick="$(english())">
+						EN
+					</a>
+				</div>
 				<div class="mobileMenuWrap">
 					<img src="images/menu.png" alt="mobileMenu" class="mobileMenu" />
 					<ul class="navMobileLinks">
@@ -59,7 +67,7 @@
 
 						<li class="navMobileLink" id="navMobileRealEstate">
 							<a id="navMobileRealEstate" onclick="$(realEstate())"
-								>real estate</a
+								>Real Estate</a
 							>
 						</li>
 						<li class="navMobileLink" id="navMobileServices">
@@ -74,11 +82,12 @@
 							<a id="navMobileContact" onclick="$(contact())">Contact</a>
 						</li>
 						<li class="navMobileLink">
-							<a class="mobileLangBtn">DE</a>
-							<a class="mobileLangBtn">EN</a>
+							<a href="#de" class="mobileLangBtn" data-reload>DE</a>
+							<a href="#en" class="mobileLangBtn" data-reload>EN</a>
 						</li>
 					</ul>
 				</div>
+
 				<a id="navHome" onclick="$(welcome())"
 					><img src="images/logo.png" alt="logo" id="navMobileLogo"
 				/></a>
@@ -89,20 +98,24 @@
 
 					<ul class="navLinks">
 						<li class="navLink" id="navOffice">
-							<a id="navOffice" onclick="$(office())">Office</a>
+							<a id="navOfficeIcon" onclick="$(office())">Büro</a>
 						</li>
 
 						<li class="navLink" id="navRealEstate">
-							<a id="navRealEstate" onclick="$(realEstate())">real estate</a>
+							<a id="navRealEstateIcon" onclick="$(realEstate())"
+								>Grundeigentum</a
+							>
 						</li>
 						<li class="navLink" id="navServices">
-							<a id="navServices" onclick="$(services())">Services</a>
+							<a id="navServicesIcon" onclick="$(services())"
+								>Dienstleistungen</a
+							>
 						</li>
 						<li class="navLink" id="navReferences">
-							<a id="navReferences" onclick="$(references())">References</a>
+							<a id="navReferencesIcon" onclick="$(references())">Verweise</a>
 						</li>
 						<li class="navLink" id="navContact">
-							<a id="navContact" onclick="$(contact())">Contact</a>
+							<a id="navContactIcon" onclick="$(contact())">Kontakt</a>
 						</li>
 					</ul>
 				</div>
@@ -111,6 +124,7 @@
 		<main id="main" class="main" role="main"></main>
 
 		<footer class="footer"></footer>
+
 		<script src="js/Properties.js"></script>
 		<script src="js/Office.js"></script>
 		<script src="js/Footer.js"></script>
@@ -130,6 +144,16 @@
 		<script src="js/listingPage.js"></script>
 		<script src="js/imageCarousel.js"></script>
 		<script src="js/rangeSlider.js"></script>
+		<script src="js/languages.js"></script>
 		<script src="js/main.js"></script>
+		<script>
+			if (window.location.hash === '#en') {
+				$('#navOfficeIcon').text('office');
+				$('#navRealEstateIcon').text('real estate');
+				$('#navServicesIcon').text('services');
+				$('#navReferencesIcon').text('references');
+				$('#navContactIcon').text('contact');
+			}
+		</script>
 	</body>
 </html>
