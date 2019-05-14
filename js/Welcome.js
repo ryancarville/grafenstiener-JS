@@ -7,11 +7,21 @@ function welcome() {
 	slideShow();
 	$('.main').append(
 		`<div class='welcomePage'>
+			
 			<div class='welcomeMsg' >
 				<h2 id='welcomeMsg'>Herzlich willkommen!</h2>
 			</div>
-		</div>`
+			
+		</div>
+		`
 	);
+	setTimeout(function welcomeContent() {
+		$('.welcomePage').prepend(`
+		<div class='welcomeContent'>
+			<h3>Header</h3>
+			<p>Lorem ipsum dolor sit amet, vim case minim consulatu ad, mei tantas consul appetere ex. Eu tamquam tibique maluisset eum. Ne pro erant possit iudicabit, eu aliquid sapientem has, no cum tollit oportere repudiandae. Ad eum cibo aeterno iracundia, detraxit consetetur mei ut.</p>
+		</div>`);
+	}, 3000);
 
 	$('#navOffice').on('click', function() {
 		$(this).addClass('navActive');

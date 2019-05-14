@@ -37,31 +37,35 @@ function listingPage(listing) {
 					<span class="dot" onclick="currentSlide(3)"></span> 
 				
 				</div>
-				<p>ID:  
-				${listing.id} 
-				<br>
-				Property Name:  
-				${listing.name} 
-				<br>
-				Address: 
-				${listing.address} 
-				<br>
-				Canton: 
-				${listing.canton} 
-				<br>
-				City: 
-				${listing.city} 
-				<br>
-				Price: 
-				${listing.price} 
-				<br>
-				Size:
-				${listing.size}
-				<br>
-				Documentation:
-				<a href='${listing.docs}'>Click Here for Docs</a>
-				</p>
+				<div class='statsWrap'>
+					<div class='propertyPrice'>
+						$${listing.price} 
+					</div>																		
+					<div class='propertyStats'>
+						ID:  
+						${listing.id} 
+						<br>
+						Property Name:  
+						${listing.name} 
+						<br>
+						Address: 
+						${listing.address} 
+						<br>
+						Canton: 
+						${listing.canton} 
+						<br>							
+						City: 
+						${listing.city} 
+						<br>
+						Size:
+						${listing.size}
+						<br><br>
+						Documentation:
+						<a href='${listing.docs}'>Click Here for Docs</a>
+					</div>
+					
 				</div>
+				
 				<div class='propertyInfo' id='property${listing.id}'>
 				<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 				eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut

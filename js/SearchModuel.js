@@ -51,18 +51,15 @@ function searchModuel() {
 								<option value='zurich'>Zürich</option>
 							</optgroup>
 						</select>
-						
-						<div id="pmd-slider-range-tooltip"  class="pmd-range-slider pmd-range-tooltip"></div>
-						
-						<button class='mainSearchBtn' type='button' onClick=filterSearch()>
-						Sort
-						</button>
-						<button class='mainSearchBtn' type='button' onClick=results(properties)>
-						Reset
-						</button>
-					</div>
-					
+															
+					<button class='mainSearchBtn' type='button' onClick=filterSearch()>
+					Sort
+					</button>
+					<button class='mainSearchBtn' type='button' onClick=results(properties)>
+					Reset
+					</button>
 				</form>
+				</div>
 			</div>
 		</div>`
 	);

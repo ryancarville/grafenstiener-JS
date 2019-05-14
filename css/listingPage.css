@@ -4,8 +4,13 @@
 	animation: scaleListings 1s ease-in-out;
 }
 
-.listingPage p {
-	text-align: center;
+.propertyStats {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 100%;
+	height: 200px;
+	border: 1px solid black;
 }
 
 .propertyInfo p {
@@ -13,14 +18,28 @@
 	padding: 10px;
 }
 
-@media only screen and (min-widht: 1000px) {
-	.listingPage {
-		padding: 150px;
+.statsWrap {
+	display: inline-block;
+	width: 100%;
+	flex-direction: column;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media only screen and (min-width: 1000px) {
+	.propertyStats {
+		width: 25%;
+		margin-top: 20px;
+		margin-left: 25%;
+		padding: 15px;
 	}
 
-	.listingPage p {
-		margin-top: 0px;
-		text-align: center;
+	.propertyPrice {
+		width: 10%;
+		float: right;
+		font-size: 30px;
+		margin-right: 25%;
+		text-align: right;
 	}
 
 	.propertyInfo p {
