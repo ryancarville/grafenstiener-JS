@@ -6,6 +6,7 @@
 	position: relative;
 	z-index: 1;
 	animation: slideDown 2s ease-in-out;
+	background-color: white;
 }
 
 #navMobileLogo {
@@ -64,6 +65,7 @@
 
 	.linksWrapper {
 		display: block;
+		background-color: white;
 	}
 
 	.navContainer {
@@ -76,7 +78,7 @@
 	#navLogo {
 		cursor: pointer;
 		width: 300px;
-		margin-top: -5px;
+		margin-top: -3px;
 		margin-left: 20px;
 		z-index: 1;
 	}
@@ -96,6 +98,7 @@
 		cursor: pointer;
 		font-size: 15px;
 		margin: 20px;
+		margin-top: -1px;
 	}
 
 	ul li a {

@@ -1,3 +1,5 @@
+//const noUiSlider = require('nouislider');
+
 function searchModuel() {
 	$('.sortListings').append(
 		`<div class='seachModWrapper'>
@@ -49,20 +51,33 @@ function searchModuel() {
 								<option value='vaud'>Vaud</option>
 								<option value='zug'>Zug</option>
 								<option value='zurich'>Zürich</option>
-							</optgroup>
+							</optgroup>						
 						</select>
-															
+					</div>
+					<input type="text" class="js-range-slider" name="my_range" value="" />			
 					<button class='mainSearchBtn' type='button' onClick=filterSearch()>
-					Sort
+					SORT
 					</button>
-					<button class='mainSearchBtn' type='button' onClick=results(properties)>
-					Reset
+					<button class='mainResetBtn' type='button' onClick=results(properties)>
+					RESET
 					</button>
 				</form>
-				</div>
 			</div>
 		</div>`
 	);
+	$('.js-range-slider').ionRangeSlider({
+		type: 'double',
+		skin: 'round',
+		min: 0,
+		max: 10000000,
+		from: 0,
+		to: 10000000,
+		grid: true,
+		prefix: 'Fr. ',
+		onChange: function(data) {
+			console.dir(data);
+		}
+	});
 }
 
 function filterSearch() {

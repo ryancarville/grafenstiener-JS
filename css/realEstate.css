@@ -24,22 +24,21 @@
 }
 
 .buyMsg {
-	color: black;
+	color: rgb(255, 255, 255);
 	height: auto;
 	width: 100%;
 	padding: 10px;
 	box-sizing: border-box;
 	border-radius: 20px 20px 20px 20px;
 	margin-bottom: 20px;
-	background-image: url('../images/bg/resWohnen.jpg');
-	background-size: 100%;
-	background-repeat: no-repeat;
 }
 
 .buyMsg p {
-	background-color: rgb(255, 255, 255, 0.5);
+	background-image: url('../images/bg/resWohnen.jpg');
+	background-size: 100%;
+	background-repeat: no-repeat;
 	border-radius: 20px 20px 20px 20px;
-	padding: 10px;
+	padding: 20px;
 	box-shadow: 5px 5px;
 }
 
@@ -91,13 +90,18 @@
 
 .rentMsg {
 	color: black;
-	background-color: rgb(0, 0, 0, 0.1);
 	width: 100%;
 	height: auto;
 	padding: 10px;
 	box-sizing: border-box;
-	border-radius: 20px 20px 20px 20px;
 	margin-bottom: 20px;
+}
+
+.rentMsg p {
+	background-color: rgb(121, 253, 255);
+	border-radius: 20px 20px 20px 20px;
+	padding: 20px;
+	box-shadow: 5px 5px;
 }
 
 #rentButton {
@@ -147,8 +151,9 @@
 	width: 100%;
 	padding: 10px;
 	box-sizing: border-box;
-	background-color: rgb(0, 0, 0, 0.1);
+
 	border-radius: 20px 20px 20px 20px;
+	text-align: left;
 }
 
 #sellButton {
@@ -185,7 +190,7 @@
 	}
 
 	.buyMsg {
-		text-align: center;
+		text-align: left;
 		height: 400px;
 		width: 30%;
 		border-bottom: 0px;
@@ -204,7 +209,7 @@
 	}
 
 	.rentMsg {
-		text-align: center;
+		text-align: left;
 		height: 400px;
 		width: 30%;
 		border-bottom: 0px;
@@ -219,7 +224,7 @@
 	}
 
 	.sellMsg {
-		text-align: center;
+		text-align: left;
 		height: 400px;
 		width: 30%;
 		border-bottom: 0px;

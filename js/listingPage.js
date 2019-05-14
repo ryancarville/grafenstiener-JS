@@ -35,11 +35,12 @@ function listingPage(listing) {
 					<span class="dot" onclick="currentSlide(1)"></span> 
 					<span class="dot" onclick="currentSlide(2)"></span> 
 					<span class="dot" onclick="currentSlide(3)"></span> 
-				
+					
 				</div>
+				<button type='button' class='backBtn' onclick=results(properties)>BACK TO SEARCH</button>
 				<div class='statsWrap'>
 					<div class='propertyPrice'>
-						$${listing.price} 
+						${listing.price} CHF
 					</div>																		
 					<div class='propertyStats'>
 						ID:  
@@ -48,7 +49,7 @@ function listingPage(listing) {
 						Property Name:  
 						${listing.name} 
 						<br>
-						Address: 
+						<img class='listingIcon' src='./images/listings/icons/locationb.png' alt='locationIcon'/>
 						${listing.address} 
 						<br>
 						Canton: 
@@ -57,7 +58,7 @@ function listingPage(listing) {
 						City: 
 						${listing.city} 
 						<br>
-						Size:
+						<img class='listingIcon' src='./images/listings/icons/rooms.png' alt='roomsIcon'/>
 						${listing.size}
 						<br><br>
 						Documentation:
