@@ -49,5 +49,5 @@ const office = function office() {
 	console.log(sessionStorage);
 	let officeHist = sessionStorage.getItem('office');
 	history.pushState(officeHist, 'Office', 'office.html');
-	console.log(history.state);
+	console.log(history.state.office);
 };
