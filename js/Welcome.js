@@ -2,61 +2,61 @@ function welcome() {
 	$(document).ready(function() {
 		$(this).scrollTop(0);
 	});
-
+	$('.footer').empty();
+	footer();
 	$('.main').empty();
 	slideShow();
-	$('.main').append(
-		`<div class='welcomePage'>
-			
-			<div class='welcomeMsg' >
-				<h2 id='welcomeMsg'>Herzlich willkommen!</h2>
-			</div>
-			
-		</div>
-		`
-	);
+	$('.main').prepend(`<div class='welcomePage'></div>`);
 	setTimeout(function welcomeContent() {
 		$('.welcomePage').prepend(`
 		<div class='welcomeContent'>
-			<h3>Header</h3>
-			<p>Lorem ipsum dolor sit amet, vim case minim consulatu ad, mei tantas consul appetere ex. Eu tamquam tibique maluisset eum. Ne pro erant possit iudicabit, eu aliquid sapientem has, no cum tollit oportere repudiandae. Ad eum cibo aeterno iracundia, detraxit consetetur mei ut.</p>
-		</div>`);
-	}, 3000);
+			<h3>Mit Kompetenz und Menschenkenntnis</h3>
+			<h2 id='welcomeMsg'>Herzlich willkommen!</h2>
+		</div><div class='sortHome'></div>
+		`),
+			searchModule();
+	}, 2000);
 
+	$('#navHomeText').on('click', function() {
+		$(this).addClass('navActive');
+		$(
+			'#navOffice, #navRealEstate, #navServices, #navRef, #navContact'
+		).removeClass('navActive');
+	});
 	$('#navOffice').on('click', function() {
 		$(this).addClass('navActive');
-		$('#navRealEstate, #navServices, #navRef, #navContact').removeClass(
-			'navActive'
-		);
+		$(
+			'#navHomeText, #navRealEstate, #navServices, #navRef, #navContact'
+		).removeClass('navActive');
 	});
 	$('#navRealEstate').on('click', function() {
 		$(this).addClass('navActive');
-		$('#navOffice, #navServices, #navReferences, #navContact').removeClass(
-			'navActive'
-		);
+		$(
+			'#navHomeText, #navOffice, #navServices, #navReferences, #navContact'
+		).removeClass('navActive');
 	});
 	$('#navServices').on('click', function() {
 		$(this).addClass('navActive');
-		$('#navOffice, #navRealEstate, #navReferences, #navContact').removeClass(
-			'navActive'
-		);
+		$(
+			'#navHomeText, #navOffice, #navRealEstate, #navReferences, #navContact'
+		).removeClass('navActive');
 	});
 	$('#navReferences').on('click', function() {
 		$(this).addClass('navActive');
-		$('#navOffice, #navRealEstate, #navServices, #navContact').removeClass(
-			'navActive'
-		);
+		$(
+			'#navHomeText, #navOffice, #navRealEstate, #navServices, #navContact'
+		).removeClass('navActive');
 	});
 	$('#navContact').on('click', function() {
 		$(this).addClass('navActive');
-		$('#navOffice, #navRealEstate, #navServices, #navReferences').removeClass(
-			'navActive'
-		);
+		$(
+			'#navHomeText, #navOffice, #navRealEstate, #navServices, #navReferences'
+		).removeClass('navActive');
 	});
 	$('#navLogo').on('click', function() {
 		$(this).addClass('navActive');
 		$(
-			'#navOffice, #navRealEstate, #navServices, #navReferences, #navContact'
+			'#navHomeText, #navOffice, #navRealEstate, #navServices, #navReferences, #navContact'
 		).removeClass('navActive');
 	});
 	if (window.location.hash === '#en') {
@@ -66,4 +66,8 @@ function welcome() {
 	} else {
 		$('#welcomeMsg').text(languages.de.welcome);
 	}
+	sessionStorage.setItem('welcome', welcome);
+	let welcomeHist = sessionStorage.getItem('welcome');
+	history.pushState(welcomeHist, 'Home', 'index.html');
+	console.log(history.state);
 }

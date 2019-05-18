@@ -1,30 +1,27 @@
-//const noUiSlider = require('nouislider');
-
-function searchModuel() {
-	$('.sortListings').append(
+function searchModule() {
+	$('.sortHome, .sortListings').append(
 		`<div class='seachModWrapper'>
 			<div class='searchModuel'>
 				<form action='' class='searchCatag' id='searchFilter'>
 					<div class='searchDropDown'>
-						<select id='searchMarketMenu'>
-							<optgroup label='searchMarket'>
-								<option value=''>Market</option>
-								<option value='investment'>Investment</option>
-								<option value='buy'>Buy</option>
-								<option value='rent'>Rent</option>
+						<select class='searchDropMenus' id='searchMarketMenu'>
+							<optgroup label='Suche Nach'>
+							<option value=''>Suche Nach</option>
+								<option value='kaufen'>Kaufen</option>
+								<option value='mitten'>Mitten</option>
 							</optgroup>
 						</select>	
-						<select id='searchTypeMenu'>
-							<optgroup label='searchType'>
-								<option value=''>Type</option>
-								<option value='investment'>Investment</option>
-								<option value='residential'>Residential</option>
-								<option value='office'>Office</option>
+						<select class='searchDropMenus' id='searchLandMenu'>
+							<optgroup label='searchLand'>
+								<option value=''>Land</option>
+								<option value='schweiz'>Schweiz</option>
+								<option value='frankreich'>Frankreich</option>
+								<option value='spanien'>Spanien</option>
 							</optgroup>
 						</select>
-						<select id='searchCantonMenu'>
+						<select class='searchDropMenus' id='searchCantonMenu'>
 							<optgroup label='searchCanton'>
-								<option value=''>Canton</option>
+								<option value=''>Region</option>
 								<option value='aargau'>Aargau</option>
 								<option value='appenzell ausserrhoden'>Appenzell Ausserrhoden</option>
 								<option value='appenzell innerrhoden'>Appenzell Innerrhoden</option>
@@ -53,12 +50,21 @@ function searchModuel() {
 								<option value='zurich'>Zürich</option>
 							</optgroup>						
 						</select>
+						<select class='searchDropMenus' id='searchTypeMenu'>
+							<optgroup label='searchType'>
+								<option value=''>Zu</option>
+								<option value='immobilien'>Immobilien</option>
+								<option value='an lage immobilien'>An Lage Immobilien</option>
+								<option value='office'>Office</option>
+							</optgroup>
+						</select>
+						
 					</div>
-					<input type="text" class="js-range-slider" name="my_range" value="" />			
+					<input type="text" class="js-range-slider" id='slider' name="my_range" value="" />			
 					<button class='mainSearchBtn' type='button' onClick=filterSearch()>
-					SORT
+					SUCHE
 					</button>
-					<button class='mainResetBtn' type='button' onClick=results(properties)>
+					<button class='mainResetBtn' id='reset' type='reset'>
 					RESET
 					</button>
 				</form>
@@ -73,10 +79,14 @@ function searchModuel() {
 		from: 0,
 		to: 10000000,
 		grid: true,
-		prefix: 'Fr. ',
-		onChange: function(data) {
-			console.dir(data);
-		}
+		postfix: 'CHF. ',
+		keyboard: true,
+		hide_from_to: false,
+		prettify_enabled: true
+	});
+	$('#reset').on('click', () => {
+		const slider = $('.js-range-slider').data('ionRangeSlider');
+		slider.reset();
 	});
 }
 

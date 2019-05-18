@@ -1,4 +1,5 @@
 //languages
+
 const languages = {
 	de: {
 		welcome: 'Herzlich willkommen!',
@@ -63,6 +64,7 @@ function german() {
 	window.location.hash = '#de';
 	location.reload(true);
 }
+
 function english() {
 	window.location.hash = '#en';
 	location.reload(true);

@@ -17,7 +17,7 @@ function results(properties) {
             </div>
         </div>`
 	);
-	searchModuel();
+	searchModule();
 	document.getElementById('listingResults').innerHTML = fullListingResults;
 	for (let i = 0; i < properties.length; i++) {
 		let id = `#listingBTN${properties[i].id}`;

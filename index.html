@@ -26,7 +26,7 @@
 		<link rel="stylesheet" type="text/css" href="css/realEstate.css" />
 		<link rel="stylesheet" href="css/Office.css" />
 		<link rel="stylesheet" href="css/Contact.css" />
-		<link rel="stylesheet" href="css/SearchModuel.css" />
+		<link rel="stylesheet" href="css/SearchModule.css" />
 		<link rel="stylesheet" href="css/ListingResults.css" />
 		<link rel="stylesheet" href="css/Listing.css" />
 		<link rel="stylesheet" href="css/listingPage.css" />
@@ -40,6 +40,10 @@
 		<link rel="stylesheet" href="css/legal.css" />
 		<link rel="stylesheet" href="css/ion.rangeSlider.min.css" />
 		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script>
+			const hash = window.location.hash;
+			console.log(hash);
+		</script>
 	</head>
 	<body>
 		<!--[if lt IE 7]>
@@ -51,14 +55,6 @@
 		<div class="loadingScreen" id="loadingScreen"><h1>LOADING...</h1></div>
 		<header>
 			<nav class="navContainer">
-				<div class="langBtnWrap">
-					<a href="#de" class="langBtn" onClick="$(german())">
-						DE
-					</a>
-					<a href="#en" class="langBtn" onClick="$(english())">
-						EN
-					</a>
-				</div>
 				<div class="mobileMenuWrap">
 					<img src="images/menu.png" alt="mobileMenu" class="mobileMenu" />
 					<ul class="navMobileLinks">
@@ -83,29 +79,38 @@
 							<a id="navMobileContact" onclick="$(contact())">Contact</a>
 						</li>
 						<li class="navMobileLink">
-							<a href="#de" class="mobileLangBtn" data-reload>DE</a>
-							<a href="#en" class="mobileLangBtn" data-reload>EN</a>
+							<a href="#de" class="mobileLangBtn" onclick="german()">DE</a>
+							<a href="#en" class="mobileLangBtn" onclick="english()">EN</a>
 						</li>
 					</ul>
 				</div>
-
 				<a id="navHome" onclick="$(welcome())"
 					><img src="images/logo.png" alt="logo" id="navMobileLogo"
 				/></a>
 				<div class="linksWrapper">
+					<div class="langBtnWrap">
+						<a href="#de" class="langBtn" onclick="$(german())">
+							DE
+						</a>
+						<a href="#en" class="langBtn" onclick="$(english())">
+							EN
+						</a>
+					</div>
 					<a id="navHome" onclick="$(welcome())"
-						><img src="images/logo.png" alt="logo" id="navLogo"
-					/></a>
+						><img src="images/logo.png" alt="logo" id="navLogo" />
+					</a>
 
 					<ul class="navLinks">
+						<li class="navLink" id="navHome">
+							<a id="navHomeText" onclick="$(welcome())">Hause</a>
+						</li>
+
 						<li class="navLink" id="navOffice">
-							<a id="navOfficeIcon" onclick="$(office())">Büro</a>
+							<a id="navOfficeIcon" onclick="$(office)">Büro</a>
 						</li>
 
 						<li class="navLink" id="navRealEstate">
-							<a id="navRealEstateIcon" onclick="$(realEstate())"
-								>Grundeigentum</a
-							>
+							<a id="navRealEstateIcon" onclick="$(realEstate())">Immobilien</a>
 						</li>
 						<li class="navLink" id="navServices">
 							<a id="navServicesIcon" onclick="$(services())"
@@ -113,7 +118,7 @@
 							>
 						</li>
 						<li class="navLink" id="navReferences">
-							<a id="navReferencesIcon" onclick="$(references())">Verweise</a>
+							<a id="navReferencesIcon" onclick="$(references())">Referenz</a>
 						</li>
 						<li class="navLink" id="navContact">
 							<a id="navContactIcon" onclick="$(contact())">Kontakt</a>
@@ -123,7 +128,6 @@
 			</nav>
 		</header>
 		<main id="main" class="main" role="main"></main>
-
 		<footer class="footer"></footer>
 
 		<script src="js/Properties.js"></script>
@@ -135,7 +139,7 @@
 		<script src="js/Welcome.js"></script>
 		<script src="js/WelcomeSearch.js"></script>
 		<script src="js/DataCounter.js"></script>
-		<script src="js/SearchModuel.js"></script>
+		<script src="js/SearchModule.js"></script>
 		<script src="js/Slideshow.js"></script>
 		<script src="js/Listing.js"></script>
 		<script src="js/ListingResults.js"></script>
@@ -150,6 +154,7 @@
 		<script src="js/ion.rangeSlider.min.js"></script>
 		<script>
 			if (window.location.hash === '#en') {
+				$('#navHomeText').text('home');
 				$('#navOfficeIcon').text('office');
 				$('#navRealEstateIcon').text('real estate');
 				$('#navServicesIcon').text('services');

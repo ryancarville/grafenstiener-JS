@@ -1,20 +1,23 @@
 .officePage {
 	width: 100%;
 	height: auto;
-	display: inline-block;
+	display: block;
+	padding-top: 60px;
 	animation: fadeIn 2s ease-in-out;
 }
 
 .officeMsg {
-	float: left;
-	color: rgb(18, 18, 18);
-	width: 100%;
+	color: rgb(255, 255, 255);
+	width: 250px;
 	height: auto;
+	margin-left: auto;
+	margin-right: auto;
 	box-sizing: border-box;
+	text-align: justify;
+	background-color: rgb(139, 101, 72, 0.7);
 }
 
-.officeMsg h2,
-h4 {
+.officeMsg h2 {
 	text-align: center;
 }
 
@@ -29,23 +32,41 @@ h4 {
 
 @media only screen and (min-width: 1000px) {
 	.officePage {
-		display: flex;
-		justify-content: space-evenly;
+		display: block;
 		align-items: center;
 	}
 
 	.officeMsg {
-		width: 30%;
-		padding-top: 200px;
+		width: 60%;
+		margin-top: 75px;
+		padding: 15px;
 	}
 
 	.officeMsg p {
-		padding: 5px;
+		padding: 15px;
 	}
 
+	.bio {
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		padding-top: 50px;
+		width: 50%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.bio p {
+		width: 350px;
+		height: 419px;
+		box-sizing: border-box;
+		color: rgb(255, 255, 255);
+		background-color: rgb(139, 101, 72, 0.7);
+		padding: 15px;
+		margin-left: auto;
+	}
 	#bioPic {
-		width: 450px;
-		border: 2px solid black;
-		margin-top: 150px;
+		width: 350px;
+
+		margin-right: auto;
 	}
 }

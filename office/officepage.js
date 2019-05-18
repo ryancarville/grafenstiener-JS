@@ -1,0 +1,3 @@
+function officePage() {
+	return office();
+}

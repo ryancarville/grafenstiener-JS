@@ -1,15 +1,20 @@
-function office() {
+const office = function office() {
 	$(document).ready(function() {
-		$(this).scrollTop(0);
+		$(this).scroll();
 	});
+	$(
+		'.welcomePage, .realEstatePage, .servicesPage, .referencesPage, .contactPage'
+	).remove();
+	if ($('.slideshowWrap').length === 0) {
+		slideShow();
+	}
 
-	$('.main').empty();
-
-	$('.main').append(
-		`<section>
+	$('.main').append(`
 			<div class='officePage'>
-				<div class='officeMsg' >
-				<center><h3 id='officeSlogan'>Mit Kompetenz und Menschenkenntnis</h3></center>
+			<button type="button" id='back' onclick=$(back())>Back</button>
+			
+				<div class='officeMsg' id='officePage' >
+					<h2>Büro</h2>
 					<p id='officeContent'>
 					Der Immobilienmarkt ist seit vielen Jahren unser berufliches Zuhause. 
 					Hier können wir einbringen, was uns ausmacht: Empathie, Erfahrung und Engagement. 
@@ -22,16 +27,17 @@ function office() {
 					Karen Gräfensteiner-Deyaert gewohnt, Kundinnen und Kunden offen und mit aufrichtigem 
 					Interesse zu begegnen.
 					</p>
-					<br />
-					
 				</div>
 				
-				<img src='images/bioPic.jpeg' alt='Phot of Karen Gräfenstiener' id='bioPic'>
-				
-				
+				<div class='bio'>
+					<p>Mit sicherem Gespür für den Menschen und den Markt begleite ich Sie beim Verkauf Ihrer Wohnung oder Ihres Hauses. Bei komplexen Immobilientransaktionen weiss ich unterschiedliche Bedürfnisse gleichwertig zu berücksichtigen, so dass alle Beteiligten sich gewürdigt fühlen.</p>			
+					<img src='images/bioPic.jpeg' alt='Phot of Karen Gräfenstiener' id='bioPic'>
+				</div>
 			</div>
-		</section>`
-	);
+		`);
+	document
+		.getElementById('officePage')
+		.animate({ scrollTop: $('#officePage').offset().top }, 2000);
 	if (window.location.hash === '#en') {
 		$('#officeSlogan').text(languages.en.slogan);
 		$('#officeContent').text(languages.en.office);
@@ -39,6 +45,9 @@ function office() {
 		$('#officeSlogan').text(languages.de.slogan);
 		$('#officeContent').text(languages.de.office);
 	}
-
-	dataCounter();
-}
+	sessionStorage.setItem('office', office);
+	console.log(sessionStorage);
+	let officeHist = sessionStorage.getItem('office');
+	history.pushState(officeHist, 'Office', 'office.html');
+	console.log(history.state);
+};

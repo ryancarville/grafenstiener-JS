@@ -1,46 +1,30 @@
 .welcomePage {
 	width: 100%;
 	padding-top: 100px;
-	display: inline-block;
+	display: block;
 }
 .welcomeMsg {
 	background-color: rgba(62, 62, 62, 0.5);
 	color: white;
-	text-align: left;
-	width: 100%;
 	font-size: 14px;
 	text-shadow: 1px 1px black;
-	margin-top: 20px;
-	animation: slideRight 4s ease-in-out;
 }
 
 .welcomeMsg h2 {
 	text-align: center;
 }
-.welcomeMsg p {
-	padding: 25px;
-}
 
 .welcomeContent {
 	font-size: 30px;
 	color: rgb(255, 255, 255);
-	float: right;
-	margin-right: 150px;
-	background-color: rgb(0, 0, 0, 0.5);
-	box-shadow: 5px 5px 20px 0px black;
 	height: auto;
 	width: 40%;
 	text-shadow: 1px 1px black;
 	margin-top: -50px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 	animation: fadeIn 1s ease-in-out;
-}
-
-.welcomeContent h3 {
-	padding: 20px;
-}
-
-.welcomeContent p {
-	padding: 20px;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -50,12 +34,14 @@
 	}
 	.welcomeMsg {
 		background-color: rgba(62, 62, 62, 0.5);
-		color: white;
 		text-align: left;
-		width: 30%;
+		width: 20%;
 		font-size: 20px;
-		text-shadow: 1px 1px black;
-		padding: 15px;
-		margin-top: 375px;
+		padding: 0px;
+		margin-top: 325px;
+	}
+	.welcomeMsg h2 {
+		float: left;
+		margin-left: 10px;
 	}
 }

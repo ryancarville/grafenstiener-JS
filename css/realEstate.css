@@ -1,45 +1,47 @@
 .realEstatePage {
 	display: block;
 	width: 100%;
-	height: 100%;
+	background-color: rgb(139, 101, 72, 0.3);
+	color: rgb(255, 255, 255);
 	animation: fadeIn 2s ease-in-out;
 }
 
 .realEstateMsg {
-	display: inline;
-	color: black;
-	animation: fadeIn 2s ease-in-out;
+	display: block;
 }
 
 .realEstateMsg h2 {
-	margin-top: 50px;
-	text-align: center;
-	animation: fadeIn 2s ease-in-out;
+	text-align: left;
 }
 .realEstateMsg p {
 	margin-top: 10px;
-	padding: 10px;
-	box-sizing: border-box;
-	animation: fadeIn 2s ease-in-out;
+
+	text-align: left;
+}
+
+.servicesList {
+	text-transform: uppercase;
+	list-style: none;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -40px;
+	text-align: center;
 }
 
 .buyMsg {
 	color: rgb(255, 255, 255);
-	height: auto;
 	width: 100%;
 	padding: 10px;
 	box-sizing: border-box;
-	border-radius: 20px 20px 20px 20px;
-	margin-bottom: 20px;
 }
 
-.buyMsg p {
-	background-image: url('../images/bg/resWohnen.jpg');
-	background-size: 100%;
-	background-repeat: no-repeat;
-	border-radius: 20px 20px 20px 20px;
-	padding: 20px;
-	box-shadow: 5px 5px;
+.buyMsg img {
+	display: block;
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
 }
 
 #buyButton {
@@ -49,9 +51,7 @@
 	border: 1px solid;
 	background-color: rgb(255, 255, 255);
 	font-size: 25px;
-	margin-top: 10px;
 	padding: 10px;
-	box-shadow: 2px 2px 2px 0px;
 	box-sizing: border-box;
 	margin-left: auto;
 	margin-right: auto;
@@ -70,7 +70,6 @@
 	font-size: 25px;
 	margin-top: 20px;
 	padding: 10px;
-	box-shadow: 2px 2px 2px 0px;
 	box-sizing: border-box;
 	margin-bottom: 10px;
 }
@@ -83,7 +82,6 @@
 	font-size: 25px;
 	margin-top: 20px;
 	padding: 10px;
-	box-shadow: 2px 2px 2px 0px;
 	box-sizing: border-box;
 	margin-bottom: 10px;
 }
@@ -91,17 +89,16 @@
 .rentMsg {
 	color: black;
 	width: 100%;
-	height: auto;
 	padding: 10px;
 	box-sizing: border-box;
-	margin-bottom: 20px;
 }
 
-.rentMsg p {
-	background-color: rgb(121, 253, 255);
-	border-radius: 20px 20px 20px 20px;
-	padding: 20px;
-	box-shadow: 5px 5px;
+.rentMsg img {
+	display: block;
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
 }
 
 #rentButton {
@@ -110,9 +107,7 @@
 	border: 1px solid;
 	background-color: rgb(255, 255, 255);
 	font-size: 25px;
-	margin-top: 5px;
 	padding: 10px;
-	box-shadow: 2px 2px 2px 0px;
 	box-sizing: border-box;
 	display: block;
 	margin-left: auto;
@@ -127,7 +122,6 @@
 	font-size: 25px;
 	margin-top: 20px;
 	padding: 10px;
-	box-shadow: 2px 2px 2px 0px;
 	box-sizing: border-box;
 	margin-bottom: 10px;
 }
@@ -140,60 +134,62 @@
 	font-size: 25px;
 	margin-top: 20px;
 	padding: 10px;
-	box-shadow: 2px 2px 2px 0px;
 	box-sizing: border-box;
 	margin-bottom: 10px;
 }
 
 .sellMsg {
 	color: black;
-	height: auto;
 	width: 100%;
 	padding: 10px;
 	box-sizing: border-box;
-
-	border-radius: 20px 20px 20px 20px;
 	text-align: left;
+}
+
+.sellMsg img {
+	display: block;
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 50px;
 }
 
 #sellButton {
 	cursor: pointer;
 	width: 100%;
 	border: 1px solid;
-	background-color: rgb(255, 255, 255);
+	background-image: url(images/listings/icons/sellBtnIcon.png);
+	background-position: top left;
+	background-repeat: no-repeat;
 	font-size: 25px;
-	margin-top: 5px;
 	padding: 10px;
-	box-shadow: 2px 2px 2px 0px;
 	box-sizing: border-box;
 	display: block;
+	margin-top: -15px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 @media only screen and (min-width: 1000px) {
 	.realEstatePage {
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-		height: 500px;
+		padding-top: 30px;
+	}
+	.realEstateMsg {
+		display: block;
+		height: 300px;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
-	.realEstateMsg {
-		height: 275px;
-		width: 100%;
-		margin-top: 100px;
-		float: left;
-	}
-	.realEstateMsg p {
-		padding: 50px;
+	.realEstateMsg h2 {
+		padding-top: 100px;
 	}
 
 	.buyMsg {
-		text-align: left;
-		height: 400px;
 		width: 30%;
 		border-bottom: 0px;
+		padding-top: 10px;
 	}
 
 	#buyButton {
@@ -209,10 +205,9 @@
 	}
 
 	.rentMsg {
-		text-align: left;
-		height: 400px;
 		width: 30%;
 		border-bottom: 0px;
+		padding-top: 10px;
 	}
 
 	#rentButton {
@@ -224,13 +219,25 @@
 	}
 
 	.sellMsg {
-		text-align: left;
-		height: 400px;
 		width: 30%;
 		border-bottom: 0px;
 	}
 
 	#sellButton {
 		width: 50%;
+	}
+	.sellMsg p {
+		margin-top: 30px;
+	}
+
+	.realEstateBtnWrap {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: flex-start;
+	}
+	.realEstateBtnWrap p {
+		text-align: justify;
+
+		color: white;
 	}
 }

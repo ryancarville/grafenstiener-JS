@@ -1,34 +1,78 @@
-.footer {
-	display: block;
-
+.footerBG {
+	background-color: #8b6548;
 	width: 100%;
-	height: 50px;
-	margin-top: 300px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	text-align: center;
-}
+	height: 300px;
+	display: block;
+	position: absolute;
+	margin-top: 456px;
 
-#footer {
-	font-size: 12px;
-	color: rgb(126, 126, 126);
+	font-size: 14px;
+	color: white;
 	text-transform: uppercase;
 }
 
-#footer > span {
+#footerLinks {
+	float: right;
+	position: relative;
+	margin-top: 10px;
+	margin-right: 50px;
+	margin-bottom: 25px;
+}
+#footerLinks > span {
 	cursor: pointer;
 	padding: 5px;
+}
+
+.newLetterFooterWrap {
+	display: block;
+	float: left;
+	text-align: left;
+	width: 30%;
+	color: white;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.newsLetterFooter p {
+	text-align: left;
+	font-size: 16px;
+}
+
+.newsLetterFooter label {
+	margin: 5px;
+}
+.newsLetterFooter input {
+	width: 95%;
+	height: 15px;
+	padding: 5px;
+	font-size: 14px;
+}
+
+.newsLetterFooter button {
+	width: 35%;
+	height: 25px;
+	text-align: center;
+	background: transparent;
+	color: white;
+	margin-top: 10px;
+	text-transform: uppercase;
+}
+
+#beardyLink {
+	display: block;
+	position: relative;
+	float: right;
+	margin-top: 265px;
+	margin-right: 25px;
+	text-decoration: none;
+	font-size: 10px;
+	padding: 15px;
+	color: white;
 }
 
 @media only screen and (min-width: 1000px) {
 	.footer {
 		text-align: right;
-	}
-
-	#footer {
 		font-size: 16px;
-
-		margin-right: 80px;
 	}
 }
