@@ -17,11 +17,11 @@ function footer() {
 				<div id='footerLinks'>
 					<span id='footerHome' onclick=welcome()>Zuhause</span>	
 					<span id='footerOffice' onclick=office()>Büro</span>
-					<span id='footerRealEstate' onclick=realEstate()>Grundeigentum</span>
+					<span id='footerRealEstate' onclick=realEstate()>Immobilien</span>
 					<span id='footerBuy' onclick=results(properties)>Kaufen</span>
 					<span id='footerRent' onclick=results(properties)>Miete</span>
 					<span id='footerSell' onclick=sell()>verkaufen</span>
-					<span id='footerReferences'onclick=references()>Verweise</span>
+					<span id='footerReferences'onclick=references()>Referenz</span>
 					<span id='footerContact' onclick=contact()>Kontakt</span>
 					<span id='footerLegal' onclick=legal()>Legal</span>
 					

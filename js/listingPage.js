@@ -2,6 +2,7 @@ function listingPage(listing) {
 	$(document).ready(function() {
 		$(this).scrollTop(0);
 	});
+
 	$('.main').empty();
 	$('.main').append(
 		`<div class='listingPage'>
@@ -38,18 +39,18 @@ function listingPage(listing) {
 					
 				</div>
 				<button type='button' class='backBtn' onclick=results(properties)>BACK TO SEARCH</button>
-				<div class='statsWrap'>
-					<div class='propertyPrice'>
-						${listing.price} CHF
-					</div>																		
+				<div class='statsWrap'>																	
 					<div class='propertyStats'>
-						ID:  
+						<p>
+						${listing.price} CHF
+						<br>
+						ID: 
 						${listing.id} 
 						<br>
 						Property Name:  
 						${listing.name} 
 						<br>
-						<img class='listingIcon' src='./images/listings/icons/locationb.png' alt='locationIcon'/>
+						Address:
 						${listing.address} 
 						<br>
 						Canton: 
@@ -58,25 +59,40 @@ function listingPage(listing) {
 						City: 
 						${listing.city} 
 						<br>
-						<img class='listingIcon' src='./images/listings/icons/rooms.png' alt='roomsIcon'/>
+						Size:
 						${listing.size}
 						<br><br>
 						Documentation:
 						<a href='${listing.docs}'>Click Here for Docs</a>
+						</p>
 					</div>
-					
-				</div>
-				
-				<div class='propertyInfo' id='property${listing.id}'>
-				<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-				eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-				enim ad minim veniam, quis nostrud exercitation ullamco laboris
-				nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-				in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-				nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-				sunt in culpa qui officia deserunt mollit anim id est laborum."
-				</p>
-			</div>
+					<div class='propertyInfo' id='property${listing.id}'>
+						<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+						enim ad minim veniam, quis nostrud exercitation ullamco laboris
+						nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+						in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+						nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+						sunt in culpa qui officia deserunt mollit anim id est laborum."
+						</p>
+					</div>
+											
+				</div>	
+				<div class='googleMap'>
+						<iframe 
+						width=100%
+						height=400px
+							id="gmap_canvas" 
+							src='https://maps.google.com/maps?q=` +
+			listing.address +
+			`&t=&z=13&ie=UTF8&iwloc=&output=embed'
+							frameborder="0" 
+							scrolling="no" 
+							marginheight="0" 
+							marginwidth="0">
+						</iframe>
+					</div>
+			</div>						
 		</div>`
 	);
 }

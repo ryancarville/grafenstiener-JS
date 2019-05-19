@@ -13,3 +13,21 @@ window.addEventListener('load', function() {
 		$('.navMobileLinks').toggleClass('mobileMenuShow');
 	});
 });
+
+$(document).ready(() => {
+	let nav, content, fetchAndInsert;
+
+	nav = $('nav#navLinks');
+	content = $('main#main');
+
+	fetchAndInsert = () => {};
+
+	nav.find('a').on('click', e => {
+		var href = $(this).attr('href');
+		console.log(href);
+
+		//Manipulate History
+		history.pushState(null, null, href);
+		e.preventDefault();
+	});
+});

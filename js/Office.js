@@ -1,4 +1,4 @@
-const office = function office() {
+function office() {
 	$(document).ready(function() {
 		$(this).scroll();
 	});
@@ -11,7 +11,7 @@ const office = function office() {
 
 	$('.main').append(`
 			<div class='officePage'>
-			<button type="button" id='back' onclick=$(back())>Back</button>
+			
 			
 				<div class='officeMsg' id='officePage' >
 					<h2>Büro</h2>
@@ -35,9 +35,7 @@ const office = function office() {
 				</div>
 			</div>
 		`);
-	document
-		.getElementById('officePage')
-		.animate({ scrollTop: $('#officePage').offset().top }, 2000);
+
 	if (window.location.hash === '#en') {
 		$('#officeSlogan').text(languages.en.slogan);
 		$('#officeContent').text(languages.en.office);
@@ -45,9 +43,4 @@ const office = function office() {
 		$('#officeSlogan').text(languages.de.slogan);
 		$('#officeContent').text(languages.de.office);
 	}
-	sessionStorage.setItem('office', office);
-	console.log(sessionStorage);
-	let officeHist = sessionStorage.getItem('office');
-	history.pushState(officeHist, 'Office', 'office.html');
-	console.log(history.state.office);
-};
+}

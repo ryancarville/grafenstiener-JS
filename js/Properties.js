@@ -2,10 +2,10 @@ const properties = [
 	{
 		id: 1,
 		name: 'Property One',
-		address: 'Feldhofstrasse 66',
+		address: 'Kleindorf 6',
 		type: 'investment',
 		market: 'buy',
-		city: 'Zurich',
+		city: 'Zollikon',
 		canton: 'zug',
 		size: 2000 + ' sq meters',
 		price: 1 + ' Million',

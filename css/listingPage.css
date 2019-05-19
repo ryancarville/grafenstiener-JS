@@ -4,30 +4,6 @@
 	animation: scaleListings 1s ease-in-out;
 }
 
-.listingIcon {
-	width: 40px;
-}
-.propertyStats {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	width: 100%;
-	height: 200px;
-}
-
-.propertyInfo p {
-	box-sizing: border-box;
-	padding: 10px;
-}
-
-.statsWrap {
-	display: inline-block;
-	width: 100%;
-	flex-direction: column;
-	margin-left: auto;
-	margin-right: auto;
-}
-
 .backBtn {
 	cursor: pointer;
 	text-align: center;
@@ -43,20 +19,45 @@
 	color: white;
 }
 
+.statsWrap {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	width: 50%;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	color: white;
+	background-color: rgb(139, 101, 72);
+}
+
+.propertyStats {
+	display: block;
+	width: 100%;
+}
+
+.propertyInfo p {
+	width: 90%;
+	padding: 10px;
+}
+
+.googleMap {
+	width: 50%;
+	height: 400px;
+	margin-left: auto;
+	margin-right: auto;
+}
 @media only screen and (min-width: 1000px) {
 	.propertyStats {
-		width: 25%;
-		margin-top: 20px;
-		margin-left: 25%;
+		width: 95%;
+
 		padding: 15px;
 	}
 
 	.propertyPrice {
-		width: 10%;
+		width: 20%;
 		float: right;
 		font-size: 30px;
-		margin-right: 25%;
-		text-align: right;
 	}
 
 	.propertyInfo p {

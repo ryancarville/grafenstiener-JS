@@ -66,8 +66,4 @@ function welcome() {
 	} else {
 		$('#welcomeMsg').text(languages.de.welcome);
 	}
-	sessionStorage.setItem('welcome', welcome);
-	let welcomeHist = sessionStorage.getItem('welcome');
-	history.pushState(welcomeHist, 'Home', 'index.html');
-	console.log(history.state);
 }

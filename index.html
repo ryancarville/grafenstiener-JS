@@ -40,10 +40,6 @@
 		<link rel="stylesheet" href="css/legal.css" />
 		<link rel="stylesheet" href="css/ion.rangeSlider.min.css" />
 		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-		<script>
-			const hash = window.location.hash;
-			console.log(hash);
-		</script>
 	</head>
 	<body>
 		<!--[if lt IE 7]>
@@ -54,7 +50,7 @@
 		<![endif]-->
 		<div class="loadingScreen" id="loadingScreen"><h1>LOADING...</h1></div>
 		<header>
-			<nav class="navContainer">
+			<nav id="navLinks" class="navContainer">
 				<div class="mobileMenuWrap">
 					<img src="images/menu.png" alt="mobileMenu" class="mobileMenu" />
 					<ul class="navMobileLinks">
@@ -84,47 +80,57 @@
 						</li>
 					</ul>
 				</div>
+				<div class="langBtnWrap">
+					<a href="#de" class="langBtn" onclick="$(german())">
+						DE
+					</a>
+					<a href="#en" class="langBtn" onclick="$(english())">
+						EN
+					</a>
+				</div>
 				<a id="navHome" onclick="$(welcome())"
 					><img src="images/logo.png" alt="logo" id="navMobileLogo"
 				/></a>
-				<div class="linksWrapper">
-					<div class="langBtnWrap">
-						<a href="#de" class="langBtn" onclick="$(german())">
-							DE
-						</a>
-						<a href="#en" class="langBtn" onclick="$(english())">
-							EN
-						</a>
-					</div>
-					<a id="navHome" onclick="$(welcome())"
-						><img src="images/logo.png" alt="logo" id="navLogo" />
-					</a>
 
-					<ul class="navLinks">
-						<li class="navLink" id="navHome">
-							<a id="navHomeText" onclick="$(welcome())">Hause</a>
-						</li>
+				<a id="navHome" onclick="$(welcome())"
+					><img src="images/logo.png" alt="logo" id="navLogo" />
+				</a>
+				<ul class="navLinks">
+					<li class="navLink" id="navHome">
+						<a href="home" id="navHomeText" onclick="$(welcome())">Hause</a>
+					</li>
 
-						<li class="navLink" id="navOffice">
-							<a id="navOfficeIcon" onclick="$(office)">Büro</a>
-						</li>
+					<li class="navLink" id="navOffice">
+						<a href="office" id="navOfficeIcon" onclick="$(office())">Büro</a>
+					</li>
 
-						<li class="navLink" id="navRealEstate">
-							<a id="navRealEstateIcon" onclick="$(realEstate())">Immobilien</a>
-						</li>
-						<li class="navLink" id="navServices">
-							<a id="navServicesIcon" onclick="$(services())"
-								>Dienstleistungen</a
-							>
-						</li>
-						<li class="navLink" id="navReferences">
-							<a id="navReferencesIcon" onclick="$(references())">Referenz</a>
-						</li>
-						<li class="navLink" id="navContact">
-							<a id="navContactIcon" onclick="$(contact())">Kontakt</a>
-						</li>
-					</ul>
-				</div>
+					<li class="navLink" id="navRealEstate">
+						<a
+							href="realEstate"
+							id="navRealEstateIcon"
+							onclick="$(realEstate())"
+							>Immobilien</a
+						>
+					</li>
+					<li class="navLink" id="navServices">
+						<a href="services" id="navServicesIcon" onclick="$(services())"
+							>Dienstleistungen</a
+						>
+					</li>
+					<li class="navLink" id="navReferences">
+						<a
+							href="references"
+							id="navReferencesIcon"
+							onclick="$(references())"
+							>Referenz</a
+						>
+					</li>
+					<li class="navLink" id="navContact">
+						<a href="contact" id="navContactIcon" onclick="$(contact())"
+							>Kontakt</a
+						>
+					</li>
+				</ul>
 			</nav>
 		</header>
 		<main id="main" class="main" role="main"></main>
@@ -153,14 +159,16 @@
 		<script src="js/legal.js"></script>
 		<script src="js/ion.rangeSlider.min.js"></script>
 		<script>
-			if (window.location.hash === '#en') {
-				$('#navHomeText').text('home');
-				$('#navOfficeIcon').text('office');
-				$('#navRealEstateIcon').text('real estate');
-				$('#navServicesIcon').text('services');
-				$('#navReferencesIcon').text('references');
-				$('#navContactIcon').text('contact');
-			}
+			$(() => {
+				if (window.location.hash === '#en') {
+					$('#navHomeText').text('home');
+					$('#navOfficeIcon').text('office');
+					$('#navRealEstateIcon').text('real estate');
+					$('#navServicesIcon').text('services');
+					$('#navReferencesIcon').text('references');
+					$('#navContactIcon').text('contact');
+				}
+			});
 		</script>
 	</body>
 </html>
