@@ -19,7 +19,7 @@ $(document).ready(() => {
 });
 //set history API for home
 const route = 'welcome';
-window.history.pushState({ route }, '', '/');
+window.history.pushState({ route }, '', '/index.html');
 //set history API for desktop logo
 $('#navHome').on('click', function(e) {
 	let route = $(this).attr('route');
