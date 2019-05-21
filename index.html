@@ -89,16 +89,16 @@
 						EN
 					</a>
 				</div>
-				<a id="navHome" onclick="$(welcome())"
+				<a id="navHome" onclick="$(welcome)"
 					><img src="images/logo.png" alt="logo" id="navMobileLogo"
 				/></a>
 
-				<a href="index.html" id="navHome"
+				<a route="welcome" href="index.html" id="navHome"
 					><img src="images/logo.png" alt="logo" id="navLogo" />
 				</a>
 				<ul id="desktopLinks" class="navLinks">
 					<li class="navLink">
-						<a route="welcome" href="index.html" id="navHomeText">Hause</a>
+						<a route="" onclick="$(welcome)" id="navHomeText">Hause</a>
 					</li>
 					<li class="navLink">
 						<a route="office" onclick="$(office)" id="navOfficeIcon">Büro</a>
