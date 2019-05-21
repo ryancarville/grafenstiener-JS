@@ -2,7 +2,6 @@ window.addEventListener('load', function() {
 	const loadingScreen = document.getElementById('loadingScreen');
 
 	welcomeSearch();
-	welcomePage();
 	footer();
 
 	document.body.removeChild(loadingScreen);
@@ -15,24 +14,25 @@ $('.navMobileLinks').on('click', () => {
 	$('.navMobileLinks').toggleClass('mobileMenuShow');
 });
 
-const routes = {
-	'/index.html': welcomePage,
-	'/office': officePage,
-	'/realEstate': realEstatePage,
-	'/services': servicesPage,
-	'/references': referencesPage,
-	'/contact': contactPage
-};
+let router = new Router({
+	mode: 'history',
+	page404: function(path) {
+		console.log('"/' + path + '" Page not found');
+	}
+});
 
-let contentDiv = document.getElementById('main');
-contentDiv.innerHTML = routes[window.location.pathname];
-console.log(window.location.pathname);
+router.add('', welcomePage);
 
-let onNavItemClick = pathName => {
-	window.history.pushState({}, pathName, window.location.origin + pathName);
-	contentDiv.innerHTML = routes[pathName];
-};
+router.add('office', office);
 
-window.onpopstate = () => {
-	contentDiv.innerHTML = routes[window.location.pathname];
-};
+router.add('realEsatate', realEstatePage);
+
+router.add('services', servicesPage);
+
+router.add('references', referencesPage);
+
+router.add('contact', contactPage);
+
+router.addUriListener();
+
+router.navigateTo('');

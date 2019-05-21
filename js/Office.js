@@ -1,4 +1,4 @@
-const officePage = function office() {
+const office = function office() {
 	$(document).ready(function() {
 		$(this).scroll();
 	});

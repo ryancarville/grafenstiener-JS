@@ -40,6 +40,7 @@
 		<link rel="stylesheet" href="css/legal.css" />
 		<link rel="stylesheet" href="css/ion.rangeSlider.min.css" />
 		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="node_modules/vanilla-router/dist/vanilla-router.min.js"></script>
 	</head>
 	<body>
 		<!--[if lt IE 7]>
@@ -92,12 +93,12 @@
 					><img src="images/logo.png" alt="logo" id="navMobileLogo"
 				/></a>
 
-				<a id="navHome" onclick="$(welcome())"
+				<a href="index.html" id="navHome"
 					><img src="images/logo.png" alt="logo" id="navLogo" />
 				</a>
 				<ul class="navLinks">
 					<li class="navLink" id="navHome">
-						<a href="/" id="navHomeText" onclick="$(welcome())">Hause</a>
+						<a href="index.html" id="navHomeText">Hause</a>
 					</li>
 
 					<li class="navLink" id="navOffice">
