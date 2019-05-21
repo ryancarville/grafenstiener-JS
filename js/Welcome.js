@@ -1,11 +1,15 @@
 function welcome() {
+	//scroll to top of page when loaded
 	$(document).ready(function() {
 		$(this).scrollTop(0);
 	});
-
+	//clear the stage
 	$('.main').empty();
+	//load the welcome slide show
 	slideShow();
+	//prepend the welcoem page div
 	$('.main').prepend(`<div class='welcomePage'></div>`);
+	//set time out for welcome content
 	setTimeout(function welcomeContent() {
 		$('.welcomePage').prepend(`
 		<div class='welcomeContent'>
@@ -15,47 +19,47 @@ function welcome() {
 		`),
 			searchModule();
 	}, 2000);
-
+	//nav link animation
 	$('#navHomeText').on('click', function() {
 		$(this).addClass('navActive');
 		$(
-			'#navOffice, #navRealEstate, #navServices, #navRef, #navContact'
+			'#navOfficeText, #navRealEstateText, #navServicesText, #navReferencesText, #navContactText'
 		).removeClass('navActive');
 	});
-	$('#navOffice').on('click', function() {
+	$('#navOfficeText').on('click', function() {
 		$(this).addClass('navActive');
 		$(
-			'#navHomeText, #navRealEstate, #navServices, #navRef, #navContact'
+			'#navHomeText, #navRealEstateText, #navServicesText, #navReferencesText, #navContactText'
 		).removeClass('navActive');
 	});
-	$('#navRealEstate').on('click', function() {
+	$('#navRealEstateText').on('click', function() {
 		$(this).addClass('navActive');
 		$(
-			'#navHomeText, #navOffice, #navServices, #navReferences, #navContact'
+			'#navHomeText, #navOfficeText, #navServicesText, #navReferencesText, #navContactText'
 		).removeClass('navActive');
 	});
-	$('#navServices').on('click', function() {
+	$('#navServicesText').on('click', function() {
 		$(this).addClass('navActive');
 		$(
-			'#navHomeText, #navOffice, #navRealEstate, #navReferences, #navContact'
+			'#navHomeText, #navOfficeText, #navRealEstateText, #navReferencesText, #navContactText'
 		).removeClass('navActive');
 	});
-	$('#navReferences').on('click', function() {
+	$('#navReferencesText').on('click', function() {
 		$(this).addClass('navActive');
 		$(
-			'#navHomeText, #navOffice, #navRealEstate, #navServices, #navContact'
+			'#navHomeText, #navOfficeText, #navRealEstateText, #navServicesText, #navContactText'
 		).removeClass('navActive');
 	});
-	$('#navContact').on('click', function() {
+	$('#navContactText').on('click', function() {
 		$(this).addClass('navActive');
 		$(
-			'#navHomeText, #navOffice, #navRealEstate, #navServices, #navReferences'
+			'#navHomeText, #navOfficeText, #navRealEstateText, #navServicesText, #navReferencesText'
 		).removeClass('navActive');
 	});
 	$('#navLogo').on('click', function() {
 		$(this).addClass('navActive');
 		$(
-			'#navHomeText, #navOffice, #navRealEstate, #navServices, #navReferences, #navContact'
+			'#navHomeText, #navOfficeText, #navRealEstateText, #navServicesText, #navReferencesText, #navContactText'
 		).removeClass('navActive');
 	});
 

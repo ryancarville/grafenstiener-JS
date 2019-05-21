@@ -1,38 +1,81 @@
 $(document).ready(() => {
-	window.addEventListener('load', function() {
-		const loadingScreen = document.getElementById('loadingScreen');
-
-		welcomeSearch();
-		welcome();
-		footer();
-
-		document.body.removeChild(loadingScreen);
-	});
-
+	//mobile menu display toggle
 	$('.mobileMenu').on('click', () => {
 		$('.navMobileLinks').toggleClass('mobileMenuShow');
 	});
 	$('.navMobileLinks').on('click', () => {
 		$('.navMobileLinks').toggleClass('mobileMenuShow');
 	});
+	window.addEventListener('load', function() {
+		//loading screen to DOM
+		const loadingScreen = document.getElementById('loadingScreen');
+		//load home page elements
+		welcomeSearch();
+		welcome();
+		footer();
+		//remove load screen
+		document.body.removeChild(loadingScreen);
+	});
 });
-
+//set history API for home
 const route = 'welcome';
 window.history.pushState({ route }, '', '/');
-
+//set history API for desktop logo
+$('#navHome').on('click', function(e) {
+	let route = $(this).attr('route');
+	window.history.pushState({ route }, '', `/${route}`);
+});
+//set history API for all desktop nav
 $('#desktopLinks li a').on('click', function(e) {
 	let route = $(this).attr('route');
 	console.log(route);
 	window.history.pushState({ route }, '', `/${route}`);
-	console.log(history.state);
 });
 
+//sets history API for listing page buttons
+$(document).on('click', '#buyButton', function(e) {
+	let route = $(this).attr('route');
+	console.log(route);
+	window.history.pushState({ route }, '', `/realEstate/${route}`);
+});
+$(document).on('click', '#investButton', function(e) {
+	let route = $(this).attr('route');
+	console.log(route);
+	window.history.pushState({ route }, '', `/realEstate/${route}`);
+});
+$(document).on('click', '#resButton', function(e) {
+	let route = $(this).attr('route');
+	console.log(route);
+	window.history.pushState({ route }, '', `/realEstate/${route}`);
+});
+$(document).on('click', '#rentButton', function(e) {
+	let route = $(this).attr('route');
+	console.log(route);
+	window.history.pushState({ route }, '', `/realEstate/${route}`);
+});
+$(document).on('click', '#officeButton', function(e) {
+	let route = $(this).attr('route');
+	console.log(route);
+	window.history.pushState({ route }, '', `/realEstate/${route}`);
+});
+$(document).on('click', '#rentResButton', function(e) {
+	let route = $(this).attr('route');
+	console.log(route);
+	window.history.pushState({ route }, '', `/realEstate/${route}`);
+});
+
+//back button evaluation
 window.onpopstate = function() {
 	console.log(history.state);
 	let route = history.state['route'];
-	console.log(route);
 	switch (route) {
 		case '':
+			welcome();
+			break;
+		case 'index.html':
+			welcome();
+			break;
+		case 'welcome':
 			welcome();
 			break;
 		case 'office':
@@ -50,5 +93,15 @@ window.onpopstate = function() {
 		case 'contact':
 			contact();
 			break;
+		case 'listings':
+			results();
+			break;
 	}
 };
+
+$(window).on('beforeunload', function(e) {
+	var length = history.length;
+	history.go(-length);
+	window.location.replace('/index.html');
+	return false;
+});

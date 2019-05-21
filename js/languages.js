@@ -61,11 +61,11 @@ const languages = {
 };
 
 function german() {
-	window.location.hash = '#de';
+	location.hash = '#de';
 	location.reload(true);
 }
 
 function english() {
-	window.location.hash = '#en';
+	location.hash = '#en';
 	location.reload(true);
 }

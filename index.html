@@ -9,10 +9,7 @@
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<link rel="shortcut icon" href="images/favicon.ico" />
-		<link
-			href="https://fonts.googleapis.com/css?family=Raleway"
-			rel="stylesheet"
-		/>
+
 		<title>Gräfensteiner | Swiss Real Estate</title>
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -49,9 +46,12 @@
 				<a href="#">upgrade your browser</a> to improve your experience.
 			</p>
 		<![endif]-->
+		<!--loading screen-->
 		<div class="loadingScreen" id="loadingScreen"><h1>LOADING...</h1></div>
 		<header>
+			<!--nav container-->
 			<nav id="navLinks" class="navContainer">
+				<!--mobile nav-->
 				<div class="mobileMenuWrap">
 					<img src="images/menu.png" alt="mobileMenu" class="mobileMenu" />
 					<ul class="navMobileLinks">
@@ -81,54 +81,69 @@
 						</li>
 					</ul>
 				</div>
+				<!--mobile nav logo-->
+				<a id="navHomeMobile" route="" onclick="$(welcome)"
+					><img src="images/logo.png" alt="logo" id="navMobileLogo"
+				/></a>
+				<!--desktop nav-->
 				<div class="langBtnWrap">
-					<a href="#de" class="langBtn" onclick="$(german())">
+					<a class="langBtn" onclick="$(german)">
 						DE
 					</a>
-					<a href="#en" class="langBtn" onclick="$(english())">
+					<a class="langBtn" onclick="$(english)">
 						EN
 					</a>
 				</div>
-				<a id="navHome" onclick="$(welcome)"
-					><img src="images/logo.png" alt="logo" id="navMobileLogo"
-				/></a>
-
-				<a route="welcome" href="index.html" id="navHome"
-					><img src="images/logo.png" alt="logo" id="navLogo" />
+				<a route="" onclick="$(welcome)" id="navHome">
+					<img src="images/logo.png" alt="logo" id="navLogo" />
 				</a>
 				<ul id="desktopLinks" class="navLinks">
 					<li class="navLink">
-						<a route="" onclick="$(welcome)" id="navHomeText">Hause</a>
+						<a route="" onclick="$(welcome)" id="navHomeText">
+							Hause
+						</a>
 					</li>
 					<li class="navLink">
-						<a route="office" onclick="$(office)" id="navOfficeIcon">Büro</a>
+						<a route="office" onclick="$(office)" id="navOfficeText">
+							Büro
+						</a>
 					</li>
 					<li class="navLink">
-						<a route="realEstate" onclick="$(realEstate)" id="navRealEstateIcon"
-							>Immobilien</a
+						<a
+							route="realEstate"
+							onclick="$(realEstate)"
+							id="navRealEstateText"
 						>
+							Immobilien
+						</a>
 					</li>
 					<li class="navLink">
-						<a route="services" onclick="$(services)" id="navServicesIcon"
-							>Dienstleistungen</a
-						>
+						<a route="services" onclick="$(services)" id="navServicesText">
+							Dienstleistungen
+						</a>
 					</li>
 					<li class="navLink">
-						<a route="references" onclick="$(references)" id="navReferencesIcon"
-							>Referenz</a
+						<a
+							route="references"
+							onclick="$(references)"
+							id="navReferencesText"
 						>
+							Referenz
+						</a>
 					</li>
 					<li class="navLink">
-						<a route="contact" onclick="$(contact)" id="navContactIcon"
-							>Kontakt</a
-						>
+						<a route="contact" onclick="$(contact)" id="navContactText">
+							Kontakt
+						</a>
 					</li>
 				</ul>
 			</nav>
 		</header>
+		<!--main container-->
 		<main id="main" class="main" role="main"></main>
+		<!--footer-->
 		<footer class="footer"></footer>
-
+		<!--scripts-->
 		<script src="js/Properties.js"></script>
 		<script src="js/Office.js"></script>
 		<script src="js/Footer.js"></script>
@@ -151,7 +166,7 @@
 		<script src="js/main.js"></script>
 		<script src="js/legal.js"></script>
 		<script src="js/ion.rangeSlider.min.js"></script>
-
+		<!--language filter-->
 		<script>
 			$(() => {
 				if (window.location.hash === '#en') {

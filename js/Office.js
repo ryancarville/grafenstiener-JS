@@ -1,6 +1,6 @@
 const office = function() {
 	$(document).ready(function() {
-		$(this).scroll();
+		$(this).scrollTop(0);
 	});
 	$(
 		'.welcomePage, .realEstatePage, .servicesPage, .referencesPage, .contactPage'
@@ -33,6 +33,11 @@ const office = function() {
 				</div>
 			</div>
 		`);
+
+	sessionStorage.setItem('office', 'office');
+	const hist = sessionStorage.getItem('office');
+	window.history.pushState({ hist }, 'Office', '/office');
+	console.log(history);
 };
 
 if (window.location.hash === '#en') {
