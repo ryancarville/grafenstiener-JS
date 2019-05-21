@@ -1,4 +1,4 @@
-const servicesPage = function services() {
+function services() {
 	$(document).ready(function() {
 		$(this).scrollTop(0);
 	});
@@ -64,4 +64,4 @@ const servicesPage = function services() {
 		$('#servicesMsg').text(languages.de.servicesIntro);
 		$('#servicesListUl').text(languages.de.servicesListUl);
 	}
-};
+}

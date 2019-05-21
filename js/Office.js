@@ -1,4 +1,4 @@
-const office = function office() {
+const office = function() {
 	$(document).ready(function() {
 		$(this).scroll();
 	});
@@ -10,9 +10,7 @@ const office = function office() {
 	}
 
 	$('.main').append(`
-			<div class='officePage'>
-			
-			
+			<div class='officePage'>					
 				<div class='officeMsg' id='officePage' >
 					<h2>Büro</h2>
 					<p id='officeContent'>

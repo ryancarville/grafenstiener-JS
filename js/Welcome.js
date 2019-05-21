@@ -1,9 +1,8 @@
-const welcomePage = function welcome() {
+function welcome() {
 	$(document).ready(function() {
 		$(this).scrollTop(0);
 	});
-	$('.footer').empty();
-	footer();
+
 	$('.main').empty();
 	slideShow();
 	$('.main').prepend(`<div class='welcomePage'></div>`);
@@ -60,7 +59,6 @@ const welcomePage = function welcome() {
 		).removeClass('navActive');
 	});
 
-	history.pushState(null, null, 'index.html');
 	if (window.location.hash === '#en') {
 		$('#welcomeMsg').text(languages.en.welcome);
 	} else if (window.location.hash === '#de') {
@@ -68,4 +66,4 @@ const welcomePage = function welcome() {
 	} else {
 		$('#welcomeMsg').text(languages.de.welcome);
 	}
-};
+}

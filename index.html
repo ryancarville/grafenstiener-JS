@@ -96,38 +96,30 @@
 				<a href="index.html" id="navHome"
 					><img src="images/logo.png" alt="logo" id="navLogo" />
 				</a>
-				<ul class="navLinks">
-					<li class="navLink" id="navHome">
-						<a href="index.html" id="navHomeText">Hause</a>
+				<ul id="desktopLinks" class="navLinks">
+					<li class="navLink">
+						<a route="welcome" href="index.html" id="navHomeText">Hause</a>
 					</li>
-
-					<li class="navLink" id="navOffice">
-						<a href="office" id="navOfficeIcon">Büro</a>
+					<li class="navLink">
+						<a route="office" onclick="$(office)" id="navOfficeIcon">Büro</a>
 					</li>
-
-					<li class="navLink" id="navRealEstate">
-						<a
-							href="realEstate"
-							id="navRealEstateIcon"
-							onclick="$(realEstate())"
+					<li class="navLink">
+						<a route="realEstate" onclick="$(realEstate)" id="navRealEstateIcon"
 							>Immobilien</a
 						>
 					</li>
-					<li class="navLink" id="navServices">
-						<a href="services" id="navServicesIcon" onclick="$(services())"
+					<li class="navLink">
+						<a route="services" onclick="$(services)" id="navServicesIcon"
 							>Dienstleistungen</a
 						>
 					</li>
-					<li class="navLink" id="navReferences">
-						<a
-							href="references"
-							id="navReferencesIcon"
-							onclick="$(references())"
+					<li class="navLink">
+						<a route="references" onclick="$(references)" id="navReferencesIcon"
 							>Referenz</a
 						>
 					</li>
-					<li class="navLink" id="navContact">
-						<a href="contact" id="navContactIcon" onclick="$(contact())"
+					<li class="navLink">
+						<a route="contact" onclick="$(contact)" id="navContactIcon"
 							>Kontakt</a
 						>
 					</li>

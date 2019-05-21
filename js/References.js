@@ -1,4 +1,4 @@
-const referencesPage = function references() {
+function references() {
 	$(document).ready(function() {
 		$(this).scrollTop(0);
 	});
@@ -44,4 +44,4 @@ const referencesPage = function references() {
             </div>
         </div>`
 	);
-};
+}

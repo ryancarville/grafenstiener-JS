@@ -1,38 +1,53 @@
-window.addEventListener('load', function() {
-	const loadingScreen = document.getElementById('loadingScreen');
+$(document).ready(() => {
+	window.addEventListener('load', function() {
+		const loadingScreen = document.getElementById('loadingScreen');
 
-	welcomeSearch();
-	footer();
+		welcomeSearch();
+		welcome();
+		footer();
 
-	document.body.removeChild(loadingScreen);
+		document.body.removeChild(loadingScreen);
+	});
+
+	$('.mobileMenu').on('click', () => {
+		$('.navMobileLinks').toggleClass('mobileMenuShow');
+	});
+	$('.navMobileLinks').on('click', () => {
+		$('.navMobileLinks').toggleClass('mobileMenuShow');
+	});
 });
 
-$('.mobileMenu').on('click', () => {
-	$('.navMobileLinks').toggleClass('mobileMenuShow');
+$('#desktopLinks li a').on('click', function(e) {
+	let route = $(this).attr('route');
+	console.log(route);
+	window.history.pushState({ route }, '', `/${route}`);
+	console.log(history.state);
 });
-$('.navMobileLinks').on('click', () => {
-	$('.navMobileLinks').toggleClass('mobileMenuShow');
-});
+const route = 'welcome';
+window.history.pushState({ route }, '', '/');
 
-let router = new Router({
-	mode: 'history',
-	page404: function(path) {
-		console.log('"/' + path + '" Page not found');
+window.onpopstate = function() {
+	console.log(history.state);
+	let route = history.state['route'];
+	console.log(route);
+	switch (route) {
+		case 'welcome':
+			welcome();
+			break;
+		case 'office':
+			office();
+			break;
+		case 'realEstate':
+			realEstate();
+			break;
+		case 'services':
+			services();
+			break;
+		case 'references':
+			references();
+			break;
+		case 'contact':
+			contact();
+			break;
 	}
-});
-
-router.add('', welcomePage);
-
-router.add('office', office);
-
-router.add('realEsatate', realEstatePage);
-
-router.add('services', servicesPage);
-
-router.add('references', referencesPage);
-
-router.add('contact', contactPage);
-
-router.addUriListener();
-
-router.navigateTo('');
+};
