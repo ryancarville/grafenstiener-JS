@@ -1,4 +1,4 @@
-function realEstate() {
+const realEstatePage = function realEstate() {
 	$(document).ready(function() {
 		$(this).scrollTop(0);
 	});
@@ -79,4 +79,4 @@ function realEstate() {
 	} else {
 		$('#welcomeMsg').text(languages.de.welcome);
 	}
-}
+};

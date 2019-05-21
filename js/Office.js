@@ -1,4 +1,4 @@
-function office() {
+const officePage = function office() {
 	$(document).ready(function() {
 		$(this).scroll();
 	});
@@ -35,12 +35,12 @@ function office() {
 				</div>
 			</div>
 		`);
+};
 
-	if (window.location.hash === '#en') {
-		$('#officeSlogan').text(languages.en.slogan);
-		$('#officeContent').text(languages.en.office);
-	} else if (window.location.hash === '#de') {
-		$('#officeSlogan').text(languages.de.slogan);
-		$('#officeContent').text(languages.de.office);
-	}
+if (window.location.hash === '#en') {
+	$('#officeSlogan').text(languages.en.slogan);
+	$('#officeContent').text(languages.en.office);
+} else if (window.location.hash === '#de') {
+	$('#officeSlogan').text(languages.de.slogan);
+	$('#officeContent').text(languages.de.office);
 }

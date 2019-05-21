@@ -1,4 +1,4 @@
-function welcome() {
+const welcomePage = function welcome() {
 	$(document).ready(function() {
 		$(this).scrollTop(0);
 	});
@@ -59,6 +59,8 @@ function welcome() {
 			'#navHomeText, #navOffice, #navRealEstate, #navServices, #navReferences, #navContact'
 		).removeClass('navActive');
 	});
+
+	history.pushState(null, null, 'index.html');
 	if (window.location.hash === '#en') {
 		$('#welcomeMsg').text(languages.en.welcome);
 	} else if (window.location.hash === '#de') {
@@ -66,4 +68,4 @@ function welcome() {
 	} else {
 		$('#welcomeMsg').text(languages.de.welcome);
 	}
-}
+};

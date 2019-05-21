@@ -1,4 +1,4 @@
-function contact() {
+const contactPage = function contact() {
 	$(document).ready(function() {
 		$(this).scrollTop(0);
 	});
@@ -176,4 +176,4 @@ function contact() {
 		$('#newsletterMsg').text('Do you want to receive our monthly newsletter?');
 		$('#submit').text('Submit');
 	}
-}
+};
