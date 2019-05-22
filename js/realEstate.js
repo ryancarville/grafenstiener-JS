@@ -1,6 +1,6 @@
 function realEstate() {
 	$(document).ready(function() {
-		$(this).scrollTop(0);
+		$(this).scrollTop();
 	});
 	$('.main').empty();
 	$('.main').append(
@@ -45,36 +45,4 @@ function realEstate() {
 		</div>
 			`
 	);
-
-	if (window.location.hash === '#en') {
-		$('#realEstateHeader').text(languages.en.servicesHeader);
-		$('#realEstateContent').text(languages.en.servicesIntro);
-		$('#realEstateTag').text(languages.en.servicesListUl);
-		$('#buyButton').text('Buy');
-		$('#buyMsg').text(languages.en.marketValueation);
-		$('#investButton').text('Investment');
-		$('#resButton').text('Residential');
-		$('#rentButton').text('Rent');
-		$('#rentMsg').text(languages.en.rentals);
-		$('#officeButton').text('Office');
-		$('#rentResButton').text('Residential');
-		$('#sellButton').text('Sell');
-		$('#sellMsg').text(languages.en.sale);
-		const servicesArray = languages.en.servicesListLi;
-		$('#servicesListUl').append(
-			servicesArray.map((item, i) => {
-				return `<li key={i}>${item}</li>`;
-			})
-		);
-	} else if (window.location.hash === '#de') {
-		$('#welcomeMsg').text(languages.de.welcome);
-		const servicesArray = languages.de.servicesListLi;
-		$('#servicesListUl').append(
-			servicesArray.map((item, i) => {
-				return `<li key={i}>${item}</li>`;
-			})
-		);
-	} else {
-		$('#welcomeMsg').text(languages.de.welcome);
-	}
 }

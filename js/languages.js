@@ -60,12 +60,15 @@ const languages = {
 	}
 };
 
-function german() {
-	location.hash = '#de';
-	location.reload(true);
-}
-
-function english() {
-	location.hash = '#en';
-	location.reload(true);
+function pushHash() {
+	if (window.location.hash === '#en') {
+		const route = window.location.href;
+		history.pushState({ route }, '', `${route}`);
+		location.reload(true);
+	} else if (lang === 'de') {
+		window.history.hash === '#de';
+		const route = window.location.href;
+		history.pushState({ route }, '', `${route}`);
+		location.reload(true);
+	}
 }

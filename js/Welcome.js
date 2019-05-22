@@ -63,11 +63,8 @@ function welcome() {
 		).removeClass('navActive');
 	});
 
-	if (window.location.hash === '#en') {
-		$('#welcomeMsg').text(languages.en.welcome);
-	} else if (window.location.hash === '#de') {
-		$('#welcomeMsg').text(languages.de.welcome);
-	} else {
-		$('#welcomeMsg').text(languages.de.welcome);
-	}
+	//set history API for home
+	const route = '';
+	window.history.pushState({ route }, '', '/index.html');
+	console.log(history.state);
 }

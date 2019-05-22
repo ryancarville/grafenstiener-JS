@@ -30,14 +30,4 @@ function footer() {
 			</div>	`
 		);
 	}, 2200);
-	if (window.location.hash === '#en') {
-		$('#footerHome').text('Home');
-		$('#footerOffice').text('office');
-		$('#footerRealEstate').text('Real Estate');
-		$('#footerBuy').text('Buy');
-		$('#footerRent').text('Rent');
-		$('#footerSell').text('Sell');
-		$('#footerReferences').text('References');
-		$('#footerContact').text('Contact');
-	}
 }

@@ -33,17 +33,4 @@ const office = function() {
 				</div>
 			</div>
 		`);
-
-	sessionStorage.setItem('office', 'office');
-	const hist = sessionStorage.getItem('office');
-	window.history.pushState({ hist }, 'Office', '/office');
-	console.log(history);
 };
-
-if (window.location.hash === '#en') {
-	$('#officeSlogan').text(languages.en.slogan);
-	$('#officeContent').text(languages.en.office);
-} else if (window.location.hash === '#de') {
-	$('#officeSlogan').text(languages.de.slogan);
-	$('#officeContent').text(languages.de.office);
-}

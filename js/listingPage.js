@@ -10,7 +10,7 @@ function listingPage(listing) {
 				<div class="slideshow-container">
 					<div class="mySlides fade">
 						<div class="numbertext">1 / 3</div>
-						<img src="images/listings/${listing.image1}" style="width:100%">
+						<img src="./images/listings/${listing.image1}" style="width:100%">
 						<div class="text">Entrance</div>
 					</div>
 				

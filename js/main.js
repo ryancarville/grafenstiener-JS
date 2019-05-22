@@ -17,9 +17,7 @@ $(document).ready(() => {
 		document.body.removeChild(loadingScreen);
 	});
 });
-//set history API for home
-const route = 'welcome';
-window.history.pushState({ route }, '', '/index.html');
+
 //set history API for desktop logo
 $('#navHome').on('click', function(e) {
 	let route = $(this).attr('route');
@@ -99,9 +97,11 @@ window.onpopstate = function() {
 	}
 };
 
-$(window).on('beforeunload', function(e) {
-	var length = history.length;
-	history.go(-length);
-	window.location.replace('/index.html');
-	return false;
-});
+function refreshToIndex() {
+	const refresh = {};
+	window.history.replaceState({ refresh }, '', '/index.html');
+	window.location.pathname = history.state['refresh'];
+	console.log(window.location.pathname);
+	return;
+}
+window.onbeforeunload = refreshToIndex;

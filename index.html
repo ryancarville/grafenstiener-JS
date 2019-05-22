@@ -40,7 +40,10 @@
 		<link rel="stylesheet" href="css/legal.css" />
 		<link rel="stylesheet" href="css/ion.rangeSlider.min.css" />
 		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-		<script src="node_modules/vanilla-router/dist/vanilla-router.min.js"></script>
+		<script
+			type="text/javascript"
+			src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+		></script>
 	</head>
 	<body>
 		<!--[if lt IE 7]>
@@ -90,12 +93,61 @@
 				/></a>
 				<!--desktop nav-->
 				<div class="langBtnWrap">
-					<a class="langBtn" onclick="$(german)">
-						DE
-					</a>
-					<a class="langBtn" onclick="$(english)">
-						EN
-					</a>
+					<div class="ct-topbar">
+						<div class="container">
+							<ul class="list-unstyled list-inline ct-topbar__list">
+								<li class="ct-language">
+									Sprache
+									<ul class="list-unstyled ct-language__dropdown">
+										<li>
+											<a
+												href="#googtrans(de|de)"
+												class="lang-de lang-select"
+												data-lang="de"
+												><img
+													src="images/languages/flag-germany.png"
+													alt="GERMAN"
+											/></a>
+										</li>
+										<li>
+											<a
+												href="#googtrans(de|en)"
+												class="lang-en lang-select"
+												data-lang="en"
+												><img src="images/languages/flag-uk.png" alt="USA"
+											/></a>
+										</li>
+										<li>
+											<a
+												href="#googtrans(de|fr)"
+												class="lang-fr lang-select"
+												data-lang="fr"
+												><img
+													src="images/languages/flag-france.png"
+													alt="FRANCE"
+											/></a>
+										</li>
+										<li>
+											<a
+												href="#googtrans(de|it)"
+												class="lang-fr lang-select"
+												data-lang="it"
+												><img src="images/languages/flag-italy.png" alt="ITALY"
+											/></a>
+										</li>
+										<li>
+											<a
+												href="#googtrans(de|es)"
+												class="lang-es lang-select"
+												data-lang="es"
+												><img src="images/languages/flag-spain.png" alt="SPAIN"
+											/></a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 				<a route="index.html" onclick="$(welcome)" id="navHome">
 					<img src="images/logo.png" alt="logo" id="navLogo" />
@@ -170,17 +222,44 @@
 		<script src="js/legal.js"></script>
 		<script src="js/ion.rangeSlider.min.js"></script>
 		<!--language filter-->
-		<script>
-			$(() => {
-				if (window.location.hash === '#en') {
-					$('#navHomeText').text('home');
-					$('#navOfficeIcon').text('office');
-					$('#navRealEstateIcon').text('real estate');
-					$('#navServicesIcon').text('services');
-					$('#navReferencesIcon').text('references');
-					$('#navContactIcon').text('contact');
+
+		<script type="text/javascript">
+			function googleTranslateElementInit() {
+				new google.translate.TranslateElement(
+					{
+						pageLanguage: 'de',
+						includelanguage: 'de,en,es,it,fr',
+						layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT
+					},
+					'google_translate_element'
+				);
+			}
+
+			function triggerHtmlEvent(element, eventName) {
+				var event;
+				if (document.createEvent) {
+					event = document.createEvent('HTMLEvents');
+					event.initEvent(eventName, true, true);
+					element.dispatchEvent(event);
+				} else {
+					event = document.createEventObject();
+					event.eventType = eventName;
+					element.fireEvent('on' + event.eventType, event);
 				}
+			}
+
+			$('.lang-select').click(function() {
+				var theLang = $(this).attr('data-lang');
+				$('.goog-te-combo').val(theLang);
+
+				//alert(jQuery(this).attr('href'));
+				window.location = $(this).attr('href');
+				location.reload();
 			});
 		</script>
+		<script
+			type="text/javascript"
+			src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+		></script>
 	</body>
 </html>

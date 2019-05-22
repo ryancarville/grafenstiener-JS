@@ -55,13 +55,4 @@ function services() {
 			</div>
 		</section>`
 	);
-	if (window.location.hash === '#en') {
-		$('#servicesMsgHeader').text(languages.en.servicesHeader);
-		$('#servicesMsg').text(languages.en.servicesIntro);
-		$('#servicesListUl').text(languages.en.servicesListUl);
-	} else if (window.location.hash === '#de') {
-		$('#servicesMsgHeader').text(languages.de.servicesHeader);
-		$('#servicesMsg').text(languages.de.servicesIntro);
-		$('#servicesListUl').text(languages.de.servicesListUl);
-	}
 }

@@ -166,14 +166,4 @@ function contact() {
 			</div>
 		</div>`
 	);
-	if (window.location.hash === '#en') {
-		$('#contactHeader').text(languages.en.contact);
-		$('#name').attr('placeholder', 'Full Name');
-		$('#email').attr('placeholder', 'Valid Email Address');
-		$('#address').attr('placeholder', 'Address');
-		$('#phoneNum').attr('placeholder', 'Telephone Number');
-		$('#msg').attr('placeholder', 'Your message here');
-		$('#newsletterMsg').text('Do you want to receive our monthly newsletter?');
-		$('#submit').text('Submit');
-	}
 }
