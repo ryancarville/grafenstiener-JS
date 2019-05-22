@@ -13,8 +13,7 @@ function welcome() {
 	setTimeout(function welcomeContent() {
 		$('.welcomePage').prepend(`
 		<div class='welcomeContent'>
-			<h3>Mit Kompetenz und Menschenkenntnis</h3>
-			<h2 id='welcomeMsg'>Herzlich willkommen!</h2>
+			<h3>mit kompetenz und menschenkenntnis</h3>	
 		</div><div class='sortHome'></div>
 		`),
 			searchModule();

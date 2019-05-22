@@ -1,6 +1,6 @@
 .sellerPage {
-	display: block;
-	padding-top: 10px;
+	display: flex;
+	padding-top: 100px;
 	width: 100%;
 	height: auto;
 	text-align: center;
@@ -9,6 +9,8 @@
 }
 
 .sellerHeader {
+	padding-top: 300px;
+	width: 40%;
 	text-align: center;
 	font-size: 25px;
 }
@@ -18,15 +20,24 @@
 	padding: 5px;
 }
 
-.sellInputForm {
-	border: 2px solid black;
+.sellFormWrapper {
+	margin-top: 100px;
+	display: block;
+	width: 40%;
+	color: white;
+	background-color: #8b6548;
+	padding: 20px;
+}
+.sellerInputForm {
+	width: 100%;
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
+	justify-content: center;
 	align-items: center;
 }
 
 .sellerFormInputs {
-	width: 90%;
+	width: 50%;
 	height: 35px;
 	margin: 10px;
 	text-align: center;
@@ -37,11 +48,12 @@
 }
 
 #sellerFormMsg {
-	width: 90%;
+	width: 600px;
 	height: 150px;
 }
 
 #sellerFormSubmit {
+	width: 25%;
 	cursor: pointer;
 	height: 50px;
 	border-radius: 50px;
@@ -85,26 +97,4 @@
 .sellFormCheckboxes a {
 	padding: 10px;
 	margin-top: 5px;
-}
-
-@media only screen and (min-width: 1000px) {
-	.sellerPage {
-		display: flex;
-		align-items: center;
-		padding-top: 70px;
-		height: 800px;
-	}
-
-	.sellerHeader {
-		margin-left: 25px;
-		font-size: 30px;
-	}
-
-	.sellerFormInputs {
-		width: 350px;
-	}
-
-	#sellerFormMsg {
-		width: 720px;
-	}
 }

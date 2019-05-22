@@ -6,7 +6,7 @@ function references() {
 	$('.main').append(
 		`<div class='refWrapper'>
             <div class='refHeader'>
-                <h2>Clients who love us</h2>
+                <h2>Kunden, die uns lieben</h2>
             </div>
             <div class='refContent'>
                 <div class='ref' id='ref1'>

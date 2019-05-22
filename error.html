@@ -9,7 +9,7 @@
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-		<link rel="shortcut icon" href="images/favicon.ico" />
+		<link rel="shortcut icon" href="./images/favicon.ico" />
 		<link
 			href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
 			rel="stylesheet"
@@ -17,29 +17,29 @@
 		<title>Gräfensteiner | Swiss Real Estate</title>
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
-		<link rel="stylesheet" href="css/Languages.css" />
-		<link rel="stylesheet" href="css/Nav.css" />
-		<link rel="stylesheet" type="text/css" href="css/Welcome.css" />
-		<link rel="stylesheet" href="css/WelcomeSearch.css" />
-		<link rel="stylesheet" href="css/DataCounter.css" />
-		<link rel="stylesheet" type="text/css" href="css/Services.css" />
-		<link rel="stylesheet" type="text/css" href="css/realEstate.css" />
-		<link rel="stylesheet" href="css/Office.css" />
-		<link rel="stylesheet" href="css/Contact.css" />
-		<link rel="stylesheet" href="css/SearchModule.css" />
-		<link rel="stylesheet" href="css/ListingResults.css" />
-		<link rel="stylesheet" href="css/Listing.css" />
-		<link rel="stylesheet" href="css/listingPage.css" />
-		<link rel="stylesheet" href="css/Footer.css" />
-		<link rel="stylesheet" href="css/References.css" />
-		<link rel="stylesheet" href="css/refPage.css" />
-		<link rel="stylesheet" href="css/Slideshow.css" />
-		<link rel="stylesheet" href="css/Sell.css" />
-		<link rel="stylesheet" href="css/imageCarousel.css" />
-		<link rel="stylesheet" href="css/keyframes.css" />
-		<link rel="stylesheet" href="css/legal.css" />
-		<link rel="stylesheet" href="css/ion.rangeSlider.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" href="../css/Languages.css" />
+		<link rel="stylesheet" href="../css/Nav.css" />
+		<link rel="stylesheet" type="text/css" href="../css/Welcome.css" />
+		<link rel="stylesheet" href="../css/WelcomeSearch.css" />
+		<link rel="stylesheet" href="../css/DataCounter.css" />
+		<link rel="stylesheet" type="text/css" href="../css/Services.css" />
+		<link rel="stylesheet" type="text/css" href="../css/realEstate.css" />
+		<link rel="stylesheet" href="../css/Office.css" />
+		<link rel="stylesheet" href="../css/Contact.css" />
+		<link rel="stylesheet" href="../css/SearchModule.css" />
+		<link rel="stylesheet" href="../css/ListingResults.css" />
+		<link rel="stylesheet" href="../css/Listing.css" />
+		<link rel="stylesheet" href="../css/listingPage.css" />
+		<link rel="stylesheet" href="../css/Footer.css" />
+		<link rel="stylesheet" href="../css/References.css" />
+		<link rel="stylesheet" href="../css/refPage.css" />
+		<link rel="stylesheet" href="../css/Slideshow.css" />
+		<link rel="stylesheet" href="../css/Sell.css" />
+		<link rel="stylesheet" href="../css/imageCarousel.css" />
+		<link rel="stylesheet" href="../css/keyframes.css" />
+		<link rel="stylesheet" href="../css/legal.css" />
+		<link rel="stylesheet" href="../css/ion.rangeSlider.min.css" />
 		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 		<script
 			type="text/javascript"
@@ -54,13 +54,13 @@
 			</p>
 		<![endif]-->
 		<!--loading screen-->
-		<div class="loadingScreen" id="loadingScreen"><h1>LOADING...</h1></div>
+
 		<header>
 			<!--nav container-->
 			<nav id="navLinks" class="navContainer">
 				<!--mobile nav-->
 				<div class="mobileMenuWrap">
-					<img src="images/menu.png" alt="mobileMenu" class="mobileMenu" />
+					<img src="../images/menu.png" alt="mobileMenu" class="mobileMenu" />
 					<ul class="navMobileLinks">
 						<li class="navMobileLink" id="navMobileOffice">
 							<a id="navMobileOffice" onclick="$(office())">Büro</a>
@@ -77,9 +77,7 @@
 							>
 						</li>
 						<li class="navMobileLink" id="navMobileReferences">
-							<a id="navMobileReferences" onclick="$(references())"
-								>Kundenstimmen</a
-							>
+							<a id="navMobileReferences" onclick="$(references())">Referenz</a>
 						</li>
 						<li class="navMobileLink" id="navMobileContact">
 							<a id="navMobileContact" onclick="$(contact())">Kontakt</a>
@@ -92,7 +90,7 @@
 				</div>
 				<!--mobile nav logo-->
 				<a id="navHomeMobile" route="" onclick="$(welcome)"
-					><img src="images/logo.png" alt="logo" id="navMobileLogo"
+					><img src="../images/logo.png" alt="logo" id="navMobileLogo"
 				/></a>
 				<!--desktop nav-->
 				<div class="langBtnWrap">
@@ -108,7 +106,7 @@
 												class="lang-de lang-select"
 												data-lang="de"
 												><img
-													src="images/languages/flag-germany.png"
+													src="../images/languages/flag-germany.png"
 													alt="GERMAN"
 											/></a>
 										</li>
@@ -117,7 +115,7 @@
 												href="#googtrans(de|en)"
 												class="lang-en lang-select"
 												data-lang="en"
-												><img src="images/languages/flag-uk.png" alt="USA"
+												><img src="../images/languages/flag-uk.png" alt="USA"
 											/></a>
 										</li>
 										<li>
@@ -126,7 +124,7 @@
 												class="lang-fr lang-select"
 												data-lang="fr"
 												><img
-													src="images/languages/flag-france.png"
+													src="../images/languages/flag-france.png"
 													alt="FRANCE"
 											/></a>
 										</li>
@@ -135,7 +133,9 @@
 												href="#googtrans(de|it)"
 												class="lang-fr lang-select"
 												data-lang="it"
-												><img src="images/languages/flag-italy.png" alt="ITALY"
+												><img
+													src="../images/languages/flag-italy.png"
+													alt="ITALY"
 											/></a>
 										</li>
 										<li>
@@ -143,7 +143,9 @@
 												href="#googtrans(de|es)"
 												class="lang-es lang-select"
 												data-lang="es"
-												><img src="images/languages/flag-spain.png" alt="SPAIN"
+												><img
+													src="../images/languages/flag-spain.png"
+													alt="SPAIN"
 											/></a>
 										</li>
 									</ul>
@@ -153,9 +155,14 @@
 					</div>
 				</div>
 				<a route="index.html" onclick="$(welcome)" id="navHome">
-					<img src="images/logo.png" alt="logo" id="navLogo" />
+					<img src="../images/logo.png" alt="logo" id="navLogo" />
 				</a>
 				<ul id="desktopLinks" class="navLinks">
+					<li class="navLink">
+						<a route="index.html" onclick="$(welcome)" id="navHomeText">
+							Hause
+						</a>
+					</li>
 					<li class="navLink">
 						<a route="office" onclick="$(office)" id="navOfficeText">
 							Büro
@@ -181,7 +188,7 @@
 							onclick="$(references)"
 							id="navReferencesText"
 						>
-							Kundenstimmen
+							Referenz
 						</a>
 					</li>
 					<li class="navLink">
@@ -193,12 +200,12 @@
 			</nav>
 		</header>
 		<!--main container-->
-		<main id="main" class="main" role="main"></main>
+		<main id="main" class="main" role="main">I am a error page</main>
 		<!--footer-->
 		<footer class="footer"></footer>
 		<!--scripts-->
-		<script src="js/Properties.js"></script>
-		<script src="js/Office.js"></script>
+		<script src="../js/Properties.js"></script>
+		<script src="../js/Office.js"></script>
 		<script src="js/Footer.js"></script>
 		<script src="js/Services.js"></script>
 		<script src="js/Contact.js"></script>
@@ -216,7 +223,7 @@
 		<script src="js/listingPage.js"></script>
 		<script src="js/imageCarousel.js"></script>
 		<script src="js/languages.js"></script>
-		<script src="js/main.js"></script>
+		<script src="/js/main.js"></script>
 		<script src="js/legal.js"></script>
 		<script src="js/ion.rangeSlider.min.js"></script>
 		<!--language filter-->

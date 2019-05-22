@@ -1,4 +1,8 @@
 $(document).ready(() => {
+	//scroll to top of page when loaded
+	$(document).ready(function() {
+		$(this).scrollTop(0);
+	});
 	//mobile menu display toggle
 	$('.mobileMenu').on('click', () => {
 		$('.navMobileLinks').toggleClass('mobileMenuShow');
@@ -97,11 +101,14 @@ window.onpopstate = function() {
 	}
 };
 
-function refreshToIndex() {
-	const refresh = {};
-	window.history.replaceState({ refresh }, '', '/index.html');
-	window.location.pathname = history.state['refresh'];
-	console.log(window.location.pathname);
-	return;
+function refreshToIndex(e) {
+	if (window.performance) {
+		console.info('window.performance works fine on this browser');
+	}
+	if (performance.navigation.type == 0) {
+		console.info('This page is reloaded');
+	} else {
+		console.info('This page is not reloaded');
+	}
 }
 window.onbeforeunload = refreshToIndex;

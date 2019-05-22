@@ -9,6 +9,10 @@ body {
 	box-sizing: border-box;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 .loadingScreen {
 	background-color: white;
 	height: 1600px;

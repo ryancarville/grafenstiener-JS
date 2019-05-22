@@ -6,8 +6,7 @@
 	margin-right: auto;
 	box-sizing: border-box;
 	background-color: rgba(0, 0, 0, 0.8);
-	width: 100%;
-	height: auto;
+	width: 80%;
 	padding: 10px;
 	box-sizing: border-box;
 }
@@ -18,12 +17,13 @@
 	height: 40px;
 	float: right;
 	margin-top: -50px;
-	margin-right: 0px;
+	margin-right: 50px;
 	font-size: 16px;
 	padding: 5px;
 	border: none;
 	background-color: transparent;
 	opacity: 0.6;
+	text-transform: lowercase;
 }
 
 .mainSearchBtn:hover {
@@ -36,12 +36,13 @@
 	height: 40px;
 	float: right;
 	margin-top: -50px;
-	margin-right: 70px;
+	margin-right: 120px;
 	font-size: 16px;
 	padding: 5px;
 	border: none;
 	background-color: transparent;
 	opacity: 0.6;
+	text-transform: lowercase;
 }
 
 .mainResetBtn:hover {
@@ -71,8 +72,8 @@
 		box-sizing: border-box;
 
 		width: 60%;
-		height: 150px;
-		padding: 30px;
+		height: 120px;
+		padding: 10px;
 	}
 
 	.sortHome {
@@ -84,6 +85,7 @@
 	.searchDropDown {
 		display: flex;
 		justify-content: space-around;
+		align-items: center;
 		width: 100%;
 	}
 }

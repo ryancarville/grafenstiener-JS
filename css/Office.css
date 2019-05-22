@@ -2,19 +2,17 @@
 	width: 100%;
 	height: auto;
 	display: block;
-	padding-top: 60px;
+	padding-top: 150px;
 	animation: fadeIn 2s ease-in-out;
 }
 
 .officeMsg {
-	color: rgb(255, 255, 255);
-	width: 250px;
+	width: 150px;
 	height: auto;
 	margin-left: auto;
 	margin-right: auto;
 	box-sizing: border-box;
 	text-align: justify;
-	background-color: rgb(139, 101, 72, 0.7);
 }
 
 .officeMsg h2 {
@@ -57,11 +55,9 @@
 	}
 	.bio p {
 		width: 350px;
-		height: 419px;
 		box-sizing: border-box;
-		color: rgb(255, 255, 255);
-		background-color: rgb(139, 101, 72, 0.7);
-		padding: 15px;
+		text-align: justify;
+		padding: 35px;
 		margin-left: auto;
 	}
 	#bioPic {

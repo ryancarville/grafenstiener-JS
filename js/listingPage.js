@@ -10,19 +10,19 @@ function listingPage(listing) {
 				<div class="slideshow-container">
 					<div class="mySlides fade">
 						<div class="numbertext">1 / 3</div>
-						<img src="./images/listings/${listing.image1}" style="width:100%">
+						<img src="../images/listings/${listing.image1}" style="width:100%">
 						<div class="text">Entrance</div>
 					</div>
 				
 					<div class="mySlides fade">
 						<div class="numbertext">2 / 3</div>
-						<img src="images/listings/${listing.image2}" style="width:100%">
+						<img src="../images/listings/${listing.image2}" style="width:100%">
 						<div class="text">Living Room</div>
 					</div>
 				
 					<div class="mySlides fade">
 						<div class="numbertext">3 / 3</div>
-						<img src="images/listings/${listing.image3}" style="width:100%">
+						<img src="../images/listings/${listing.image3}" style="width:100%">
 						<div class="text">Kitchen</div>
 					</div>
 				
@@ -38,7 +38,7 @@ function listingPage(listing) {
 					<span class="dot" onclick="currentSlide(3)"></span> 
 					
 				</div>
-				<button type='button' class='backBtn' onclick=results(properties)>BACK TO SEARCH</button>
+				
 				<div class='statsWrap'>																	
 					<div class='propertyStats'>
 						<p>
@@ -47,22 +47,22 @@ function listingPage(listing) {
 						ID: 
 						${listing.id} 
 						<br>
-						Property Name:  
+						Name des Anwesens:
 						${listing.name} 
 						<br>
 						Address:
 						${listing.address} 
 						<br>
-						Canton: 
+						Kanton: 
 						${listing.canton} 
 						<br>							
-						City: 
+						Stadt: 
 						${listing.city} 
 						<br>
-						Size:
+						Größe:
 						${listing.size}
 						<br><br>
-						Documentation:
+						Dokumentation:
 						<a href='${listing.docs}'>Click Here for Docs</a>
 						</p>
 					</div>

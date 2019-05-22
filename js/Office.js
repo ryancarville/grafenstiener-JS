@@ -10,8 +10,14 @@ const office = function() {
 	}
 
 	$('.main').append(`
-			<div class='officePage'>					
-				<div class='officeMsg' id='officePage' >
+			<div class='welcomeContent' style='margin-top:500px'>
+				<h3>mit kompetenz und menschenkenntnis</h3>	
+				<a href='#officePageScroll' id='downArrowOffice'><img src='images/downArrow.png' style='margin-top:200px; width:100px;'/></a>
+			</div>
+			
+			<div class='officePage' >	
+			<div id='officePageScroll'></div>				
+				<div class='officeMsg' id='officePage'>
 					<h2>Büro</h2>
 					<p id='officeContent'>
 					Der Immobilienmarkt ist seit vielen Jahren unser berufliches Zuhause. 
@@ -29,8 +35,19 @@ const office = function() {
 				
 				<div class='bio'>
 					<p>Mit sicherem Gespür für den Menschen und den Markt begleite ich Sie beim Verkauf Ihrer Wohnung oder Ihres Hauses. Bei komplexen Immobilientransaktionen weiss ich unterschiedliche Bedürfnisse gleichwertig zu berücksichtigen, so dass alle Beteiligten sich gewürdigt fühlen.</p>			
-					<img src='images/bioPic.jpeg' alt='Phot of Karen Gräfenstiener' id='bioPic'>
+					<img src='../images/bioPic.jpeg' alt='Photo of Karen Gräfenstiener' id='bioPic'>
 				</div>
 			</div>
 		`);
 };
+$('#downArrowOffice').click(function(e) {
+	e.preventDefault();
+	$('html, body').animate(
+		{
+			scrollTop: $(this)
+				.attr('href')
+				.offset({ top: 1000 }).top
+		},
+		8000
+	);
+});

@@ -10,7 +10,7 @@ function contact() {
 					<h2 class='header' id='contactHeader'>Wir sind gerne für Sie da und freuen uns auf Ihre Kontaktaufnahme.</h2>
 					<h3 class='info'>
 						Gräfenstiener | Swiss Real Estate <br />
-						<a class='emailLink' href='mailto:infor@jdjksl.com'>
+						<a class='emailLink' href='mailto:info@gräfenstiener.com'>
 							info@gräfenstiener.com
 						</a>
 					</h3>
@@ -22,7 +22,7 @@ function contact() {
 					id='contactForm'
 					enctype='multipart/form-data'
 					method='post'
-					action='sendEmail.php'>
+					action='./sendEmail.php'>
 					<div class='contactInputTop'>
 						<div id='nameInput'>
 							<label for='name'>Name*</label>
@@ -47,7 +47,7 @@ function contact() {
 							/>
 						</div>
 						<div id='phoneInput'>
-							<label for='phone'>Phone</label>
+							<label for='phone'>Telefon</label>
 							<br/>
 							<input
 								type='text'					
@@ -57,7 +57,7 @@ function contact() {
 							/>
 						</div>
 						<div id='streetInput'>	
-							<label for='street'>Street</label>
+							<label for='street'>Strasse</label>
 							<br/>	
 							<input
 								type='text'
@@ -67,7 +67,7 @@ function contact() {
 							/>
 						</div>
 						<div id='addressNumInput'>
-							<label for='streetNum'>Street Number</label>
+							<label for='streetNum'>Hausnummer</label>
 							<br/>
 							<input
 								type='text'
@@ -88,7 +88,7 @@ function contact() {
 							/>
 						</div>
 						<div id='cityInput'>
-							<label for='city'>City</label>
+							<label for='city'>Stadt</label>
 							<br/>
 							<input
 								type='text'
@@ -98,7 +98,7 @@ function contact() {
 							/>
 						</div>														
 						<div id='cantonInput'>
-							<label for='canton'>Canton</label>
+							<label for='canton'>Kanton</label>
 							<br/>
 							<input
 								type='text'
@@ -108,7 +108,7 @@ function contact() {
 							/>
 						</div>
 						<div id='countryInput'>
-							<label for='country'>Country</label>
+							<label for='country'>Land</label>
 							<br/>
 							<input
 								type='text'						
@@ -126,7 +126,7 @@ function contact() {
 									class='checkBtn'
 									name='newsletter'
 									id='newsletter'
-									value='newsletter'
+									value='YES'
 								/>
 								<label for='newsletter'></label>
 							</div>
@@ -135,19 +135,17 @@ function contact() {
 						<label for='message'></label>
 						<textarea						
 							name='message'
-							placeholder='Your Message Here...'
+							placeholder='Ihre Nachricht hier...'
 							onfocus="this.placeholder=''" 
-							onblur="this.placeholder='Your Message Here...'"
+							onblur="this.placeholder='Ihre Nachricht hier...'"
 							cols='50'
 							rows='5'
 							id='msg'
 							class='contactFormInput'
 						/>
-					<p>* denotes required feilds</p>
-						
+					<p>* bezeichnet benötigte Felder</p>	
 					</div>
-					<br />
-					
+					<br />				
 					<button
 						class='contactBtn'
 						id='submit'
@@ -160,7 +158,7 @@ function contact() {
 						id='resetContactForm'
 						value='reset'
 						type='reset'>
-						Reset
+						Zurücksetzen
 					</button>
 				</form>
 			</div>

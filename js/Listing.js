@@ -1,32 +1,32 @@
 function getListing(listing) {
 	const listItem = `<div class='listing' id='${listing.id}'>
-	<img src='images/listings/
+	<img src='../images/listings/
 	${listing.image1}'
 	class='listingImg' id='image${listing.id}'> 
-	<p>ID:  
+	<p>
+	Preis:
+	${listing.price} CHF
+	<br>
+	ID: 
 	${listing.id} 
 	<br>
-	Property Name:  
+	Name des Anwesens:
 	${listing.name} 
 	<br>
-	Address: 
+	Address:
 	${listing.address} 
 	<br>
-	Canton: 
+	Kanton: 
 	${listing.canton} 
-	<br>
-	City: 
+	<br>							
+	Stadt: 
 	${listing.city} 
 	<br>
-	Price: 
-	${listing.price} 
-	<br>
-	Size:
-	${listing.size}
-	<br>
+	Größe:
+	${listing.size}<br>
 	<button class='listingInfoBTN' id='listingBTN${
 		listing.id
-	}' type='button' >See more Info</button>
+	}' type='button' >Weitere Infos</button>
 	</p>
 	</div>
 	`;

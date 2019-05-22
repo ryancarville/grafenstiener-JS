@@ -5,23 +5,23 @@ function searchModule() {
 				<form action='' class='searchCatag' id='searchFilter'>
 					<div class='searchDropDown'>
 						<select class='searchDropMenus' id='searchMarketMenu'>
-							<optgroup label='Suche Nach'>
-							<option value=''>Suche Nach</option>
-								<option value='kaufen'>Kaufen</option>
-								<option value='mitten'>Mitten</option>
+							<optgroup label='suche nach'>
+								<option value='kaufen'>kaufen</option>
+								<option value='meiten'>meiten</option>
+								<option value=''>alle</option>
 							</optgroup>
 						</select>	
 						<select class='searchDropMenus' id='searchLandMenu'>
-							<optgroup label='searchLand'>
-								<option value=''>Land</option>
-								<option value='schweiz'>Schweiz</option>
-								<option value='frankreich'>Frankreich</option>
-								<option value='spanien'>Spanien</option>
+							<optgroup label='land'>							
+								<option value='schweiz'>schweiz</option>
+								<option value='frankreich'>frankreich</option>
+								<option value='spanien'>spanien</option>
+								<option value=''>alle</option>
 							</optgroup>
 						</select>
 						<select class='searchDropMenus' id='searchCantonMenu'>
-							<optgroup label='searchCanton'>
-								<option value=''>Region</option>
+							<optgroup label='canton'>
+								<option value=''>region</option>
 								<option value='aargau'>Aargau</option>
 								<option value='appenzell ausserrhoden'>Appenzell Ausserrhoden</option>
 								<option value='appenzell innerrhoden'>Appenzell Innerrhoden</option>
@@ -48,14 +48,17 @@ function searchModule() {
 								<option value='vaud'>Vaud</option>
 								<option value='zug'>Zug</option>
 								<option value='zurich'>Zürich</option>
+								<option value=''>alle</option>
 							</optgroup>						
 						</select>
 						<select class='searchDropMenus' id='searchTypeMenu'>
-							<optgroup label='searchType'>
-								<option value=''>Zu</option>
-								<option value='immobilien'>Immobilien</option>
-								<option value='an lage immobilien'>An Lage Immobilien</option>
-								<option value='office'>Office</option>
+							<optgroup label='objektart'>
+								<option value=''>alle</option>
+								<option value='wohnungen'>wohnungen</option>
+								<option value='einfamiliehäuser'>einfamilienhäuser</option>
+								<option value='office'>mehrfamilienhaus</option>
+								<option value='geschäftshaüser'>geschäftshaüser</option>
+								<option value='grundstücke'>grundstücke</option>
 							</optgroup>
 						</select>
 						
@@ -75,11 +78,12 @@ function searchModule() {
 		type: 'double',
 		skin: 'round',
 		min: 0,
-		max: 10000000,
+		max: 30000000,
 		from: 0,
-		to: 10000000,
+		to: 30000000,
+		step: '100000',
 		grid: true,
-		postfix: 'CHF. ',
+		postfix: ' CHF',
 		keyboard: true,
 		hide_from_to: false,
 		prettify_enabled: true

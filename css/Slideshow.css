@@ -10,20 +10,20 @@
 	left: 0;
 	width: 100%;
 	padding-top: 80px;
-	animation: slideshow 30s linear infinite;
+	animation: slideshow 60s linear infinite;
 	z-index: -10;
 	background-repeat: no-repeat;
 }
 
 .slideshowImg:nth-child(1) {
 	z-index: 2;
-	animation-delay: 20s;
+	animation-delay: 40s;
 	z-index: -10;
 }
 
 .slideshowImg:nth-child(2) {
 	z-index: 2;
-	animation-delay: 10s;
+	animation-delay: 20s;
 	z-index: -10;
 }
 

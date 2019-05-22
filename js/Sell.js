@@ -6,49 +6,47 @@ function sell() {
 	$('.main').append(
 		`<div class='sellerPage'>
             <div class='sellerHeader'>
-                <h2 class='header'>Excellent Choice!</h2>
+                <h2 class='header'>Exzellente Wahl!</h2>
                 <p>
-                    We can't wait to speak with you.  Please fill out the form to your best knowledge.
+                Wir können es kaum erwarten, mit Ihnen zu sprechen. Bitte füllen Sie das Formular nach bestem Wissen aus.
                 </p>
             </div>
-            <div class='formWrapper'>
+            <div class='sellFormWrapper'>
+            
                 <form
                     name='myform'
                     id='sellerForm'
                     action='./sendseller.php'
                     enctype='multipart/form-data'
-                    method='post'>
-                    
+                    method='post'>                
                     <div class='sellerInputForm'>
+                    <label for='name'>Name*:</label>  
                         <input
                             type='text'
-                            placeholder='Full Name'
                             class='sellerFormInputs'
                             id='sellerFormName'
                             name='name'
                             required
                         />
-                        
+                        <label for='email'>Email*:</label>
                         <input
-                            type='text'
-                            placeholder='Email address'
+                            type='text'                     
                             name='email'
                             class='sellerFormInputs'
                             id='sellerFormEmail'        
                             required
                         />
                         
+                        <label for='address'>Immobilien-Adresse:</label>
                         <input
                             type='text'
-                            placeholder='Property Address'
                             class='sellerFormInputs'
                             id='sellerFormAddress'
-                            name='addess'
+                            name='address'
                         />
-                        
+                        <label for='phone'>Telefon:</label>
                         <input
                             type='text'
-                            placeholder='Phone Number'
                             class='sellerFormInputs'
                             id='sellerFormPhone'
                             name='phone'
@@ -68,19 +66,20 @@ function sell() {
                         </div>
                         <div class='sellMessage'> 
                             <textarea
-                                placeholder='Your Message'
+                                placeholder='Ihre Nachricht hier..'
+                                onblur='Ihre Nachricht hier..'
                                 name='message'
                                 class='sellerFormInputs'
                                 id='sellerFormMsg'
                             />
                         </div>
-                            <button
-                                class='sellerFormInputs'
-                                id='sellerFormSubmit'
-                                name='submit'
-                                type='submit'>
-                                Send Message
-                            </button>
+                        <button
+                            class='sellerFormInputs'
+                            id='sellerFormSubmit'
+                            name='submit'
+                            type='submit'>
+                            Nachricht senden
+                        </button>
                     </div>
                 </form> 
             </div>
