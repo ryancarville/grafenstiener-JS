@@ -52,13 +52,13 @@ function searchModule() {
 							</optgroup>						
 						</select>
 						<select class='searchDropMenus' id='searchTypeMenu'>
-							<optgroup label='objektart'>
-								<option value=''>alle</option>
+							<optgroup label='objektart'>							
 								<option value='wohnungen'>wohnungen</option>
 								<option value='einfamiliehäuser'>einfamilienhäuser</option>
 								<option value='office'>mehrfamilienhaus</option>
 								<option value='geschäftshaüser'>geschäftshaüser</option>
 								<option value='grundstücke'>grundstücke</option>
+								<option value=''>alle</option>
 							</optgroup>
 						</select>
 						

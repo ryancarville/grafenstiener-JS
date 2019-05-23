@@ -1,243 +1,38 @@
 .realEstatePage {
 	display: block;
+	background-image: url('../images/realEstateBG/realEstate1.png');
+	background-repeat: no-repeat;
 	width: 100%;
-	background-color: rgb(139, 101, 72, 0.3);
-	color: rgb(255, 255, 255);
+	background-size: 100%;
+	background-position: center;
 	animation: fadeIn 2s ease-in-out;
 }
 
-.realEstateMsg {
-	display: block;
+.realEstatePage img {
+	width: 100%;
+}
+
+#realEstateText {
+	margin-top: -200px;
+	text-align: center;
+	margin-left: -500px;
+	color: white;
+	font-size: 50px;
 }
 
 .realEstateMsg h2 {
-	text-align: left;
-}
-.realEstateMsg p {
-	margin-top: 10px;
-
-	text-align: left;
-}
-
-.servicesList {
-	text-transform: uppercase;
-	list-style: none;
-	width: 70%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: -40px;
 	text-align: center;
 }
-
-.buyMsg {
-	color: rgb(255, 255, 255);
-	width: 100%;
-	padding: 10px;
-	box-sizing: border-box;
-}
-
-.buyMsg img {
-	display: block;
-	width: 300px;
+.realEstateMsg p {
+	width: 30%;
+	text-align: justify;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 10px;
-}
-
-#buyButton {
-	display: block;
-	cursor: pointer;
-	width: 100%;
-	border: 1px solid;
-	background-color: rgb(255, 255, 255);
-	font-size: 25px;
-	padding: 10px;
-	box-sizing: border-box;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.buttonWrap {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-}
-#investButton {
-	cursor: pointer;
-	width: 45%;
-	border: 1px solid;
-	background-color: rgb(255, 255, 255);
-	font-size: 25px;
-	margin-top: 20px;
-	padding: 10px;
-	box-sizing: border-box;
-	margin-bottom: 10px;
-}
-
-#resButton {
-	cursor: pointer;
-	width: 45%;
-	border: 1px solid;
-	background-color: rgb(255, 255, 255);
-	font-size: 25px;
-	margin-top: 20px;
-	padding: 10px;
-	box-sizing: border-box;
-	margin-bottom: 10px;
-}
-
-.rentMsg {
-	color: black;
-	width: 100%;
-	padding: 10px;
-	box-sizing: border-box;
-}
-
-.rentMsg img {
-	display: block;
-	width: 300px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 10px;
-}
-
-#rentButton {
-	cursor: pointer;
-	width: 100%;
-	border: 1px solid;
-	background-color: rgb(255, 255, 255);
-	font-size: 25px;
-	padding: 10px;
-	box-sizing: border-box;
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-#officeButton {
-	cursor: pointer;
-	width: 45%;
-	border: 1px solid;
-	background-color: rgb(255, 255, 255);
-	font-size: 25px;
-	margin-top: 20px;
-	padding: 10px;
-	box-sizing: border-box;
-	margin-bottom: 10px;
-}
-
-#rentResButton {
-	cursor: pointer;
-	width: 45%;
-	border: 1px solid;
-	background-color: rgb(255, 255, 255);
-	font-size: 25px;
-	margin-top: 20px;
-	padding: 10px;
-	box-sizing: border-box;
-	margin-bottom: 10px;
-}
-
-.sellMsg {
-	color: black;
-	width: 100%;
-	padding: 10px;
-	box-sizing: border-box;
-	text-align: left;
-}
-
-.sellMsg img {
-	display: block;
-	width: 300px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 50px;
-}
-
-#sellButton {
-	cursor: pointer;
-	width: 100%;
-	border: 1px solid;
-
-	background-position: top left;
-	background-repeat: no-repeat;
-	font-size: 25px;
-	padding: 10px;
-	box-sizing: border-box;
-	display: block;
-	margin-top: -15px;
-	margin-left: auto;
-	margin-right: auto;
+	margin-bottom: 100px;
 }
 
 @media only screen and (min-width: 1000px) {
 	.realEstatePage {
-		padding-top: 30px;
-	}
-	.realEstateMsg {
-		display: block;
-		height: 300px;
-		width: 90%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	.realEstateMsg h2 {
-		padding-top: 100px;
-	}
-
-	.buyMsg {
-		width: 30%;
-		border-bottom: 0px;
-		padding-top: 10px;
-	}
-
-	#buyButton {
-		width: 50%;
-	}
-
-	#investButton {
-		margin-bottom: 10px;
-	}
-
-	#resButton {
-		margin-bottom: 10px;
-	}
-
-	.rentMsg {
-		width: 30%;
-		border-bottom: 0px;
-		padding-top: 10px;
-	}
-
-	#rentButton {
-		width: 50%;
-	}
-
-	#officeButton {
-		margin-bottom: 10px;
-	}
-
-	.sellMsg {
-		width: 30%;
-		border-bottom: 0px;
-	}
-
-	#sellButton {
-		width: 50%;
-	}
-	.sellMsg p {
-		margin-top: 30px;
-	}
-
-	.realEstateBtnWrap {
-		display: flex;
-		justify-content: space-evenly;
-		align-items: flex-start;
-	}
-	.realEstateBtnWrap p {
-		text-align: justify;
-
-		color: white;
+		padding-top: 550px;
 	}
 }

@@ -3,7 +3,7 @@
 	height: 450px;
 	display: block;
 	position: absolute;
-	margin-top: 450px;
+	margin-top: 20%;
 	padding-bottom: 50px;
 	font-size: 14px;
 	color: rgb(0, 0, 0);
@@ -11,13 +11,14 @@
 }
 
 #footerLinks {
+	position: sticky;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	float: right;
-	position: relative;
-	margin-top: 55px;
-	margin-right: -400px;
-	margin-bottom: 25px;
+	margin-right: -31%;
 }
-#footerLinks > span {
+#footerLinks span {
 	cursor: pointer;
 	margin-right: 25px;
 }
@@ -28,7 +29,7 @@
 	text-align: left;
 	margin-top: 80px;
 	margin-right: 125px;
-	width: 20%;
+	width: 30%;
 	color: rgb(0, 0, 0);
 	padding: 10px;
 	box-sizing: border-box;
@@ -67,6 +68,9 @@
 	background: transparent;
 }
 
+.footerLeft {
+	float: left;
+}
 .footerLocInfo {
 	float: left;
 	width: 300px;
@@ -74,12 +78,17 @@
 	margin-left: 30px;
 	text-align: left;
 }
+
+.footerLocInfo span {
+	cursor: pointer;
+	font-size: 10px;
+}
 #beardyLink {
 	display: block;
 	position: relative;
 	float: left;
 	margin-top: 450px;
-	margin-left: -320px;
+	margin-left: -315px;
 	text-decoration: none;
 	font-size: 10px;
 	padding: 15px;

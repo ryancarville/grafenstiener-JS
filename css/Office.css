@@ -1,9 +1,27 @@
+.slideShowContent {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	text-align: center;
+	padding-top: 22%;
+	color: white;
+	font-size: 30px;
+	animation: fadeIn 2s ease-in-out;
+}
+
+.downArrow {
+	position: relative;
+	width: 5%;
+	margin-left: auto;
+	margin-right: auto;
+	animation: arrowDown 2s 2s ease-in-out;
+}
+
 .officePage {
 	width: 100%;
 	height: auto;
 	display: block;
-	padding-top: 150px;
-	animation: fadeIn 2s ease-in-out;
+	padding-top: 200px;
 }
 
 .officeMsg {

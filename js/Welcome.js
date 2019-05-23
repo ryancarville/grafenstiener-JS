@@ -14,7 +14,7 @@ function welcome() {
 		$('.welcomePage').prepend(`
 		<div class='welcomeContent'>
 			<h3>mit kompetenz und menschenkenntnis</h3>	
-		</div><div class='sortHome'></div>
+		<div class='sortHome'></div></div>
 		`),
 			searchModule();
 	}, 2000);

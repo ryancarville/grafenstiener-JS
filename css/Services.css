@@ -1,16 +1,39 @@
 .servicesPage {
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
+	display: block;
 	width: 100%;
 	box-sizing: border-box;
 	animation: fadeIn 2s ease-in-out;
 }
 
+.servicesImage {
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+.servicesImage img {
+	width: 100%;
+	height: auto;
+	max-height: 1000px;
+}
+
+.servicesImage h3 {
+	color: white;
+	font-size: 50px;
+	text-align: center;
+	margin-top: -500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#serviceArrowPoint {
+	margin-top: 200px;
+}
+
 .servicesMsg {
 	color: black;
 	width: 100%;
-	margin-top: 20px;
+	margin-top: 325px;
 }
 
 .servicesMsg h2 {
@@ -32,22 +55,87 @@
 	.servicesMsg {
 		margin-left: auto;
 		margin-right: auto;
-		width: 90%;
-		padding: 10px;
+		width: 30%;
 		box-sizing: border-box;
+		text-align: center;
 	}
 
 	#servicesMsgIntro {
 		text-align: justify;
 	}
+
 	.servicesMsgGroup {
 		display: flex;
+		flex-direction: column;
 		justify-content: space-around;
 		text-align: justify;
+		margin-top: 40px;
+	}
+
+	.servicesMsgOption {
+		width: 50%;
 		padding: 20px;
 	}
-	.servicesMsgOption {
-		width: 33%;
-		padding: 20px;
+
+	#serviceSell {
+		display: flex;
+		justify-content: space-around;
+		width: 100%;
+		padding: 50px;
+		background-color: rgba(128, 128, 128, 0.2);
+		margin: 0px;
+	}
+	#serviceSell div h2 {
+		text-align: center;
+	}
+	#serviceSell p {
+		width: 40%;
+	}
+
+	#serviceRent {
+		display: flex;
+		justify-content: space-around;
+		width: 100%;
+	}
+	#serviceRent div {
+		text-align: center;
+	}
+	#serviceRent div img {
+		width: 60%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#serviceRent div h2 {
+		text-align: center;
+	}
+	#serviceRent p {
+		text-align: justify;
+		margin-top: 100px;
+		width: 30%;
+	}
+
+	#serviceMarket {
+		display: flex;
+		justify-content: space-around;
+		width: 100%;
+		padding: 50px;
+		background-color: rgba(128, 128, 128, 0.2);
+		margin: 0px;
+	}
+	#serviceMarket div {
+		text-align: center;
+	}
+	#serviceMarket div img {
+		width: 60%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#serviceMarket div h2 {
+		text-align: center;
+	}
+	#serviceMarket p {
+		text-align: justify;
+		margin-top: 100px;
+		width: 30%;
 	}
 }

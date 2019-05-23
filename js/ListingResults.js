@@ -5,7 +5,6 @@ function results(properties) {
 	let fullListingResults = properties
 		.map(listing => getListing(listing))
 		.join('');
-	$('.main').empty();
 	$('.main').append(
 		`<div class='resultsPage'>
             <header>

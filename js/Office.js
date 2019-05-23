@@ -8,13 +8,13 @@ const office = function() {
 	if ($('.slideshowWrap').length === 0) {
 		slideShow();
 	}
-
+	$('.main').empty();
+	slideShow();
 	$('.main').append(`
-			<div class='welcomeContent' style='margin-top:500px'>
+			<div class='slideShowContent'>
 				<h3>mit kompetenz und menschenkenntnis</h3>	
-				<a href='#officePageScroll' id='downArrowOffice'><img src='images/downArrow.png' style='margin-top:200px; width:100px;'/></a>
+				<a href='#officePageScroll' class='downArrow' id='downArrowOffice'><img src='images/downArrow.png' style='margin-top:200px; width:100px;'/></a>
 			</div>
-			
 			<div class='officePage' >	
 			<div id='officePageScroll'></div>				
 				<div class='officeMsg' id='officePage'>
@@ -31,8 +31,7 @@ const office = function() {
 					Karen Gräfensteiner-Deyaert gewohnt, Kundinnen und Kunden offen und mit aufrichtigem 
 					Interesse zu begegnen.
 					</p>
-				</div>
-				
+				</div>		
 				<div class='bio'>
 					<p>Mit sicherem Gespür für den Menschen und den Markt begleite ich Sie beim Verkauf Ihrer Wohnung oder Ihres Hauses. Bei komplexen Immobilientransaktionen weiss ich unterschiedliche Bedürfnisse gleichwertig zu berücksichtigen, so dass alle Beteiligten sich gewürdigt fühlen.</p>			
 					<img src='../images/bioPic.jpeg' alt='Photo of Karen Gräfenstiener' id='bioPic'>
