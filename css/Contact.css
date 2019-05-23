@@ -11,88 +11,82 @@
 .headers {
 	text-align: center;
 	margin-top: 10px;
-}
-
-.contactFormWrap {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 75%;
-	color: white;
-	background-color: #8b6548;
 	padding: 20px;
 }
 
-.contactInputTop {
+.contactFormWrap {
+	width: 75%;
 	display: flex;
-	justify-content: space-evenly;
-	flex-wrap: wrap;
-	align-items: center;
+	padding: 10px;
+	margin-right: 50px;
 }
 
-.contactFormBottom {
-	display: block;
-	width: 100%;
-	text-align: center;
+#contactForm {
+	display: inline;
 }
 
 .contactFormInput {
+	position: relative;
 	font-size: 18px;
-	margin-top: 10px;
+	border: 1px solid #8b6548;
 	box-sizing: border-box;
-	width: 300px;
+	width: 400px;
 	height: 30px;
 	padding: 5px;
 }
 
-#msg {
-	box-sizing: border-box;
-	width: 90%;
-	height: 150px;
-	margin-top: 20px;
+.contactFormBottom {
+	margin-top: -540px;
+	margin-left: 450px;
 }
 
-#msg label {
-	position: sticky;
-}
 .contactFormBottom p {
 	float: left;
 	font-size: 12;
 	font-style: italic;
-	margin-left: 5%;
 	margin-top: -2px;
 	position: sticky;
 }
 
-#submit {
-	text-align: center;
-	cursor: pointer;
+#msg {
+	box-sizing: border-box;
+	width: 100%;
+	height: 450px;
+}
+
+#btnWrap {
+	float: right;
 	margin-top: 20px;
-	margin-right: 35px;
+}
+#submit {
+	cursor: pointer;
 	font-size: 20px;
 	float: right;
 	background: transparent;
-	color: white;
 	border: none;
 }
+
 #submit:hover {
-	color: #00fbff;
+	color: #8b6548;
 }
 
 #resetContactForm {
-	text-align: center;
 	cursor: pointer;
-	margin-top: 20px;
-	margin-right: 35px;
 	font-size: 20px;
 	float: right;
 	background: transparent;
-	color: white;
 	border: none;
 }
 
+#resetContactForm:hover {
+	color: #8b6548;
+}
+
 .newsletterWrap {
-	padding-top: 20px;
+	display: flex;
+	margin-top: -5px;
+	float: left;
+	margin-left: -230px;
 }
 .checkboxNewsletterInput {
 	width: 30px;
@@ -129,6 +123,87 @@
 }
 
 .newsletterText {
+	margin-top: 20px;
+	margin-left: 10px;
 	font-size: 20px;
+}
+
+#genderRadio {
+	display: flex;
+	justify-content: space-around;
+	width: 350px;
+	padding-bottom: 10px;
+}
+.mrRadio {
+	width: 30px;
+	height: 30px;
+	background: rgb(255, 255, 255, 1);
+	border-radius: 100%;
+	position: relative;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
+	margin-top: 15px;
+}
+
+.mrRadio label {
+	width: 20px;
+	height: 20px;
+	border-radius: 100px;
+	transition: all 0.5s ease;
+	cursor: pointer;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	z-index: 1;
+	background: rgb(255, 255, 255);
+	box-shadow: inset 0px 1px 3px rgba(106, 106, 106, 0.5);
+}
+
+.mrRadio input {
+	opacity: 0;
 	color: white;
+}
+.mrRadio input[type='checkbox']:checked + label {
+	background: #00fbff;
+}
+
+.mrRadio p {
+	margin-top: -15px;
+	margin-left: 40px;
+}
+
+.mrsRadio {
+	width: 30px;
+	height: 30px;
+	background: rgb(255, 255, 255, 1);
+	border-radius: 100%;
+	position: relative;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.8);
+	margin-top: 15px;
+}
+
+.mrsRadio label {
+	width: 20px;
+	height: 20px;
+	border-radius: 100px;
+	transition: all 0.5s ease;
+	cursor: pointer;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	z-index: 1;
+	background: rgb(255, 255, 255);
+	box-shadow: inset 0px 1px 3px rgba(106, 106, 106, 0.5);
+}
+
+.mrsRadio input {
+	opacity: 0;
+	color: white;
+}
+.mrsRadio input[type='checkbox']:checked + label {
+	background: #00fbff;
+}
+
+.mrsRadio p {
+	margin-top: -15px;
+	margin-left: 40px;
 }

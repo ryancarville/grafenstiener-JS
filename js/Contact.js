@@ -22,116 +22,152 @@ function contact() {
 					id='contactForm'
 					enctype='multipart/form-data'
 					method='post'
-					action='./sendEmail.php'>
-					<div class='contactInputTop'>
-						<div id='nameInput'>
-							<label for='name'>Name*</label>
-							<br/>
+					action='./sendEmail.php'>	
+					<div id='genderRadio'>
+						<div class='mrRadio'>
 							<input
-								type='text'
-								id='name'
-								name='name'
-								class='contactFormInput'
-								required
+								type='checkbox'
+								class='checkBtn'
+								name='mrRadio'
+								id='mrRadio'
+								value='Herr'
 							/>
+							<label for='mrRadio'></label>
+							<p>Herr</p>
 						</div>
-						<div id='emailInput'>	
-							<label for='email'>Email Address*</label>
-							<br/>	
+						<div class='mrsRadio'>
 							<input
-								type='text'
-								name='email'
-								id='email'
-								class='contactFormInput'
-								required
+								type='checkbox'
+								class='checkBtn'
+								name='mrsRadio'
+								id='mrsRadio'
+								value='Frau'
 							/>
+							<label for='mrsRadio'></label>
+							<p>Frau</p>
 						</div>
-						<div id='phoneInput'>
-							<label for='phone'>Telefon</label>
-							<br/>
-							<input
-								type='text'					
-								id='phoneNum'
-								name='phone'
-								class='contactFormInput'
-							/>
-						</div>
-						<div id='streetInput'>	
-							<label for='street'>Strasse</label>
-							<br/>	
-							<input
-								type='text'
-								id='street'
-								name='street'
-								class='contactFormInput'
-							/>
-						</div>
-						<div id='addressNumInput'>
-							<label for='streetNum'>Hausnummer</label>
-							<br/>
-							<input
-								type='text'
-								id='streetNum'
-								name='streetNum'
-								class='contactFormInput'
-							/>
-						</div>
-						<div id='zipCodeInput'>
-							<label for='zipCode'>Ortz</label>
-							<br/>
-							<input
-								type='text'
-								id='zipCode'
-								name='zipCode'
-								class='contactFormInput'
-								
-							/>
-						</div>
-						<div id='cityInput'>
-							<label for='city'>Stadt</label>
-							<br/>
-							<input
-								type='text'
-								id='city'
-								name='city'
-								class='contactFormInput'
-							/>
-						</div>														
-						<div id='cantonInput'>
-							<label for='canton'>Kanton</label>
-							<br/>
-							<input
-								type='text'
-								id='canton'
-								name='canton'
-								class='contactFormInput'
-							/>
-						</div>
-						<div id='countryInput'>
-							<label for='country'>Land</label>
-							<br/>
-							<input
-								type='text'						
-								id='country'
-								name='country'
-								class='contactFormInput'
-							/>
-						</div>						
+					</div>	
+					<div id='lastNameInput'>
+						<label for='lastName'>Surname*</label>
+						<br/>
+						<input
+							type='text'
+							id='lastName'
+							name='lastName'
+							class='contactFormInput'
+							required
+						/>
 					</div>
-					<div class='contactFormBottom'>
-						<div class='newsletterWrap'>
-							<div class='checkboxNewsletterInput'>
-								<input
-									type='checkbox'
-									class='checkBtn'
-									name='newsletter'
-									id='newsletter'
-									value='YES'
-								/>
-								<label for='newsletter'></label>
-							</div>
-							<a class='newsletterText' id='newsletterMsg'>Möchten Sie unseren monatlichen Newsletter erhalten?</a>
-						</div>
+					<div id='firstNameInput'>
+						<label for='firstName'>Vorname*</label>
+						<br/>
+						<input
+							type='text'
+							id='firstName'
+							name='firstName'
+							class='contactFormInput'
+							required
+						/>
+					</div>
+					<div id='companyInput'>
+						<label for='company'>Firma</label>
+						<br/>
+						<input
+							type='text'
+							id='company'
+							name='company'
+							class='contactFormInput'			
+						/>
+					</div>
+					<div id='emailInput'>	
+						<label for='email'>Email Address*</label>
+						<br/>	
+						<input
+							type='text'
+							name='email'
+							id='email'
+							class='contactFormInput'
+							required
+						/>
+					</div>
+					<div id='phoneInput'>
+						<label for='phone'>Telefon*</label>
+						<br/>
+						<input
+							type='text'					
+							id='phoneNum'
+							name='phone'
+							class='contactFormInput'
+							required
+						/>
+					</div>
+					<div id='streetInput'>	
+						<label for='street'>Strasse*</label>
+						<br/>	
+						<input
+							type='text'
+							id='street'
+							name='street'
+							class='contactFormInput'
+							required
+						/>
+					</div>
+					<div id='addressNumInput'>
+						<label for='streetNum'>Hausnummer*</label>
+						<br/>
+						<input
+							type='text'
+							id='streetNum'
+							name='streetNum'
+							class='contactFormInput'
+							required
+						/>
+					</div>
+					<div id='zipCodeInput'>
+						<label for='zipCode'>Ort*</label>
+						<br/>
+						<input
+							type='text'
+							id='zipCode'
+							name='zipCode'
+							class='contactFormInput'
+							required
+						/>
+					</div>
+					<div id='cityInput'>
+						<label for='city'>Stadt*</label>
+						<br/>
+						<input
+							type='text'
+							id='city'
+							name='city'
+							class='contactFormInput'
+							required
+						/>
+					</div>														
+					<div id='cantonInput'>
+						<label for='canton'>Kanton*</label>
+						<br/>
+						<input
+							type='text'
+							id='canton'
+							name='canton'
+							class='contactFormInput'
+							required
+						/>
+					</div>
+					<div id='countryInput'>
+						<label for='country'>Land*</label>
+						<br/>
+						<input
+							type='text'						
+							id='country'
+							name='country'
+							class='contactFormInput'
+							required
+						/>
+					</div>						
+					<div class='contactFormBottom'>	
 						<label for='message'></label>
 						<textarea						
 							name='message'
@@ -143,23 +179,38 @@ function contact() {
 							id='msg'
 							class='contactFormInput'
 						/>
-					<p>* bezeichnet benötigte Felder</p>	
+						<p>* bezeichnet benötigte Felder</p>
 					</div>
-					<br />				
-					<button
-						class='contactBtn'
-						id='submit'
-						name='submit'
-						type='submit'>
-						Nachricht senden
-					</button>
-					<button
-						class='contactBtn'
-						id='resetContactForm'
-						value='reset'
-						type='reset'>
-						Zurücksetzen
-					</button>
+					<br />
+					<div class='newsletterWrap'>
+						<div class='checkboxNewsletterInput'>
+							<input
+								type='checkbox'
+								class='checkBtn'
+								name='newsletter'
+								id='newsletter'
+								value='YES'
+							/>
+							<label for='newsletter'></label>
+						</div>
+						<a class='newsletterText' id='newsletterMsg'>Newsletter?</a>
+					</div>
+					<div id='btnWrap'>			
+						<button
+							class='contactBtn'
+							id='submit'
+							name='submit'
+							type='submit'>
+							Nachricht senden
+						</button>
+						<button
+							class='contactBtn'
+							id='resetContactForm'
+							value='reset'
+							type='reset'>
+							Zurücksetzen
+						</button>
+					</div>	
 				</form>
 			</div>
 		</div>`
