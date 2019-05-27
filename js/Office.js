@@ -13,7 +13,7 @@ const office = function() {
 	$('.main').append(`
 			<div class='slideShowContent'>
 				<h3>mit kompetenz und menschenkenntnis</h3>	
-				<a href='#officePageScroll' class='downArrow' id='downArrowOffice'><img src='images/downArrow.png' style='margin-top:200px; width:100px;'/></a>
+				<a href='#officePageScroll' class='downArrow' id='downArrowOffice'><img src='/images/downArrow.png' style='margin-top:200px; width:100px;'/></a>
 			</div>
 			<div class='officePage' >	
 			<div id='officePageScroll'></div>				

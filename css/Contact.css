@@ -14,15 +14,14 @@
 	padding: 20px;
 }
 
-.contactFormWrap {
-	width: 75%;
+#contactForm {
+	width: 60%;
 	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-start;
 	padding: 10px;
 	margin-right: 50px;
-}
-
-#contactForm {
-	display: inline;
 }
 
 .contactFormInput {
@@ -38,6 +37,7 @@
 .contactFormBottom {
 	margin-top: -540px;
 	margin-left: 450px;
+	height: 500px;
 }
 
 .contactFormBottom p {
@@ -53,10 +53,29 @@
 	width: 100%;
 	height: 450px;
 }
-
-#btnWrap {
+.bottomBtn {
+	display: flex;
+	justify-content: space-evenly;
 	float: right;
-	margin-top: 20px;
+	margin-left: 500px;
+	margin-top: 5px;
+}
+.info {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	align-items: center;
+	vertical-align: middle;
+}
+
+.info img {
+	height: 100px;
+}
+#btnWrap {
+	width: 100%;
+	float: right;
+	margin-top: 8px;
+	margin-left: 30px;
 }
 #submit {
 	cursor: pointer;
@@ -84,9 +103,10 @@
 
 .newsletterWrap {
 	display: flex;
-	margin-top: -5px;
-	float: left;
-	margin-left: -230px;
+	float: right;
+	margin-top: -15px;
+	margin-left: -50px;
+	padding: 5px;
 }
 .checkboxNewsletterInput {
 	width: 30px;

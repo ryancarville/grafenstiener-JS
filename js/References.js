@@ -6,11 +6,18 @@ function references() {
 	$('.main').append(
 		`<div class='refWrapper'>
             <div class='refHeader'>
-                <h2>Kunden, die uns lieben</h2>
+            <img src='/images/references/references.png' alt='references Image' class='landingImg'/>
+            <h2>Kunden, die uns lieben</h2>
+            <a href='#refContent' class='downArrow' id='downArrowRef'>
+                <img src='/images/downArrow.png' style='margin-top:150px; width:100px;'/>
+            </a>
             </div>
-            <div class='refContent'>
+            <div class='refContent' id='refContent'>
                 <div class='ref' id='ref1'>
-                    <h2><b>Für sie lege ich die Hand ins Feuer</b></h2>
+                    <div class='refTitle'>
+                        <h2><b>Für sie lege ich die Hand ins Feuer</b></h2>
+                        <p><i>Ernst Buck</i><br>Unternehmer</p>
+                    </div>
                     <p>Von Frau Gräfensteiner beraten habe ich ein Mehrfamilienhaus 
                     in Steinmaur, eines in Bülach und letztes Jahr noch eines in Stallikon 
                     gekauft. Noch nie bin ich so direkt, korrekt und ausführlich bedient 
@@ -21,12 +28,10 @@ function references() {
                     reintrudeln, werde ich wieder mit Frau Gräfensteiner arbeiten. Der 
                     Immobilienmarkt wird je länger je schwieriger, da braucht man eine 
                     Vertrauensperson wie sie.
-                    </p>
-                    <p><i>Ernst Buck</i><br>Unternehmer</p>
+                    </p>            
                 </div>
                 <br>
-                <div class='ref' id='ref2'>
-                    <h2><b>Frau Gräfensteiner hat ein grosses, persönliches Engagement.</b></h2>
+                <div class='ref' id='ref2'>      
                     <p>Die Empfehlung, mich an Frau Gräfensteiner zu wenden, bekam ich von meiner 
                     Tochter bekommen – eine ihrer Freundinnen hatte mit ihr ein Immobiliengeschäft 
                     getätigt. Ein Glücksfall!<br>
@@ -38,7 +43,10 @@ function references() {
                     Jetzt habe ich sie schon wieder um ihre Hilfe angefragt. Obwohl es kein besonders 
                     interessantes Geschäft für sie ist, hat sie zugesagt.
                     </p>
-                    <p><i>Isabelle Fischer</i><br>im Ruhestand</p>
+                    <div class='refTitle'>
+                        <h2><b>Frau Gräfensteiner hat ein grosses, persönliches Engagement.</b></h2>
+                        <p><i>Isabelle Fischer</i><br>im Ruhestand</p>  
+                    </div>
                 </div>
                 
             </div>

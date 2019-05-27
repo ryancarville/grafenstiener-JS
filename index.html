@@ -17,6 +17,7 @@
 		<title>Gräfensteiner | Swiss Real Estate</title>
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="node_modules/normalize.css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="stylesheet" href="css/Languages.css" />
 		<link rel="stylesheet" href="css/Nav.css" />
@@ -40,7 +41,7 @@
 		<link rel="stylesheet" href="css/keyframes.css" />
 		<link rel="stylesheet" href="css/legal.css" />
 		<link rel="stylesheet" href="css/ion.rangeSlider.min.css" />
-		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 		<script
 			type="text/javascript"
 			src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
@@ -54,7 +55,7 @@
 			</p>
 		<![endif]-->
 		<!--loading screen-->
-		<div class="loadingScreen" id="loadingScreen"><h1>LOADING...</h1></div>
+		<div class="loadingScreen" id="loadingScreen"></div>
 		<header>
 			<!--nav container-->
 			<nav id="navLinks" class="navContainer">
@@ -218,6 +219,7 @@
 		<script src="js/languages.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/legal.js"></script>
+		<script src="js/error.js"></script>
 		<script src="js/ion.rangeSlider.min.js"></script>
 		<!--language filter-->
 
@@ -249,7 +251,7 @@
 				var theLang = $(this).attr('data-lang');
 				$('.goog-te-combo').val(theLang);
 
-				//alert(jQuery(this).attr('href'));
+				//alert($(this).attr('href'));
 				window.location = $(this).attr('href');
 				location.reload(true);
 			});

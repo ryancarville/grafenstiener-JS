@@ -20,11 +20,18 @@ function results(properties) {
 	document.getElementById('listingResults').innerHTML = fullListingResults;
 	for (let i = 0; i < properties.length; i++) {
 		let id = `#listingBTN${properties[i].id}`;
-		$(id).on('click', () => {
+
+		$(id).on('click', function() {
+			let route = $(this).attr('route');
+			console.log(route);
+			window.history.pushState({ route }, '', `/realEstate/${route}`);
 			listingPage(properties[i]);
 		});
 		let imgID = `#image${properties[i].id}`;
-		$(imgID).on('click', () => {
+		$(imgID).on('click', function() {
+			let route = $(this).attr('route');
+			console.log(route);
+			window.history.pushState({ route }, '', `/realEstate/${route}`);
 			listingPage(properties[i]);
 		});
 	}

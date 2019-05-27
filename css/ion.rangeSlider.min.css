@@ -34,11 +34,11 @@
 	position: absolute;
 	display: block;
 	box-sizing: border-box;
-	cursor: default;
-	z-index: 1;
+	cursor: pointer;
+	z-index: 0;
 }
 .irs-handle.type_last {
-	z-index: 2;
+	z-index: 0;
 }
 .irs-min,
 .irs-max {
@@ -135,6 +135,7 @@
 
 .irs--round {
 	height: 20px;
+	margin-left: 10%;
 }
 .irs--round.irs-with-grid {
 	height: 65px;
@@ -144,17 +145,14 @@
 	height: 4px;
 	background-color: #5b5b5b;
 	border-radius: 4px;
-	margin-left: 10%;
 }
 .irs--round .irs-bar {
 	top: 36px;
 	height: 4px;
 	background-color: #000000;
-	margin-left: 10%;
 }
 .irs--round .irs-bar--single {
 	border-radius: 4px 0 0 4px;
-	margin-left: 10%;
 }
 .irs--round .irs-shadow {
 	height: 4px;
@@ -170,7 +168,6 @@
 	background-color: #8b6548;
 	border-radius: 100%;
 	box-shadow: 0 1px 3px rgba(0, 0, 255, 0.3);
-	margin-left: 10%;
 }
 .irs--round .irs-handle.state_hover,
 .irs--round .irs-handle:hover {
@@ -199,7 +196,6 @@
 	background-color: #000000;
 	color: white;
 	border-radius: 4px;
-	margin-left: 10%;
 }
 
 .irs--round .irs-from:before,
@@ -219,7 +215,6 @@
 }
 .irs--round .irs-grid {
 	height: 25px;
-	margin-left: 10%;
 }
 .irs--round .irs-grid-pol {
 	background-color: #ffffff;

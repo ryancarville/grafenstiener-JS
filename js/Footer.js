@@ -3,13 +3,13 @@ function footer() {
 		$('.footer').append(
 			`<div class='footerBG'>
 				<div class='newLetterFooterWrap'>
-					<form class='newsLetterFooter' action='' method='POST' name='newsLetterFooter'>
+					<form class='newsLetterFooter' method='POST' action='./sendNewsletterForm.php'name='newsLetterFooter'>
 						<p>Bleiben Sie auf dem Laufenden und abonnieren Sie unseren Newsletter!</p>
-						<label for='name'>Last Name</label><br>
-						<input class='newsLetterFooter' id='newsLetterFooterLastName' name='name' required><br><br>
-						<label for='firstName'>First Name</label><br>
+						<label for='lastName'>Vorname*</label><br>
+						<input class='newsLetterFooter' id='newsLetterFooterLastName' name='lastName' required><br><br>
+						<label for='firstName'>Surname*</label><br>
 						<input class='newsLetterFooter' id='newsLetterFooterFirstName' name='firstName' required><br><br>
-						<label for='email'>Email</label><br>
+						<label for='email'>Email*</label><br>
 						<input class='newsLetterFooter' id='newsLetterFooterEmail' name='email' required><br><br>
 						<label for='msg'></label>
 						<textarea 

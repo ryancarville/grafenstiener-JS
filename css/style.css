@@ -1,4 +1,7 @@
 body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 	padding: 0;
 	margin: 0;
 	font-family: 'Raleway', sans-serif;
@@ -13,12 +16,27 @@ html {
 	scroll-behavior: smooth;
 }
 
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	33% {
+		opacity: 0.8;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	75% {
+		opacity: 0.3;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
 .loadingScreen {
-	background-color: white;
-	height: 1600px;
-	width: 100%;
-	text-align: center;
-	margin-top: 25%;
+	position: absolute;
+	animation: fadeOut 2500ms 2500ms linear ease-out;
 }
 
 .main {

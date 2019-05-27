@@ -63,7 +63,9 @@ function searchModule() {
 						</select>
 						
 					</div>
-					<input type="text" class="js-range-slider" id='slider' name="my_range" value="" />			
+					<div class='rangeSliderWrap'>
+						<input type="text" class="js-range-slider" id='slider' name="my_range" value="" />	
+					</div>		
 					<button class='mainSearchBtn' type='button' onClick=filterSearch()>
 					SUCHE
 					</button>

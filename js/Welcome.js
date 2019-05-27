@@ -61,9 +61,4 @@ function welcome() {
 			'#navHomeText, #navOfficeText, #navRealEstateText, #navServicesText, #navReferencesText, #navContactText'
 		).removeClass('navActive');
 	});
-
-	//set history API for home
-	const route = '';
-	window.history.pushState({ route }, '', '/index.html');
-	console.log(history.state);
 }

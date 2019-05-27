@@ -6,29 +6,42 @@ function contact() {
 	$('.main').append(
 		`<div class='contactPage'>
 			<div class='headers'>
-				<article class='contactHeader'>
+				<section class='contactHeader'>
 					<h2 class='header' id='contactHeader'>Wir sind gerne für Sie da und freuen uns auf Ihre Kontaktaufnahme.</h2>
 					<h3 class='info'>
-						Gräfenstiener | Swiss Real Estate <br />
+						<div>
+						<img src='images/contact/location.png' alt='location icon'/><br>
+						Gräfenstiener | Swiss Real Estate <br>
+						Feldhofstrasse 66 <br>
+						8706 Meilen, CH<br>
+						</div>
+						<div>
+						<img src='images/contact/email.png' alt='email icon'/><br>
 						<a class='emailLink' href='mailto:info@gräfenstiener.com'>
 							info@gräfenstiener.com
-						</a>
+						</a><br><br>
+						</div>
+						<div>
+						<img src='images/contact/phone.png' alt='phoneicon' />
+						<p>
+							+41(79)156 23 29
+						</p>
+						</div>
 					</h3>
-				</article>
+				</section>
 			</div>
-			<div class='contactFormWrap'>
 				<form
 					name='contactForm'
 					id='contactForm'
 					enctype='multipart/form-data'
 					method='post'
-					action='./sendEmail.php'>	
+					action='sendEmail.php'>	
 					<div id='genderRadio'>
 						<div class='mrRadio'>
 							<input
 								type='checkbox'
 								class='checkBtn'
-								name='mrRadio'
+								name='gender'
 								id='mrRadio'
 								value='Herr'
 							/>
@@ -39,7 +52,7 @@ function contact() {
 							<input
 								type='checkbox'
 								class='checkBtn'
-								name='mrsRadio'
+								name='gender'
 								id='mrsRadio'
 								value='Frau'
 							/>
@@ -94,7 +107,7 @@ function contact() {
 						<label for='phone'>Telefon*</label>
 						<br/>
 						<input
-							type='text'					
+							type='number'					
 							id='phoneNum'
 							name='phone'
 							class='contactFormInput'
@@ -116,7 +129,7 @@ function contact() {
 						<label for='streetNum'>Hausnummer*</label>
 						<br/>
 						<input
-							type='text'
+							type='number'
 							id='streetNum'
 							name='streetNum'
 							class='contactFormInput'
@@ -181,38 +194,111 @@ function contact() {
 						/>
 						<p>* bezeichnet benötigte Felder</p>
 					</div>
-					<br />
-					<div class='newsletterWrap'>
-						<div class='checkboxNewsletterInput'>
-							<input
-								type='checkbox'
-								class='checkBtn'
-								name='newsletter'
-								id='newsletter'
-								value='YES'
-							/>
-							<label for='newsletter'></label>
+				
+					<div class='bottomBtn'>
+						<div class='newsletterWrap'>
+							<div class='checkboxNewsletterInput'>
+								<input
+									type='checkbox'
+									class='checkBtn'
+									name='newsletter'
+									id='newsletter'
+									value='YES'
+								/>
+								<label for='newsletter'></label>
+							</div>
+							<a class='newsletterText' id='newsletterMsg'>Newsletter?</a>
 						</div>
-						<a class='newsletterText' id='newsletterMsg'>Newsletter?</a>
+						<div id='btnWrap'>			
+							<button
+								class='contactBtn'
+								id='submit'
+								name='submit'
+								type='button'>
+								Nachricht senden
+							</button>
+							<button
+								class='contactBtn'
+								id='resetContactForm'
+								value='reset'
+								type='reset'>
+								Zurücksetzen
+							</button>
+						</div>	
 					</div>
-					<div id='btnWrap'>			
-						<button
-							class='contactBtn'
-							id='submit'
-							name='submit'
-							type='submit'>
-							Nachricht senden
-						</button>
-						<button
-							class='contactBtn'
-							id='resetContactForm'
-							value='reset'
-							type='reset'>
-							Zurücksetzen
-						</button>
-					</div>	
+					<span id='formErrorMsg' class='formErrorText'></span>
+					<span id='formSuccessMsg' class='formSuccessText'></span>
 				</form>
-			</div>
 		</div>`
 	);
+
+	$('#submit').on('click', function(e) {
+		e.preventDefault();
+		console.log('form clicked');
+
+		let gender = $("input[name='gender']:checked").val();
+
+		let lastName = $('#lastName').val();
+		let firstName = $('#firstName').val();
+		let company = $('#company').val();
+		let email = $('#email').val();
+		let street = $('#street').val();
+		let streetNum = $('#streetNum').val();
+		let zipCode = $('#zipCode').val();
+		let city = $('#city').val();
+		let canton = $('#canton').val();
+		let country = $('#country').val();
+		let phone = $('#phoneNum').val();
+		let message = $('#msg').val();
+		let newsletter = $('#newsletter').val();
+		console.log(lastName);
+		console.log(message);
+		if (
+			lastName == '' ||
+			firstName == '' ||
+			email == '' ||
+			street == '' ||
+			streetNum == '' ||
+			zipCode == '' ||
+			city == '' ||
+			canton == '' ||
+			country == '' ||
+			phone == ''
+		) {
+			$('#formErrorMsg').html('All feilds with a * are required');
+		} else {
+			$('#formErrorMsg').html('');
+			$.ajax({
+				type: 'POST',
+				url: 'sendEmail.php',
+				data: {
+					gender: gender,
+					lastName: lastName,
+					firstName: firstName,
+					company: company,
+					email: email,
+					phone: phone,
+					street: street,
+					streetNum: streetNum,
+					zipCode: zipCode,
+					city: city,
+					canton: canton,
+					country: country,
+					message: message,
+					newsletter: newsletter
+				},
+				success: function(data) {
+					console.log(data);
+					$('form').trigger('reset');
+					$('#formSuccessMsg')
+						.fadeIn()
+						.html(data);
+					setTimeout(function() {
+						$('#formSuccessMsg').fadeOut('slow');
+					}, 10000);
+				}
+			});
+		}
+		return false;
+	});
 }

@@ -2,7 +2,7 @@ function getListing(listing) {
 	const listItem = `<div class='listing' id='${listing.id}'>
 	<img src='../images/listings/
 	${listing.image1}'
-	class='listingImg' id='image${listing.id}'> 
+	class='listingImg' id='image${listing.id}' route='${listing.id}'> 
 	<p>
 	Preis:
 	${listing.price} CHF
@@ -26,7 +26,7 @@ function getListing(listing) {
 	${listing.size}<br>
 	<button class='listingInfoBTN' id='listingBTN${
 		listing.id
-	}' type='button' >Weitere Infos</button>
+	}' type='button' route='${listing.id}'>Weitere Infos</button>
 	</p>
 	</div>
 	`;

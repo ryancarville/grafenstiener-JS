@@ -39,6 +39,7 @@
 		<link rel="stylesheet" href="../css/imageCarousel.css" />
 		<link rel="stylesheet" href="../css/keyframes.css" />
 		<link rel="stylesheet" href="../css/legal.css" />
+		<link rel="stylesheet" href="../css/error.css" />
 		<link rel="stylesheet" href="../css/ion.rangeSlider.min.css" />
 		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 		<script
@@ -55,215 +56,54 @@
 		<![endif]-->
 		<!--loading screen-->
 
-		<header>
-			<!--nav container-->
-			<nav id="navLinks" class="navContainer">
-				<!--mobile nav-->
-				<div class="mobileMenuWrap">
-					<img src="../images/menu.png" alt="mobileMenu" class="mobileMenu" />
-					<ul class="navMobileLinks">
-						<li class="navMobileLink" id="navMobileOffice">
-							<a id="navMobileOffice" onclick="$(office())">Büro</a>
-						</li>
-
-						<li class="navMobileLink" id="navMobileRealEstate">
-							<a id="navMobileRealEstate" onclick="$(realEstate())"
-								>Immobilien</a
-							>
-						</li>
-						<li class="navMobileLink" id="navMobileServices">
-							<a id="navMobileServices" onclick="$(services())"
-								>Dienstleistungen</a
-							>
-						</li>
-						<li class="navMobileLink" id="navMobileReferences">
-							<a id="navMobileReferences" onclick="$(references())">Referenz</a>
-						</li>
-						<li class="navMobileLink" id="navMobileContact">
-							<a id="navMobileContact" onclick="$(contact())">Kontakt</a>
-						</li>
-						<li class="navMobileLink">
-							<a href="#de" class="mobileLangBtn" onclick="german()">DE</a>
-							<a href="#en" class="mobileLangBtn" onclick="english()">EN</a>
-						</li>
-					</ul>
-				</div>
-				<!--mobile nav logo-->
-				<a id="navHomeMobile" route="" onclick="$(welcome)"
-					><img src="../images/logo.png" alt="logo" id="navMobileLogo"
-				/></a>
-				<!--desktop nav-->
-				<div class="langBtnWrap">
-					<div class="ct-topbar">
-						<div class="container">
-							<ul class="list-unstyled list-inline ct-topbar__list">
-								<li class="ct-language">
-									Sprache
-									<ul class="list-unstyled ct-language__dropdown">
-										<li>
-											<a
-												href="#googtrans(de|de)"
-												class="lang-de lang-select"
-												data-lang="de"
-												><img
-													src="../images/languages/flag-germany.png"
-													alt="GERMAN"
-											/></a>
-										</li>
-										<li>
-											<a
-												href="#googtrans(de|en)"
-												class="lang-en lang-select"
-												data-lang="en"
-												><img src="../images/languages/flag-uk.png" alt="USA"
-											/></a>
-										</li>
-										<li>
-											<a
-												href="#googtrans(de|fr)"
-												class="lang-fr lang-select"
-												data-lang="fr"
-												><img
-													src="../images/languages/flag-france.png"
-													alt="FRANCE"
-											/></a>
-										</li>
-										<li>
-											<a
-												href="#googtrans(de|it)"
-												class="lang-fr lang-select"
-												data-lang="it"
-												><img
-													src="../images/languages/flag-italy.png"
-													alt="ITALY"
-											/></a>
-										</li>
-										<li>
-											<a
-												href="#googtrans(de|es)"
-												class="lang-es lang-select"
-												data-lang="es"
-												><img
-													src="../images/languages/flag-spain.png"
-													alt="SPAIN"
-											/></a>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<a route="index.html" onclick="$(welcome)" id="navHome">
-					<img src="../images/logo.png" alt="logo" id="navLogo" />
-				</a>
-				<ul id="desktopLinks" class="navLinks">
-					<li class="navLink">
-						<a route="index.html" onclick="$(welcome)" id="navHomeText">
-							Hause
-						</a>
-					</li>
-					<li class="navLink">
-						<a route="office" onclick="$(office)" id="navOfficeText">
-							Büro
-						</a>
-					</li>
-					<li class="navLink">
-						<a
-							route="realEstate"
-							onclick="$(realEstate)"
-							id="navRealEstateText"
-						>
-							Immobilien
-						</a>
-					</li>
-					<li class="navLink">
-						<a route="services" onclick="$(services)" id="navServicesText">
-							Dienstleistungen
-						</a>
-					</li>
-					<li class="navLink">
-						<a
-							route="references"
-							onclick="$(references)"
-							id="navReferencesText"
-						>
-							Referenz
-						</a>
-					</li>
-					<li class="navLink">
-						<a route="contact" onclick="$(contact)" id="navContactText">
-							Kontakt
-						</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
 		<!--main container-->
-		<main id="main" class="main" role="main">I am a error page</main>
-		<!--footer-->
-		<footer class="footer"></footer>
-		<!--scripts-->
-		<script src="../js/Properties.js"></script>
-		<script src="../js/Office.js"></script>
-		<script src="js/Footer.js"></script>
-		<script src="js/Services.js"></script>
-		<script src="js/Contact.js"></script>
-		<script src="js/realEstate.js"></script>
-		<script src="js/Welcome.js"></script>
-		<script src="js/WelcomeSearch.js"></script>
-		<script src="js/DataCounter.js"></script>
-		<script src="js/SearchModule.js"></script>
-		<script src="js/Slideshow.js"></script>
-		<script src="js/Listing.js"></script>
-		<script src="js/ListingResults.js"></script>
-		<script src="js/Sell.js"></script>
-		<script src="js/References.js"></script>
-		<script src="js/refPage.js"></script>
-		<script src="js/listingPage.js"></script>
-		<script src="js/imageCarousel.js"></script>
-		<script src="js/languages.js"></script>
-		<script src="/js/main.js"></script>
-		<script src="js/legal.js"></script>
-		<script src="js/ion.rangeSlider.min.js"></script>
-		<!--language filter-->
-
+		<main id="main" class="main" role="main">
+			<div id="notfound">
+				<div class="notfound">
+					<div class="notfound-404">
+						<h3>Oops! Page not found</h3>
+						<h1><span>4</span><span>0</span><span>4</span></h1>
+					</div>
+					<h2>we are sorry, but the page you requested was not found</h2>
+					<div class="reloadCounter">
+						<p id="timer">
+							either click the link below or page will redirect to home page in
+							<span id="count">10</span> seconds...
+						</p>
+					</div>
+					<a
+						id="errorHome"
+						route=""
+						onmousedown="window.location.pathname = 'index.html'"
+						onclick="location.reload(true)"
+					>
+						Back to Home Page
+					</a>
+				</div>
+			</div>
+		</main>
 		<script type="text/javascript">
-			function googleTranslateElementInit() {
-				new google.translate.TranslateElement(
-					{
-						pageLanguage: 'de',
-						includelanguage: 'de,en,es,it,fr'
-					},
-					'google_translate_element'
-				);
-			}
-
-			function triggerHtmlEvent(element, eventName) {
-				var event;
-				if (document.createEvent) {
-					event = document.createEvent('HTMLEvents');
-					event.initEvent(eventName, true, true);
-					element.dispatchEvent(event);
-				} else {
-					event = document.createEventObject();
-					event.eventType = eventName;
-					element.fireEvent('on' + event.eventType, event);
-				}
-			}
-
-			$('.lang-select').click(function() {
-				var theLang = $(this).attr('data-lang');
-				$('.goog-te-combo').val(theLang);
-
-				//alert(jQuery(this).attr('href'));
-				window.location = $(this).attr('href');
-				location.reload(true);
-			});
+			window.onload = function() {
+				(function() {
+					var counter = 10;
+					setInterval(function() {
+						counter--;
+						if (counter >= 0) {
+							span = document.getElementById('count');
+							span.innerHTML = counter;
+						}
+						// Display 'counter' wherever you want to display it.
+						if (counter === 0) {
+							//    alert('this is where it happens');
+							clearInterval(counter);
+						}
+					}, 1000);
+				})();
+			};
 		</script>
-		<script
-			type="text/javascript"
-			src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-		></script>
+		<meta
+			http-equiv="refresh"
+			content="10;url=https://kedipoxi.myhostpoint.ch"
+		/>
 	</body>
 </html>

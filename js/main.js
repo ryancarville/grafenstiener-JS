@@ -17,53 +17,24 @@ $(document).ready(() => {
 		welcomeSearch();
 		welcome();
 		footer();
-		//remove load screen
-		document.body.removeChild(loadingScreen);
 	});
 });
+
+//set history API for home
+const route = '';
+window.history.pushState({ route }, '', '/index.html');
+console.log(history.state);
 
 //set history API for desktop logo
 $('#navHome').on('click', function(e) {
 	let route = $(this).attr('route');
-	window.history.pushState({ route }, '', `/${route}`);
+	window.history.pushState({ route }, '', `${route}`);
 });
 //set history API for all desktop nav
 $('#desktopLinks li a').on('click', function(e) {
 	let route = $(this).attr('route');
 	console.log(route);
-	window.history.pushState({ route }, '', `/${route}`);
-});
-
-//sets history API for listing page buttons
-$(document).on('click', '#buyButton', function(e) {
-	let route = $(this).attr('route');
-	console.log(route);
-	window.history.pushState({ route }, '', `/realEstate/${route}`);
-});
-$(document).on('click', '#investButton', function(e) {
-	let route = $(this).attr('route');
-	console.log(route);
-	window.history.pushState({ route }, '', `/realEstate/${route}`);
-});
-$(document).on('click', '#resButton', function(e) {
-	let route = $(this).attr('route');
-	console.log(route);
-	window.history.pushState({ route }, '', `/realEstate/${route}`);
-});
-$(document).on('click', '#rentButton', function(e) {
-	let route = $(this).attr('route');
-	console.log(route);
-	window.history.pushState({ route }, '', `/realEstate/${route}`);
-});
-$(document).on('click', '#officeButton', function(e) {
-	let route = $(this).attr('route');
-	console.log(route);
-	window.history.pushState({ route }, '', `/realEstate/${route}`);
-});
-$(document).on('click', '#rentResButton', function(e) {
-	let route = $(this).attr('route');
-	console.log(route);
-	window.history.pushState({ route }, '', `/realEstate/${route}`);
+	window.history.pushState({ route }, '', `${route}`);
 });
 
 //back button evaluation
@@ -100,15 +71,3 @@ window.onpopstate = function() {
 			break;
 	}
 };
-
-function refreshToIndex(e) {
-	if (window.performance) {
-		console.info('window.performance works fine on this browser');
-	}
-	if (performance.navigation.type == 0) {
-		console.info('This page is reloaded');
-	} else {
-		console.info('This page is not reloaded');
-	}
-}
-window.onbeforeunload = refreshToIndex;

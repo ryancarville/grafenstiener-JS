@@ -10,7 +10,7 @@ function services() {
 					<img src='../images/services/services.jpg' alt='service image'/>
 					<h3>Dienstleistungen</h3>
 					<a href='#serviceArrowPoint' class='downArrow' id='downArrowOffice'>
-						<img src='images/downArrow.png' style='margin-top:150px; width:100px;'/>
+						<img src='./images/downArrow.png' style='margin-top:150px; width:100px;'/>
 					</a>
 				</div>
 				<div id='serviceArrowPoint'></div>
