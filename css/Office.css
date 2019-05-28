@@ -3,34 +3,21 @@
 	flex-direction: column;
 	width: 100%;
 	text-align: center;
-	padding-top: 22%;
+	padding-top: 40%;
 	color: white;
 	font-size: 30px;
 	animation: fadeIn 2s ease-in-out;
 }
 
 .downArrow {
-	position: relative;
-	width: 5%;
-	margin-left: auto;
-	margin-right: auto;
-	animation: arrowDown 2s 2s ease-in-out;
+	display: none;
 }
 
 .officePage {
 	width: 100%;
 	height: auto;
 	display: block;
-	padding-top: 200px;
-}
-
-.officeMsg {
-	width: 150px;
-	height: auto;
-	margin-left: auto;
-	margin-right: auto;
-	box-sizing: border-box;
-	text-align: justify;
+	padding-top: 20px;
 }
 
 .officeMsg h2 {
@@ -38,8 +25,23 @@
 }
 
 .officeMsg p {
-	margin-left: 10px;
-	margin-right: 10px;
+	width: 100%;
+	padding: 10px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
+	text-align: justify;
+}
+
+.bio p {
+	width: 100%;
+	padding: 10px;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	box-sizing: border-box;
+	text-align: justify;
 }
 
 #bioPic {
@@ -47,18 +49,41 @@
 }
 
 @media only screen and (min-width: 1000px) {
-	.officePage {
+	.slideShowContent {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		text-align: center;
+		padding-top: 22%;
+		color: white;
+		font-size: 30px;
+		animation: fadeIn 2s ease-in-out;
+	}
+
+	.downArrow {
 		display: block;
+		position: relative;
+		width: 50px;
+		height: 25px;
+		margin-top: -20px;
+		margin-left: auto;
+		margin-right: auto;
+		animation: arrowDown 2s 2s ease-in-out;
+	}
+
+	.officePage {
+		display: flex;
+		justify-content: center;
 		align-items: center;
+		flex-direction: column;
+		width: 100%;
+		text-align: center;
+		margin-top: 400px;
 	}
 
 	.officeMsg {
-		width: 60%;
+		width: 50%;
 		margin-top: 75px;
-		padding: 15px;
-	}
-
-	.officeMsg p {
 		padding: 15px;
 	}
 
@@ -67,20 +92,26 @@
 		align-items: center;
 		flex-direction: row;
 		padding-top: 50px;
+		width: 100%;
+	}
+	#bioText {
 		width: 50%;
-		margin-left: auto;
-		margin-right: auto;
+		height: 450px;
+		box-sizing: border-box;
+		background-color: rgb(179, 179, 179);
 	}
 	.bio p {
-		width: 350px;
-		box-sizing: border-box;
+		padding: 100px;
 		text-align: justify;
 		padding: 35px;
-		margin-left: auto;
+		margin-top: 15%;
+	}
+	#bioPicWrap {
+		width: 50%;
+		box-sizing: border-box;
 	}
 	#bioPic {
-		width: 350px;
-
-		margin-right: auto;
+		width: 100%;
+		height: 450px;
 	}
 }

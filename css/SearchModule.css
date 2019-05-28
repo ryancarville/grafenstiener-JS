@@ -2,23 +2,44 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
+	margin-top: 60px;
 	margin-left: auto;
 	margin-right: auto;
 	box-sizing: border-box;
 	background-color: rgba(0, 0, 0, 0.8);
-	width: 80%;
+	width: 100%;
+	height: 350px;
 	padding: 10px;
 	box-sizing: border-box;
+}
+
+.searchDropDown {
+	width: 100%;
+}
+
+.searchDropMenus {
+	text-align: center;
+	width: 70%;
+	height: 35px;
+	font-size: 15px;
+	color: rgb(97, 97, 97);
+	background-color: rgb(255, 255, 255);
+	border: none;
+	margin-bottom: 10px;
+	padding: 5px;
+}
+
+#searchFilter > div.rangeSliderWrap {
+	display: none;
 }
 
 .mainSearchBtn {
 	cursor: pointer;
 	color: rgb(255, 255, 255);
-	height: 40px;
-	float: right;
-	margin-top: -50px;
-	margin-right: 50px;
+	height: 50px;
 	font-size: 16px;
+	margin-top: 20px;
 	padding: 5px;
 	border: none;
 	background-color: transparent;
@@ -33,11 +54,9 @@
 .mainResetBtn {
 	cursor: pointer;
 	color: rgb(255, 255, 255);
-	height: 40px;
-	float: right;
-	margin-top: -50px;
-	margin-right: 120px;
+	height: 50px;
 	font-size: 16px;
+	margin-top: 20px;
 	padding: 5px;
 	border: none;
 	background-color: transparent;
@@ -49,24 +68,15 @@
 	opacity: 1;
 }
 
-.searchDropDown {
-	width: 100%;
-}
-
-.searchDropMenus {
-	width: 150px;
-	height: 30px;
-	font-size: 15px;
-	color: rgb(97, 97, 97);
-	background-color: rgb(255, 255, 255);
-	border: none;
-	margin-bottom: 10px;
-	padding: 30px;
-}
-
 @media only screen and (min-width: 1000px) {
+	.sortHome {
+		position: relative;
+		padding-top: 0px;
+		animation: fadeIn 1s ease-in-out;
+	}
+
 	.searchModuel {
-		display: block;
+		align-items: unset;
 		margin-left: auto;
 		margin-right: auto;
 		box-sizing: border-box;
@@ -74,16 +84,66 @@
 		height: 120px;
 	}
 
-	.sortHome {
-		position: relative;
-		padding-top: 0px;
-		animation: fadeIn 1s ease-in-out;
-	}
-
 	.searchDropDown {
+		width: 100%;
 		display: flex;
 		justify-content: space-around;
-		align-items: center;
-		width: 100%;
+		margin-top: 10px;
+	}
+
+	.searchDropMenus {
+		width: 20%;
+		height: 30px;
+		font-size: 15px;
+		color: rgb(97, 97, 97);
+		background-color: rgb(255, 255, 255);
+		border: none;
+		margin-bottom: 10px;
+		padding: 5px;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#searchFilter > div.rangeSliderWrap {
+		display: block;
+	}
+
+	.mainSearchBtn {
+		cursor: pointer;
+		color: rgb(255, 255, 255);
+		height: 40px;
+		float: right;
+		margin-top: -50px;
+		margin-right: 50px;
+		font-size: 16px;
+		padding: 5px;
+		border: none;
+		background-color: transparent;
+		opacity: 0.6;
+		text-transform: lowercase;
+	}
+
+	.mainSearchBtn:hover {
+		opacity: 1;
+	}
+
+	.mainResetBtn {
+		cursor: pointer;
+		color: rgb(255, 255, 255);
+		height: 40px;
+		float: right;
+		margin-top: -50px;
+		margin-right: 120px;
+		font-size: 16px;
+		padding: 5px;
+		border: none;
+		background-color: transparent;
+		opacity: 0.6;
+		text-transform: lowercase;
+	}
+
+	.mainResetBtn:hover {
+		opacity: 1;
 	}
 }

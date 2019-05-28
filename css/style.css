@@ -1,3 +1,7 @@
+* {
+	text-transform: lowercase;
+}
+
 body {
 	display: flex;
 	flex-direction: column;
@@ -16,35 +20,11 @@ html {
 	scroll-behavior: smooth;
 }
 
-@keyframes fadeOut {
-	0% {
-		opacity: 1;
-	}
-	33% {
-		opacity: 0.8;
-	}
-	50% {
-		opacity: 0.5;
-	}
-	75% {
-		opacity: 0.3;
-	}
-	100% {
-		opacity: 0;
-	}
-}
-
 .loadingScreen {
 	position: absolute;
-	animation: fadeOut 2500ms 2500ms linear ease-out;
+	animation: fadeOut 4s 3s linear ease-out;
 }
 
 .main {
 	position: relative;
-}
-
-.langBtn {
-	float: right;
-	margin-top: -20px;
-	text-decoration: none;
 }

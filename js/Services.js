@@ -4,16 +4,14 @@ function services() {
 	});
 	$('.main').empty();
 	$('.main').append(
-		`<section>
+		`
 			<div class='servicesPage'>
-				<div class='servicesImage'>
-					<img src='../images/services/services.jpg' alt='service image'/>
-					<h3>Dienstleistungen</h3>
-					<a href='#serviceArrowPoint' class='downArrow' id='downArrowOffice'>
-						<img src='./images/downArrow.png' style='margin-top:150px; width:100px;'/>
-					</a>
-				</div>
-				<div id='serviceArrowPoint'></div>
+				<h3>Dienstleistungen</h3>
+				<a href='#serviceScroll' class='downArrow' id='downArrowServices'>
+					<img src='./images/downArrow.png' style='margin-top:150px; width:100px;'/>
+				</a>
+			</div>
+				<div id='serviceScroll'></div>
 				<div class='servicesMsg' id='servicesMsg'>	
 					<h2 id='servicesMsgHeader'>Dienstleistungen, die wir anbieten</h2>
 					<p id='servicesMsgIntro'>
@@ -71,6 +69,6 @@ function services() {
 					</div>
 				</div>
 			</div>
-		</section>`
+		`
 	);
 }

@@ -22,82 +22,88 @@
 }
 
 @media only screen and (min-width: 1000px) {
-	/*.langBtn {
+	#google_translate_element {
 		float: right;
-		width: 10px;
-
-		margin-right: 100px;
+		position: relative;
 		margin-top: -25px;
-		cursor: pointer;
-		position: sticky;
 	}
-	*/
+	#google_translate_element div.goog-te-gadget-simple {
+		border: none;
+		background-color: transparent;
+		/*background-color: #17548d;*/ /*#e3e3ff*/
+	}
 
-	.goog-te-banner-frame.skiptranslate {
+	#google_translate_element
+		div.goog-te-gadget-simple
+		a.goog-te-menu-value:hover {
+		text-decoration: none;
+	}
+
+	#google_translate_element
+		div.goog-te-gadget-simple
+		a.goog-te-menu-value
+		span {
+		color: #aaa;
+	}
+
+	#google_translate_element
+		div.goog-te-gadget-simple
+		a.goog-te-menu-value
+		span:hover {
+		color: rgb(68, 68, 68);
+	}
+
+	.goog-te-gadget-icon {
+		display: none !important;
+		/*background: url("url for the icon") 0 0 no-repeat !important;*/
+	}
+
+	[id^=':1.menuBody'] > table > tbody > tr > td > a > div {
+		background-color: transparent;
+	}
+	/* Remove the down arrow */
+	/* when dropdown open */
+	#google_translate_element
+		div.goog-te-gadget-simple
+		a.goog-te-menu-value
+		span[style='color: rgb(213, 213, 213);'] {
+		display: none;
+	}
+	/* after clicked/touched */
+	#google_translate_element
+		div.goog-te-gadget-simple
+		a.goog-te-menu-value
+		span[style='color: rgb(118, 118, 118);'] {
+		display: none;
+	}
+	/* on page load (not yet touched or clicked) */
+	#google_translate_element
+		div.goog-te-gadget-simple
+		a.goog-te-menu-value
+		span[style='color: rgb(155, 155, 155);'] {
+		display: none;
+	}
+
+	/* Remove span with left border line | (next to the arrow) in Chrome & Firefox */
+	#google_translate_element
+		div.goog-te-gadget-simple
+		a.goog-te-menu-value
+		span[style='border-left: 1px solid rgb(187, 187, 187);'] {
+		display: none;
+	}
+	/* Remove span with left border line | (next to the arrow) in Edge & IE11 */
+	#google_translate_element
+		div.goog-te-gadget-simple
+		a.goog-te-menu-value
+		span[style='border-left-color: rgb(187, 187, 187); border-left-width: 1px; border-left-style: solid;'] {
+		display: none;
+	}
+	/* HIDE the google translate toolbar */
+	body > .skiptranslate .goog-te-banner-frame {
 		display: none !important;
 	}
+
 	body {
 		top: 0px !important;
-	}
-	.ct-topbar {
-		cursor: pointer;
-		font-size: 14px;
-		float: right;
-		text-align: center;
-		background: #eee;
-		width: 100px;
-		margin-top: -45px;
-		margin-right: 10px;
-	}
-	.ct-topbar__list {
-		margin-bottom: 0px;
-	}
-	.ct-language__dropdown {
-		padding-top: 8px;
-		max-height: 0;
-		overflow: hidden;
-		position: absolute;
-		top: 110%;
-		left: -3px;
-		-webkit-transition: all 0.25s ease-in-out;
-		transition: all 0.25s ease-in-out;
-		width: 100px;
-		text-align: center;
-		padding-top: 0;
-		z-index: 200;
-	}
-	.ct-language__dropdown li {
-		cursor: pointer;
-		background: rgb(255, 255, 255);
-		padding: 5px;
-	}
-	.ct-language__dropdown li a {
-		display: block;
-	}
-	.ct-language__dropdown li:first-child {
-		padding-top: 10px;
-		border-radius: 3px 3px 0 0;
-	}
-	.ct-language__dropdown li:last-child {
-		padding-bottom: 10px;
-		border-radius: 0 0 3px 3px;
-	}
-	.ct-language__dropdown li:hover {
-		background: rgb(255, 255, 255);
-	}
-
-	.ct-language {
-		position: relative;
-		background: #ffffff;
-		color: rgb(0, 0, 0);
-		padding: 10px 0;
-	}
-	.ct-language:hover .ct-language__dropdown {
-		max-height: 200px;
-		padding-top: 8px;
-	}
-	.list-unstyled {
-		padding-left: 0;
-		list-style: none;
 	}
 }

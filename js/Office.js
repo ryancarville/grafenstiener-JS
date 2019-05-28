@@ -33,8 +33,12 @@ const office = function() {
 					</p>
 				</div>		
 				<div class='bio'>
-					<p>Mit sicherem Gespür für den Menschen und den Markt begleite ich Sie beim Verkauf Ihrer Wohnung oder Ihres Hauses. Bei komplexen Immobilientransaktionen weiss ich unterschiedliche Bedürfnisse gleichwertig zu berücksichtigen, so dass alle Beteiligten sich gewürdigt fühlen.</p>			
-					<img src='../images/bioPic.jpeg' alt='Photo of Karen Gräfenstiener' id='bioPic'>
+					<div id='bioText'>
+						<p>Mit sicherem Gespür für den Menschen und den Markt begleite ich Sie beim Verkauf Ihrer Wohnung oder Ihres Hauses. Bei komplexen Immobilientransaktionen weiss ich unterschiedliche Bedürfnisse gleichwertig zu berücksichtigen, so dass alle Beteiligten sich gewürdigt fühlen.</p>			
+					</div>
+					<div id='bioPicWrap'>
+						<img src='../images/bioPic.jpeg' alt='Photo of Karen Gräfenstiener' id='bioPic'>
+					<div>
 				</div>
 			</div>
 		`);

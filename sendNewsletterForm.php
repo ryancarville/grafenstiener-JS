@@ -15,27 +15,23 @@ if(isset($_POST['email'])) {
     }
  
  
-    // validation expected data exists
-    if(!isset($_POST['lastName']) ||
-        !isset($_POST['firstName']) ||
-        !isset($_POST['email'])) {
-        died('We are sorry, but there appears to be a problem with the form you submitted.');      
-    }
+    
  
      
     
     $lastName = $_POST['lastName']; // required
     $firstName = $_POST['firstName']; // required
     $email = $_POST['email']; // required
-    $message = $_POST['msg'];
+    $message = $_POST['message'];
 
     $error_message = "";
     $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
- 
+    $string_exp = "/^[A-Za-z .'-]+$/";
+
   if(!preg_match($email_exp,$email)) {
     $error_message .= 'The Email Address you entered does not appear to be valid.<br />';
   }
-    $string_exp = "/^[A-Za-z .'-]+$/";
+    
   if(!preg_match($string_exp,$lastName)) {
     $error_message .= 'The last name you entered does not appear to be valid.<br />';
   }
@@ -65,14 +61,12 @@ if(isset($_POST['email'])) {
 $headers = 'From: '.$email."\r\n".
 'Reply-To: '.$email."\r\n" .
 'X-Mailer: PHP/' . phpversion();
-@mail($email_to, $email_subject, $email_message, $headers);  
-  
-?>
- <!-- include your own success html here -->
- 
-Thank you for contacting us. We will be in touch with you very soon.
- 
-<?php
+$success = @mail($email_to, $email_subject, $email_message, $headers);  
 
 }
+if($success){
+  echo "Message Sent";
+}
+
 ?>
+ 

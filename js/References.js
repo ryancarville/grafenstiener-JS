@@ -4,13 +4,11 @@ function references() {
 	});
 	$('.main').empty();
 	$('.main').append(
-		`<div class='refWrapper'>
-            <div class='refHeader'>
-            <img src='/images/references/references.png' alt='references Image' class='landingImg'/>
-            <h2>Kunden, die uns lieben</h2>
-            <a href='#refContent' class='downArrow' id='downArrowRef'>
-                <img src='/images/downArrow.png' style='margin-top:150px; width:100px;'/>
-            </a>
+		`<div class='refPage'>
+                <h2>Kunden, die uns lieben</h2>
+                <a href='#refContent' class='downArrow' id='downArrowRef'>
+                    <img src='/images/downArrow.png' style='margin-top:150px; width:100px;'/>
+                </a>
             </div>
             <div class='refContent' id='refContent'>
                 <div class='ref' id='ref1'>

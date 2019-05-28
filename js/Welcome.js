@@ -18,47 +18,4 @@ function welcome() {
 		`),
 			searchModule();
 	}, 2000);
-	//nav link animation
-	$('#navHomeText').on('click', function() {
-		$(this).addClass('navActive');
-		$(
-			'#navOfficeText, #navRealEstateText, #navServicesText, #navReferencesText, #navContactText'
-		).removeClass('navActive');
-	});
-	$('#navOfficeText').on('click', function() {
-		$(this).addClass('navActive');
-		$(
-			'#navHomeText, #navRealEstateText, #navServicesText, #navReferencesText, #navContactText'
-		).removeClass('navActive');
-	});
-	$('#navRealEstateText').on('click', function() {
-		$(this).addClass('navActive');
-		$(
-			'#navHomeText, #navOfficeText, #navServicesText, #navReferencesText, #navContactText'
-		).removeClass('navActive');
-	});
-	$('#navServicesText').on('click', function() {
-		$(this).addClass('navActive');
-		$(
-			'#navHomeText, #navOfficeText, #navRealEstateText, #navReferencesText, #navContactText'
-		).removeClass('navActive');
-	});
-	$('#navReferencesText').on('click', function() {
-		$(this).addClass('navActive');
-		$(
-			'#navHomeText, #navOfficeText, #navRealEstateText, #navServicesText, #navContactText'
-		).removeClass('navActive');
-	});
-	$('#navContactText').on('click', function() {
-		$(this).addClass('navActive');
-		$(
-			'#navHomeText, #navOfficeText, #navRealEstateText, #navServicesText, #navReferencesText'
-		).removeClass('navActive');
-	});
-	$('#navLogo').on('click', function() {
-		$(this).addClass('navActive');
-		$(
-			'#navHomeText, #navOfficeText, #navRealEstateText, #navServicesText, #navReferencesText, #navContactText'
-		).removeClass('navActive');
-	});
 }

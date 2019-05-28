@@ -1,38 +1,72 @@
 .realEstatePage {
 	display: block;
-	background-image: url('../images/realEstateBG/realEstate1.png');
+	background-image: url('../images/realEstateBG/realEstateLanding.png');
 	background-repeat: no-repeat;
 	width: 100%;
+	padding-top: 250px;
 	background-size: 100%;
 	background-position: center;
 	animation: fadeIn 2s ease-in-out;
 }
 
-.realEstatePage img {
-	width: 100%;
+#realEstateText {
+	margin-top: -210px;
+	text-align: center;
+	color: white;
+	font-size: 20px;
 }
 
-#realEstateText {
-	margin-top: -200px;
-	text-align: center;
-	margin-left: -500px;
-	color: white;
-	font-size: 50px;
+#downArrowRealEstate {
+	display: none;
 }
 
 .realEstateMsg h2 {
 	text-align: center;
 }
 .realEstateMsg p {
-	width: 30%;
+	width: 100%;
 	text-align: justify;
-	margin-left: auto;
-	margin-right: auto;
+	padding: 20px;
 	margin-bottom: 100px;
 }
 
 @media only screen and (min-width: 1000px) {
 	.realEstatePage {
-		padding-top: 550px;
+		padding-top: 1050px;
+	}
+
+	#realEstateText {
+		margin-top: -900px;
+		text-align: center;
+		color: white;
+		font-size: 50px;
+	}
+
+	#downArrowRealEstate {
+		display: block;
+		position: relative;
+		width: 50px;
+		height: 25px;
+		margin-top: 250px;
+		margin-left: auto;
+		margin-right: auto;
+		animation: arrowDown 2s 2s ease-in-out;
+	}
+
+	#realEstateScroll {
+		margin-top: 10px;
+	}
+
+	.realEstateMsg h2 {
+		text-align: center;
+		margin-top: 100px;
+	}
+	.realEstateMsg p {
+		width: 50%;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: justify;
+		padding: 20px;
+		margin-bottom: 100px;
 	}
 }

@@ -7,10 +7,11 @@ function realEstate() {
 	$('.main').append(
 		`<div class='realEstatePage'>
 			<p id='realEstateText'>Immobilien</p>
-		</div>	
-		<div class='realEstateMsg'>
+			<a href='#realEstateScroll' class='downArrow' id='downArrowRealEstate'><img src='/images/downArrow.png' style='margin-top:200px; width:100px;'/></a>
+		</div>
+		<div id='realEstateScroll'></div>
+		<div class='realEstateMsg' >
 			<h2>gekonnt diskret persönlich</h2>
-
 			<p>Unsere Website bietet lediglich eine Auswahl 
 			der Wohn- und Anlage Immobilien im Verkauf. Fragen 
 			Sie uns nach Angeboten, welche wir nicht publiziert 

@@ -10,21 +10,21 @@ function contact() {
 					<h2 class='header' id='contactHeader'>Wir sind gerne für Sie da und freuen uns auf Ihre Kontaktaufnahme.</h2>
 					<h3 class='info'>
 						<div>
-						<img src='images/contact/location.png' alt='location icon'/><br>
-						Gräfenstiener | Swiss Real Estate <br>
-						Feldhofstrasse 66 <br>
-						8706 Meilen, CH<br>
+							<img src='images/contact/location.png' alt='location icon'/><br>
+							Gräfensteiner Swiss Real Estate<br>
+							Feldhofstrasse 66<br>
+							CH-8706 Meilen
 						</div>
 						<div>
 						<img src='images/contact/email.png' alt='email icon'/><br>
-						<a class='emailLink' href='mailto:info@gräfenstiener.com'>
-							info@gräfenstiener.com
+						<a class='emailLink' href='mailto:info@graefensteiner.ch'>
+							info@graefensteiner.ch
 						</a><br><br>
 						</div>
 						<div>
 						<img src='images/contact/phone.png' alt='phoneicon' />
 						<p>
-							+41(79)156 23 29
+							Tel +41 44 550 03 00
 						</p>
 						</div>
 					</h3>
@@ -234,10 +234,7 @@ function contact() {
 
 	$('#submit').on('click', function(e) {
 		e.preventDefault();
-		console.log('form clicked');
-
 		let gender = $("input[name='gender']:checked").val();
-
 		let lastName = $('#lastName').val();
 		let firstName = $('#firstName').val();
 		let company = $('#company').val();
@@ -251,8 +248,7 @@ function contact() {
 		let phone = $('#phoneNum').val();
 		let message = $('#msg').val();
 		let newsletter = $('#newsletter').val();
-		console.log(lastName);
-		console.log(message);
+
 		if (
 			lastName == '' ||
 			firstName == '' ||
@@ -288,14 +284,15 @@ function contact() {
 					newsletter: newsletter
 				},
 				success: function(data) {
-					console.log(data);
-					$('form').trigger('reset');
 					$('#formSuccessMsg')
 						.fadeIn()
 						.html(data);
 					setTimeout(function() {
 						$('#formSuccessMsg').fadeOut('slow');
 					}, 10000);
+					if ($('#formSuccessMsg').text() == 'Message Sent') {
+						$('form').trigger('reset');
+					}
 				}
 			});
 		}
